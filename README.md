@@ -9,7 +9,7 @@ Katabasis is an epic retelling of the tragic love story of Orpheus and Eurydice,
 ### Characters
 | Name | Image | Sprite | Description |
 | ----------- | ----------- | ----------- | ----------- |
-| **Orpheus** | ![](https://i.imgur.com/gcLkam2.png =200x) | *Sprite Art Here* | A young and optimistic musician who sings and plays the lyre beautifully. His music has the power to change people's hearts. Married to Eurydice. | 
+| **Orpheus** | ![](https://i.imgur.com/gcLkam2.png) | *Sprite Art Here* | A young and optimistic musician who sings and plays the lyre beautifully. His music has the power to change people's hearts. Married to Eurydice. | 
 | **Eurydice** |*Concept Art Here* | *Sprite Art Here* | A beautiful wood nymph who fell in love with Orpheus after hearing him perform his music. She died from the bite of a venemous snake that was placed in her chambers by a man who was in love with her and jealous of Orpheus. |
 | **Hades** | *Concept Art Here* | *Sprite Art Here* | The God of Death and King of the Underworld. Hellbent on ensuring that Orpheus does not make it to his palace, where he is holding Eurydice. Hates those *cough* Orpheus *cough* who try to cheat Death. |
 | **Charon** | *Concept Art Here* | *Sprite Art Here* | The boatman who takes souls across the river Styx and into the land of the dead. He guides Orpheus through the underworld in exchange for obols, the coin of the dead. |
@@ -20,7 +20,7 @@ Katabasis is an epic retelling of the tragic love story of Orpheus and Eurydice,
 ### The Underworld
 
 **Styx** - *Stage One: Denial* - Color: Grey
-![](https://i.imgur.com/86jSFYp.png =900x)
+![](https://i.imgur.com/86jSFYp.png)
 > Greyscale color scheme, maybe the backdrop could be a river with ghostlike skulls floating out. It would open on Charon's boat, after he realizes you have no obols, he kicks you off, you then have to find the underworld entrance, and once you find it, Cerberus blocks the way and triggers the Cerberus Boss Battle / Chase. The plot point for this stage would be Orpheus denying the fact that Eurydice died.
 
 **Elysium** - *Stage Two: Anger* - Color: Blue
@@ -30,7 +30,7 @@ Katabasis is an epic retelling of the tragic love story of Orpheus and Eurydice,
 > Asphodel is sort of like the Limbo of Greek mythology, filled with people who weren't overly good or bad, and have lost all memories of their former life. Plot wise, Orpheus could try and bargain with the fates to try and get them to change Eurydice's fate. They deny him and another boss battle ensues.
 
 **Tatarus** - *Stage Four: Depression* - Color: Red
-![](https://i.imgur.com/TufUtku.gif =900x)
+![](https://i.imgur.com/TufUtku.gif)
 > Tartarus is the ultimate hell of the underworld where the worst of the worst went. It holds prisons for Titans, Tantalus, Ixion and Sisyphus, one of them could potentially be a boss battle. Plotwise, Orpheus could have a breakdown after being told that his journey is meaningless and that Eurydice can never leave. It would be cool to maybe do some sort of shaky scene where the world around him is crumbling, like his mental state is.
 
 **Hades' Palace** - *Stage Five: Acceptance* - Color: Purple
