@@ -15,6 +15,9 @@ public class player_movement : MonoBehaviour
     bool slope_check;
     Vector3 slope_coord;
 
+    bool facingLeft;
+    bool facingRight;
+
     float x_onslope;
     float y_onslope;
    

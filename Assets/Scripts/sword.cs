@@ -18,7 +18,7 @@ public class sword : MonoBehaviour
         //init rotation to zero
         rotation = new Vector3(0f, 0f, 0f);
         z_rot = 0f;
-        mod = 120f;//15 //1200
+        mod = 1000;//15 //1200
         swing = false;
         up = false;
         down = false;
