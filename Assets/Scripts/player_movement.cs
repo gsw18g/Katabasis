@@ -17,6 +17,7 @@ public class player_movement : MonoBehaviour
 
     bool facingLeft;
     bool facingRight;
+    bool flip;
 
     float x_onslope;
     float y_onslope;
@@ -43,6 +44,9 @@ public class player_movement : MonoBehaviour
         x_onslope = 0f;
         y_onslope = 0f;
 
+        facingLeft = false;
+        facingRight = true;
+        flip = false;
     }
 
     // Update is called once per frame
@@ -61,15 +65,49 @@ public class player_movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
+            if(facingLeft)
+            {
+                flip = !flip;
+                //facingRight = !facingRight;
+                //facingLeft = !facingLeft;
+                //transform.eulerAngles = new Vector3(0, 180, 0);
+            }
              
         }
 
         //move left
         if(Input.GetKey(KeyCode.A))
         {
-            velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
             
+            velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
+            if (facingRight)
+            {
+                flip = !flip;
+               // facingRight = !facingRight;
+                //facingLeft = !facingLeft;
+                //transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
         }
+
+        if(flip && facingRight)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+            facingRight = !facingRight;//facingright = false
+            facingLeft = !facingLeft; // facingleft = true
+            flip = !flip; //flip = false
+        }
+
+        if(flip && facingLeft)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            facingRight = !facingRight;//facingright = false
+            facingLeft = !facingLeft; // facingleft = true
+            flip = !flip; //flip = false
+        }
+
+
+       
 
         //if player is on the ground, and jump key pressed
         if(ground || slope_check)

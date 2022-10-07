@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ground
   - slope
+  - enemy_melee
+  - sword
   layers:
   - Default
   - TransparentFX

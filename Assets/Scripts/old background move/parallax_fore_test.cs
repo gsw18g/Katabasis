@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class parallax_mid : MonoBehaviour
+public class parallax_fore_test : MonoBehaviour
 {
     public float speed;
     public GameObject player;
@@ -13,7 +13,7 @@ public class parallax_mid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = .3f;//.5
+       // speed = 1f;//.5
         the_player = player.GetComponent<player_movement>();
         x_pos = gameObject.transform.position.x;
         y_pos = gameObject.transform.position.y;

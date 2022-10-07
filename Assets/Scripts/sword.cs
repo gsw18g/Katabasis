@@ -5,12 +5,13 @@ using UnityEngine;
 public class sword : MonoBehaviour
 {
     Vector3 rotation;
-    float z_rot;
+    public static float z_rot;
     bool swing;
     bool up;
     bool down;
     bool back_to_start;
     float mod;
+    public static bool downswing;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,12 @@ public class sword : MonoBehaviour
         //init rotation to zero
         rotation = new Vector3(0f, 0f, 0f);
         z_rot = 0f;
-        mod = 1000;//15 //1200
+        mod = 1000f; //1000;//15 //1200
         swing = false;
         up = false;
         down = false;
         back_to_start = false;
+        downswing = false;
     }
 
     //rotate to up to 94 in z axis, then down to -34
@@ -32,8 +34,17 @@ public class sword : MonoBehaviour
     {
         ///////change this to a timed cooldown, so player can time attacks properly
 
+        /*
+         * 
+              if(downswing)
+              {
+                  downswing = false;
+              }
+         */
+
+
         //if left mouse pressed and released
-        if(Input.GetMouseButtonDown(0) && !up && !down && !back_to_start)
+        if (Input.GetMouseButtonDown(0) && !up && !down && !back_to_start)
         {
             
             up = true;
@@ -59,6 +70,7 @@ public class sword : MonoBehaviour
                 Debug.Log("up = false");
                 up = false;
                 down = true;
+                downswing = true;
             }
 
             
@@ -67,7 +79,7 @@ public class sword : MonoBehaviour
         {
             Debug.Log("down = true");
 
-            //if sword is not at top of swing
+            //if sword is not at bottom of swing
             if((z_rot + 34) > 0)
             {
                 Debug.Log("z_rot2 = " + z_rot);
@@ -75,21 +87,24 @@ public class sword : MonoBehaviour
                 z_rot = z_rot - (Time.deltaTime * mod);
 
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
+                
 
             }
-            //sword is at top of swing
+            //sword is at bottom of swing
             else
             {
                 Debug.Log("down = false");
                 down = false;
                 back_to_start = true;
+                
+
             }
         }
 
         
         if(back_to_start)
         {
-            //if sword is not at top of swing
+            //if sword is not at start position
             if (z_rot < 0f)
             {
                 Debug.Log("z_rot3 = " + z_rot);
@@ -99,10 +114,11 @@ public class sword : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
 
             }
-            //sword is at top of swing
+            //sword is start pos
             else
             {
                 
+
                 back_to_start = false;
             }
         }
