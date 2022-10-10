@@ -48,7 +48,7 @@ public class sword : MonoBehaviour
         {
             
             up = true;
-            Debug.Log("swing");
+            //Debug.Log("swing");
         }
 
         //if swing is started

@@ -8,6 +8,9 @@ TagManager:
   - slope
   - enemy_melee
   - sword
+  - heart1
+  - heart2
+  - heart3
   layers:
   - Default
   - TransparentFX

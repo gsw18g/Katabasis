@@ -15,6 +15,8 @@ public class enemy_melee : MonoBehaviour
     bool down_swing;
     bool mouseclick;
     float z_rot;
+
+    public static bool melee;
     //bool sword_collider_hit;
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class enemy_melee : MonoBehaviour
         down_swing = sword.downswing;
         mouseclick = false;
         z_rot = sword.z_rot;
+        melee = false;
         //down_swing = sword_collider.sword_collider_hit;
     }
 
@@ -45,27 +48,26 @@ public class enemy_melee : MonoBehaviour
         down_swing = sword.downswing;
         //down_swing = sword_collider.sword_collider_hit;
 
-        Debug.Log("sword_hit = " + sword_hit);
-        Debug.Log("downswing" + down_swing);
+        //Debug.Log("sword_hit = " + sword_hit);
+        //Debug.Log("downswing" + down_swing);
 
-
+        
         /*
-         * if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0))
         {
             mouseclick = true;
         }
-         * */
-
-        /*
-         * 
-         *  if (sword_hit && down_swing && Input.GetMouseButton(0))
+  
+         if (sword_hit && down_swing && Input.GetMouseButton(0))
          {
              down_swing = false;
              Destroy(gameObject);
          }
-         * */
+
+         */
+        
         z_rot = sword.z_rot;
-        Debug.Log("z_rot==============" + z_rot);
+        //Debug.Log("z_rot==============" + z_rot);
 
         if (Input.GetMouseButton(0) && sword_hit && z_rot < -10 && z_rot > -19)
         {
@@ -73,9 +75,29 @@ public class enemy_melee : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //pos_y = gameObject.transform.position.y;
-        //velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.CompareTag("Player"))
+        {
+            melee = true;
+        }
+    }
 
-        //rb.transform.position = new Vector3(velocity, pos_y, 0f);
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            melee = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            melee = false;
+        }
     }
 }
