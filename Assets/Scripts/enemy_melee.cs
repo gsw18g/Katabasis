@@ -16,9 +16,13 @@ public class enemy_melee : MonoBehaviour
     bool mouseclick;
     float z_rot;
     public static int health;
-
     public static bool melee;
     //bool sword_collider_hit;
+
+    [SerializeField] private Transform center;
+    [SerializeField] private float knockbackvl=10f;
+    [SerializeField] private float knockbacktime = 1f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +93,7 @@ public class enemy_melee : MonoBehaviour
         if (health > 0)
         {
             health -= 34;
+            knockback();
         }
         if(health < 0)
         {
@@ -124,4 +129,18 @@ public class enemy_melee : MonoBehaviour
             melee = false;
         }
     }
+
+    public void knockback()
+    {
+        var dir = center.position - player_pos.transform.position;
+        rb.velocity = (Vector2)dir.normalized * knockbackvl;
+        StartCoroutine(Unknockback());
+    }
+
+    private IEnumerator Unknockback()
+    {
+        yield return new WaitForSeconds(knockbacktime);
+    }
+
+
 }
