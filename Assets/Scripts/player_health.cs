@@ -23,7 +23,7 @@ public class player_health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("player_health = " + health);
+        //Debug.Log("player_health = " + health);
         timer += Time.deltaTime;
 
         en_melee = enemy_melee.melee;
@@ -48,7 +48,7 @@ public class player_health : MonoBehaviour
         if(health <= 0)
         {
             player_dead = true;
-            Debug.Log("Player is dead");
+            //Debug.Log("Player is dead");
         }
     }
 

@@ -23,6 +23,7 @@ public class sword_check : MonoBehaviour
         if (collision.transform.CompareTag("enemy_melee"))
         {
             hit_melee_enemy = true;
+            //Debug.Log("inside sword cirlce");
         }
     }
 
@@ -31,6 +32,7 @@ public class sword_check : MonoBehaviour
         if (collision.transform.CompareTag("enemy_melee"))
         {
             hit_melee_enemy = true;
+            //Debug.Log("inside sword cirlce");
         }
     }
 
@@ -39,6 +41,7 @@ public class sword_check : MonoBehaviour
         if (collision.transform.CompareTag("enemy_melee"))
         {
             hit_melee_enemy = false;
+            //Debug.Log("outside sword cirlce");
         }
     }
 

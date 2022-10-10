@@ -15,6 +15,7 @@ public class enemy_melee : MonoBehaviour
     bool down_swing;
     bool mouseclick;
     float z_rot;
+    public static int health;
 
     public static bool melee;
     //bool sword_collider_hit;
@@ -33,6 +34,7 @@ public class enemy_melee : MonoBehaviour
         mouseclick = false;
         z_rot = sword.z_rot;
         melee = false;
+        health = 100;
         //down_swing = sword_collider.sword_collider_hit;
     }
 
@@ -69,14 +71,36 @@ public class enemy_melee : MonoBehaviour
         z_rot = sword.z_rot;
         //Debug.Log("z_rot==============" + z_rot);
 
-        if (Input.GetMouseButton(0) && sword_hit && z_rot < -10 && z_rot > -19)
+        if(Input.GetMouseButtonDown(0) && sword_hit)// && down_swing z_rot < -10 && z_rot > -19
         {
+            enemy_damage();
             down_swing = false;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
+       // gameObject.transform.localScale = new Vector3(1 - (health / 100), 0f, 0f);
        
     }
+
+    void enemy_damage()
+    {
+        
+       
+        if (health > 0)
+        {
+            health -= 34;
+        }
+        if(health < 0)
+        {
+            health = 0;
+            Destroy(gameObject);
+        }
+        Debug.Log("enemy health ====================== " + health);
+
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.CompareTag("Player"))

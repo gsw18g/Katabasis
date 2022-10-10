@@ -62,12 +62,12 @@ public class sword : MonoBehaviour
 
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
 
-                Debug.Log("z_rot1 = " + z_rot);
+                //Debug.Log("z_rot1 = " + z_rot);
             }
             //sword is at top of swing
             else
             {
-                Debug.Log("up = false");
+                //Debug.Log("up = false");
                 up = false;
                 down = true;
                 downswing = true;
@@ -77,12 +77,12 @@ public class sword : MonoBehaviour
         }
         else if(down)
         {
-            Debug.Log("down = true");
+            //Debug.Log("down = true");
 
             //if sword is not at bottom of swing
             if((z_rot + 34) > 0)
             {
-                Debug.Log("z_rot2 = " + z_rot);
+                //Debug.Log("z_rot2 = " + z_rot);
                 //increase z rot smoothly
                 z_rot = z_rot - (Time.deltaTime * mod);
 
@@ -93,7 +93,7 @@ public class sword : MonoBehaviour
             //sword is at bottom of swing
             else
             {
-                Debug.Log("down = false");
+                //Debug.Log("down = false");
                 down = false;
                 back_to_start = true;
                 
@@ -107,7 +107,7 @@ public class sword : MonoBehaviour
             //if sword is not at start position
             if (z_rot < 0f)
             {
-                Debug.Log("z_rot3 = " + z_rot);
+                //Debug.Log("z_rot3 = " + z_rot);
                 //increase z rot soothly
                 z_rot = z_rot + (Time.deltaTime * mod);
 
