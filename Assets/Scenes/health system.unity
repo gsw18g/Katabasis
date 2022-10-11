@@ -731,6 +731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground Check Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 7005747902213684658, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7005747902213684660, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1916,7 +1920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563949541198624958, guid: 64c91123a2005694aaa9abd77b18fbe8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 3563949541198624958, guid: 64c91123a2005694aaa9abd77b18fbe8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1963,6 +1967,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7752081304960174274, guid: d031f51ee50c86b4d9645c54f89c8a62, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752081304960174274, guid: d031f51ee50c86b4d9645c54f89c8a62, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7752081304960174281, guid: d031f51ee50c86b4d9645c54f89c8a62, type: 3}
       propertyPath: m_Name
       value: zombie melee

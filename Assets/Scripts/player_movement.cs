@@ -21,8 +21,17 @@ public class player_movement : MonoBehaviour
 
     float x_onslope;
     float y_onslope;
-   
-   
+
+    bool knock = false;
+    float knock_time = 0f;
+
+    /*[SerializeField] private Transform center;
+    [SerializeField] private float knockback_vel = 10f;
+    [SerializeField] private float knockback_time = 1f;
+
+     * */
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +66,7 @@ public class player_movement : MonoBehaviour
         ground = check_ground.is_grounded;
         slope_check = check_ground.on_slope;
         slope_coord = check_ground.coord;
+        knock = player_health.knock;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -90,6 +100,8 @@ public class player_movement : MonoBehaviour
 
         }
 
+
+
         if(flip && facingRight)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -121,8 +133,9 @@ public class player_movement : MonoBehaviour
             }
            
         }
-       
-        if(slope_check)
+
+        /*
+         * if(slope_check)
         {
             Debug.Log("on slope");
             Debug.Log("slope_coord =" + slope_coord);
@@ -144,14 +157,91 @@ public class player_movement : MonoBehaviour
             rb.transform.position = new Vector3(velocity, pos_y, 0f);
             //rb.transform.position = new Vector3(velocity, pos_y, 0f);
         }
+         * */
+
+
+        if(knock && knock_time <= 1f)
+        {
+            
+                Debug.Log("velocity ========== " + velocity);
+                //start adding to knocktime
+                knock_time += Time.deltaTime;
+
+                //start adding speed * time * mod every frame 
+                velocity -= (speed * Time.deltaTime * mod);
+                //substract vel from position.x every frame
+                rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
+                //gameObject.transform.position = new Vector3(transform.position.x - velocity, transform.position.y, 0f);
+            
+            
+            
+               
+            
+          
+
+            
+        }
+        else
+        {
+            rb.transform.position = new Vector3(velocity, pos_y, 0f);
+            knock_time = 0f;
+            //velocity = 0f;
+            player_health.knock = false;
+        }
+
+
+        /* old function
+         * if(knock)
+        {
+            if (knock_time <= 1f)
+            {
+                Debug.Log("velocity ========== " + velocity);
+                //start adding to knocktime
+                knock_time += Time.deltaTime;
+
+                //start adding speed * time * mod every frame 
+                velocity -= (speed * Time.deltaTime * mod);
+                //substract vel from position.x every frame
+                rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
+                //gameObject.transform.position = new Vector3(transform.position.x - velocity, transform.position.y, 0f);
+            }
+            else if (knock_time >= 1f)
+            {
+                knock_time = 0f;
+                //velocity = 0f;
+                player_health.knock = false;
+            }
+            {
+
+            }
+
+            
+        }
+        else
+        {
+            rb.transform.position = new Vector3(velocity, pos_y, 0f);
+        }
+         * */
+
+        Debug.Log("knocktime ******** " + knock_time);
 
 
 
 
+    }//update
 
+    /*public void knockback()
+    {
+        var dir = center.position - transform.position;
+        rb.velocity = (Vector2)dir.normalized * knockback_vel;
+        StartCoroutine(Unknockback());
     }
 
+    private IEnumerator Unknockback()
+    {
+        yield return new WaitForSeconds(knockback_time);
+    }
 
-
+     * */
 
 }
