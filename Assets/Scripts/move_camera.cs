@@ -9,7 +9,7 @@ public class move_camera : MonoBehaviour
     float x_pos;
     float y_pos;
     //offset camera to center on player
-    float offset = 8.39f;//8.39
+    float offset = 0f;//8.39
     // Start is called before the first frame update
     void Start()
     {
