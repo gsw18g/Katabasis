@@ -25,6 +25,11 @@ public class player_movement : MonoBehaviour
     bool knock = false;
     float knock_time = 0f;
 
+    public GameObject zombie;
+    public GameObject center;
+
+    float knock_force = 5f;
+
     /*[SerializeField] private Transform center;
     [SerializeField] private float knockback_vel = 10f;
     [SerializeField] private float knockback_time = 1f;
@@ -36,13 +41,13 @@ public class player_movement : MonoBehaviour
     void Start()
     {
         mod = 1.5f;//.005
-        speed = 1.0f;
+        speed = 2.0f;
         
         rb = GetComponent<Rigidbody2D>();
         //get players starting x and y pos
         pos_x = gameObject.transform.position.x;
         pos_y = gameObject.transform.position.y;
-        jump_height = new Vector2(0f,4f);//4f
+        jump_height = new Vector2(0f,8f);//4f
 
         velocity = pos_x;//0f change the starting pos of player
 
@@ -72,7 +77,7 @@ public class player_movement : MonoBehaviour
         pos_y = gameObject.transform.position.y;
 
         //move right
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !knock)
         {
             velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
             if(facingLeft)
@@ -86,7 +91,7 @@ public class player_movement : MonoBehaviour
         }
 
         //move left
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.A) && !knock)
         {
             
             velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
@@ -160,26 +165,29 @@ public class player_movement : MonoBehaviour
          * */
 
 
-        if(knock && knock_time <= 1f)
+        if(knock && knock_time <= .1f)
         {
             
                 Debug.Log("velocity ========== " + velocity);
                 //start adding to knocktime
                 knock_time += Time.deltaTime;
 
+            if(center.transform.position.x - zombie.transform.position.x < 0)
+            {
                 //start adding speed * time * mod every frame 
-                velocity -= (speed * Time.deltaTime * mod);
+                velocity -= (knock_force * Time.deltaTime * mod);
+            }
+            else
+            {
+                //start adding speed * time * mod every frame 
+                velocity += (knock_force * Time.deltaTime * mod);
+            }
+
+                
                 //substract vel from position.x every frame
                 rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
                 //gameObject.transform.position = new Vector3(transform.position.x - velocity, transform.position.y, 0f);
-            
-            
-            
-               
-            
-          
-
-            
+         
         }
         else
         {

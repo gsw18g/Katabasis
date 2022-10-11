@@ -759,6 +759,14 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7005747902213684659, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 1519754358}
+    - target: {fileID: 7005747902213684659, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 14905043}
     - target: {fileID: 7005747902213684660, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -801,6 +809,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005747902213684660, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005747902213684661, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: center
+      value: 
+      objectReference: {fileID: 1519754358}
+    - target: {fileID: 7005747902213684661, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 14905043}
+    - target: {fileID: 7005747902213684661, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7005747902213684662, guid: 5d6a03ce2343b9a4a85d50432cdc6458, type: 3}

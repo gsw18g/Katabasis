@@ -88,7 +88,7 @@ public class player_health : MonoBehaviour
 
     void player_damage()
     {
-        if(timer >= 2f)
+        if(timer >= .5f)
         {
             knock = true;
            // knockback();
