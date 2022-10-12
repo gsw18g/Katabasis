@@ -10,6 +10,7 @@ public class move_camera : MonoBehaviour
     float y_pos;
     //offset camera to center on player
     float offset = 0f;//8.39
+    float y_offset = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class move_camera : MonoBehaviour
     {
         //x_pos = gameObject.transform.position.x;
 
-        gameObject.transform.position = new Vector3(x_pos + the_player.transform.position.x + offset, y_pos, 0f);
+        gameObject.transform.position = new Vector3(x_pos + the_player.transform.position.x + offset, y_pos + the_player.transform.position.y + y_offset, 0f);
         //gameObject.transform.position = new Vector3(x_pos, y_pos, 0f);
 
 
