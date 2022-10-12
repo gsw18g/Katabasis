@@ -26,9 +26,7 @@ public class parallax_back : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //vel = the_player.velocity;
-
-        vel = the_player.transform.position.x;
+        vel = the_player.velocity;
         //vel = vel - (x_pos.transform.position.x * speed);
         //gameObject.transform.position = new Vector3(x_pos + (-vel * speed), y_pos, 0f);
         gameObject.transform.position = new Vector3(-vel * speed, y_pos, 0f);

@@ -83,7 +83,9 @@ public class player_movement : MonoBehaviour
             if(facingLeft)
             {
                 flip = !flip;
-               
+                //facingRight = !facingRight;
+                //facingLeft = !facingLeft;
+                //transform.eulerAngles = new Vector3(0, 180, 0);
             }
              
         }
@@ -96,7 +98,9 @@ public class player_movement : MonoBehaviour
             if (facingRight)
             {
                 flip = !flip;
-               
+               // facingRight = !facingRight;
+                //facingLeft = !facingLeft;
+                //transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
         }
@@ -194,15 +198,58 @@ public class player_movement : MonoBehaviour
         }
 
 
-        Debug.Log("vel in play move = " + velocity);
+        /* old function
+         * if(knock)
+        {
+            if (knock_time <= 1f)
+            {
+                Debug.Log("velocity ========== " + velocity);
+                //start adding to knocktime
+                knock_time += Time.deltaTime;
 
-        //Debug.Log("knocktime ******** " + knock_time);
+                //start adding speed * time * mod every frame 
+                velocity -= (speed * Time.deltaTime * mod);
+                //substract vel from position.x every frame
+                rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
+                //gameObject.transform.position = new Vector3(transform.position.x - velocity, transform.position.y, 0f);
+            }
+            else if (knock_time >= 1f)
+            {
+                knock_time = 0f;
+                //velocity = 0f;
+                player_health.knock = false;
+            }
+            {
+
+            }
+
+            
+        }
+        else
+        {
+            rb.transform.position = new Vector3(velocity, pos_y, 0f);
+        }
+         * */
+
+        Debug.Log("knocktime ******** " + knock_time);
 
 
 
 
     }//update
 
-   
+    /*public void knockback()
+    {
+        var dir = center.position - transform.position;
+        rb.velocity = (Vector2)dir.normalized * knockback_vel;
+        StartCoroutine(Unknockback());
+    }
+
+    private IEnumerator Unknockback()
+    {
+        yield return new WaitForSeconds(knockback_time);
+    }
+
+     * */
 
 }
