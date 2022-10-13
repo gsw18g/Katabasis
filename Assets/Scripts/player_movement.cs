@@ -30,6 +30,7 @@ public class player_movement : MonoBehaviour
     public GameObject center;
 
     float knock_force = 5f;
+    bool stab = false;
 
     //public bool walk = false;
 
@@ -75,6 +76,7 @@ public class player_movement : MonoBehaviour
         slope_check = check_ground.on_slope;
         slope_coord = check_ground.coord;
         knock = player_health.knock;
+        stab = enemy_melee.melee;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -210,8 +212,15 @@ public class player_movement : MonoBehaviour
             player_health.knock = false;
         }
 
+        if(Input.GetMouseButtonDown(0))
+        {
+            animator.SetBool("stab", true);
+        }
+        
+        
 
-        Debug.Log("vel in play move = " + velocity);
+
+        //Debug.Log("vel in play move = " + velocity);
 
         //Debug.Log("knocktime ******** " + knock_time);
 
@@ -220,6 +229,12 @@ public class player_movement : MonoBehaviour
 
     }//update
 
+
+    public void reset_stab()
+    {
+        Debug.Log("reset stab = false");
+        animator.SetBool("stab", false);
+    }
    
 
 }

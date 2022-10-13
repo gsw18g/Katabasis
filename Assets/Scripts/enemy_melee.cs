@@ -17,6 +17,7 @@ public class enemy_melee : MonoBehaviour
     float z_rot;
     public static int health;
     public static bool melee;
+    //public Animator animator;
     //bool sword_collider_hit;
 
     [SerializeField] private Transform center;
@@ -94,6 +95,7 @@ public class enemy_melee : MonoBehaviour
         {
             health -= 34;
             knockback();
+            //animator.SetBool("stab", true);
         }
         if(health < 0)
         {
@@ -135,6 +137,7 @@ public class enemy_melee : MonoBehaviour
         var dir = center.position - player_pos.transform.position;
         rb.velocity = (Vector2)dir.normalized * knockbackvl;
         StartCoroutine(Unknockback());
+        //animator.SetBool("stab", false);
     }
 
     private IEnumerator Unknockback()

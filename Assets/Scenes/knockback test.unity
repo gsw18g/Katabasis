@@ -2613,6 +2613,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7005747902734805770}
     - target: {fileID: 7752081304960174286, guid: d031f51ee50c86b4d9645c54f89c8a62, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7005747902734805777}
+    - target: {fileID: 7752081304960174286, guid: d031f51ee50c86b4d9645c54f89c8a62, type: 3}
       propertyPath: knockbackvl
       value: 2
       objectReference: {fileID: 0}
