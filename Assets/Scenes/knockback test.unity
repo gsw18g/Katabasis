@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130682127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0, z: 0}
   m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2398,7 +2398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3022915416907048990, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022915416907048990, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 3022915417692543928, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: zombie
@@ -2470,12 +2474,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245258803262926022, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11000013
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5245258803664965972, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: zombie
       value: 
       objectReference: {fileID: 14905043}
+    - target: {fileID: 5245258803664965978, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9827199
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245258803664965978, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Size.y
+      value: 2.7955205
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245258803664965978, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.025920153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245258803664965978, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1296004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90daaf77925b5c4468689e1861564086, type: 3}
 --- !u!4 &7005747902734805768 stripped
