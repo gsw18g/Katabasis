@@ -18,10 +18,10 @@ public class player_health : MonoBehaviour
     float pos_y;
     public static bool knock;
 
-    [SerializeField] private Transform center;
-    [SerializeField] private float knockback_vel = 25f;
-    [SerializeField] private float knockback_time = 1f;
-    public GameObject zombie;
+    //[SerializeField] private Transform center;
+    //[SerializeField] private float knockback_vel = 25f;
+    //[SerializeField] private float knockback_time = 1f;
+    //public GameObject zombie;
 
     // Start is called before the first frame update
     void Start()
