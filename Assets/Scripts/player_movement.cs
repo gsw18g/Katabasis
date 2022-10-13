@@ -14,6 +14,7 @@ public class player_movement : MonoBehaviour
     bool ground;
     bool slope_check;
     Vector3 slope_coord;
+    public Animator animator;
 
     bool facingLeft;
     bool facingRight;
@@ -29,6 +30,8 @@ public class player_movement : MonoBehaviour
     public GameObject center;
 
     float knock_force = 5f;
+
+    //public bool walk = false;
 
     /*[SerializeField] private Transform center;
     [SerializeField] private float knockback_vel = 10f;
@@ -85,11 +88,12 @@ public class player_movement : MonoBehaviour
                 flip = !flip;
                
             }
-             
-        }
 
+            //walk = true;
+            animator.SetBool("walk", true);
+        }
         //move left
-        if(Input.GetKey(KeyCode.A) && !knock)
+        else if(Input.GetKey(KeyCode.A) && !knock)
         {
             
             velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
@@ -98,8 +102,15 @@ public class player_movement : MonoBehaviour
                 flip = !flip;
                
             }
-
+            //walk = true;
+            animator.SetBool("walk", true);
         }
+        else
+        {
+            //walk = false;
+            animator.SetBool("walk", false);
+        }
+
 
 
 
@@ -130,11 +141,17 @@ public class player_movement : MonoBehaviour
                 //jump
                 
                 rb.AddForce(jump_height, ForceMode2D.Impulse);
-                Debug.Log("ground + jump");
+                animator.SetBool("jump", true);
+                //Debug.Log("ground + jump");
             }
-           
-        }
+            
 
+
+        }
+        else
+        {
+            animator.SetBool("jump", false);
+        }
         /*
          * if(slope_check)
         {
@@ -161,7 +178,7 @@ public class player_movement : MonoBehaviour
          * */
 
 
-        if(knock && knock_time <= .1f)
+        if (knock && knock_time <= .1f)
         {
             
                 Debug.Log("velocity ========== " + velocity);

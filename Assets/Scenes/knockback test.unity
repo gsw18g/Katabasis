@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &130682128
 Transform:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1001 &345631531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1 &872762637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1001 &1065280835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb1b29342ba00642ba13fdadeaa4142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1 &1326559624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   velocity: 0
+  animator: {fileID: 0}
   zombie: {fileID: 14905043}
   center: {fileID: 876093454}
 --- !u!212 &1326559627
@@ -1956,7 +1957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1 &2019933112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2020691981713529478, guid: 0b3e3e425cd8d5a4987f7b136e880b68, type: 3}
@@ -1975,7 +1976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!4 &2035268070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5320750066567277383, guid: 4b2bdc991f93f854c9bc99778d3af8da, type: 3}
@@ -2121,7 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  player: {fileID: 1326559624}
+  player: {fileID: 7005747902734805770}
 --- !u!1001 &565397878177579162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2402,12 +2403,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3022915416907048990, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.24
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 3022915417692543928, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: zombie
       value: 
       objectReference: {fileID: 14905043}
+    - target: {fileID: 3022915417692543928, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7005747902734805777}
     - target: {fileID: 3022915417692543929, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2453,8 +2458,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3022915417692543930, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022915417692543930, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022915417692543930, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022915417692543930, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3022915417692543931, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_Name
@@ -2468,6 +2485,10 @@ PrefabInstance:
       propertyPath: zombie
       value: 
       objectReference: {fileID: 14905043}
+    - target: {fileID: 3022915417692543934, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7005747902734805777}
     - target: {fileID: 5245258802068557805, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5000001
@@ -2508,6 +2529,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3022915417692543931, guid: 90daaf77925b5c4468689e1861564086, type: 3}
   m_PrefabInstance: {fileID: 5245258802297548977}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &7005747902734805777
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005747902734805770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1b49794ba445e54b9df934d69e3eb69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7752081304974943770
 PrefabInstance:
   m_ObjectHideFlags: 0
