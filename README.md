@@ -9,7 +9,7 @@ Katabasis is an epic retelling of the tragic love story of Orpheus and Eurydice,
 ### Characters
 | Name | Image | Sprite | Description |
 | ----------- | ----------- | ----------- | ----------- |
-| **Orpheus** | ![](https://i.imgur.com/gcLkam2.png) | ![](https://user-images.githubusercontent.com/88259168/195715901-b653e106-21b1-4757-8e5b-6c0edad5fd40.gif) | A young and optimistic musician who sings and plays the lyre beautifully. His music has the power to change people's hearts. Married to Eurydice. | 
+| **Orpheus** | ![](https://i.imgur.com/gcLkam2.png) | [orpheushalo](https://user-images.githubusercontent.com/88259168/195715901-b653e106-21b1-4757-8e5b-6c0edad5fd40.gif) | A young and optimistic musician who sings and plays the lyre beautifully. His music has the power to change people's hearts. Married to Eurydice. | 
 | **Eurydice** |*Concept Art Here* | *Sprite Art Here* | A beautiful wood nymph who fell in love with Orpheus after hearing him perform his music. She died from the bite of a venemous snake that was placed in her chambers by a man who was in love with her and jealous of Orpheus. |
 | **Hades** | *Concept Art Here* | *Sprite Art Here* | The God of Death and King of the Underworld. Hellbent on ensuring that Orpheus does not make it to his palace, where he is holding Eurydice. Hates those *cough* Orpheus *cough* who try to cheat Death. |
 | **Charon** | *Concept Art Here* | *Sprite Art Here* | The boatman who takes souls across the river Styx and into the land of the dead. He guides Orpheus through the underworld in exchange for obols, the coin of the dead. |
