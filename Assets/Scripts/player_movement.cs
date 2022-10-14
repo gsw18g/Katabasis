@@ -150,10 +150,7 @@ public class player_movement : MonoBehaviour
 
 
         }
-        else
-        {
-            animator.SetBool("jump", false);
-        }
+       
         /*
          * if(slope_check)
         {
@@ -235,6 +232,12 @@ public class player_movement : MonoBehaviour
         Debug.Log("reset stab = false");
         animator.SetBool("stab", false);
     }
-   
+
+
+    public void reset_jump()
+    {
+        
+        animator.SetBool("jump", false);
+    }
 
 }
