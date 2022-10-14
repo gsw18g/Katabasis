@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 10afb2cda6cca2549886ea5ab5bc584e, type: 3}
     - time: 0.125
-      value: {fileID: 21300000, guid: f7d8e13cfc63aa3488fe0014dc8e2626, type: 3}
+      value: {fileID: 21300000, guid: 10afb2cda6cca2549886ea5ab5bc584e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,7 +43,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 10afb2cda6cca2549886ea5ab5bc584e, type: 3}
-    - {fileID: 21300000, guid: f7d8e13cfc63aa3488fe0014dc8e2626, type: 3}
+    - {fileID: 21300000, guid: 10afb2cda6cca2549886ea5ab5bc584e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -69,6 +69,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.125
+    functionName: reset_jump
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.125
     functionName: reset_jump
     data: 
