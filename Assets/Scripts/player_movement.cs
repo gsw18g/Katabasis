@@ -180,7 +180,7 @@ public class player_movement : MonoBehaviour
         if (knock && knock_time <= .1f)
         {
             
-                Debug.Log("velocity ========== " + velocity);
+                //Debug.Log("velocity ========== " + velocity);
                 //start adding to knocktime
                 knock_time += Time.deltaTime;
 

@@ -34,6 +34,6 @@ public class parallax_fore : MonoBehaviour
         //gameObject.transform.position = new Vector3(x_pos + (-vel * speed), y_pos, 0f);
         gameObject.transform.position = new Vector3(-vel * speed, y_pos, 0f);
 
-        Debug.Log("player vel = " + vel);
+        //Debug.Log("player vel = " + vel);
     }
 }
