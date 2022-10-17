@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class sword_check : MonoBehaviour
 {
-    public static bool hit_melee_enemy;
+    //public static bool hit_melee_enemy;
+    public bool hit_melee_enemy;
 
     // Start is called before the first frame update
     void Start()

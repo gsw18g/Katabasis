@@ -568,6 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fa6d75034834849a13b9d7cd452932, type: 3}
+--- !u!1 &464304213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5245258802068557802, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+  m_PrefabInstance: {fileID: 5245258802297548977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &501040365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1976,6 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1829e4010d8cded48b7bfef9f48b0806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit_melee_enemy: 0
 --- !u!58 &2039069217
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2330,6 +2336,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7005747902734805770}
+    - target: {fileID: 1800602679684745040, guid: 55514db9eb0371c42a52abe6524054c4, type: 3}
+      propertyPath: the_sword
+      value: 
+      objectReference: {fileID: 464304213}
     - target: {fileID: 1800602679684745043, guid: 55514db9eb0371c42a52abe6524054c4, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -2568,6 +2578,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 7005747902734805777}
+    - target: {fileID: 5245258802068557802, guid: 90daaf77925b5c4468689e1861564086, type: 3}
+      propertyPath: m_TagString
+      value: sword_check
+      objectReference: {fileID: 0}
     - target: {fileID: 5245258802068557805, guid: 90daaf77925b5c4468689e1861564086, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5000001

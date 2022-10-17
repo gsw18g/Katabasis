@@ -6,6 +6,10 @@ public class enemy_melee : MonoBehaviour
 {
     player_movement player_pos;
     public GameObject player;
+
+    sword_check sword_range;
+    public GameObject the_sword;
+
     float speed = 1f;
     Rigidbody2D rb;
     float pos_y = 0f;
@@ -23,7 +27,14 @@ public class enemy_melee : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-        sword_hit = sword_check.hit_melee_enemy;
+
+        the_sword = GameObject.FindGameObjectWithTag("sword_check");
+        sword_range = the_sword.GetComponent<sword_check>();
+
+
+
+        //sword_hit = sword_check.hit_melee_enemy;
+
         //health = 100;
     }
 
@@ -36,11 +47,29 @@ public class enemy_melee : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         rb.transform.position = transform.position;
 
-        sword_hit = sword_check.hit_melee_enemy;
-     
-        if(Input.GetMouseButtonDown(0) && sword_hit)
+        ///sword_hit = sword_check.hit_melee_enemy;
+
+        //sword_hit = sword_range.hit_melee_enemy;
+
+        
+        sword_hit = sword_range.hit_melee_enemy;
+
+        if (Input.GetMouseButtonDown(0) && sword_hit)//sword_hit
         {
-            enemy_damage();
+           // Destroy(gameObject);
+            //enemy_damage();
+            if (health > 0)
+            {
+                //health = get_health();
+                health -= 34;
+                knockback();
+
+            }
+            if (health < 0)
+            {
+                health = 0;
+                Destroy(gameObject);
+            }
         }
 
        // gameObject.transform.localScale = new Vector3(1 - (health / 100), 0f, 0f);

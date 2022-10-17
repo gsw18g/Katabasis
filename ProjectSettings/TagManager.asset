@@ -11,6 +11,7 @@ TagManager:
   - heart1
   - heart2
   - heart3
+  - sword_check
   layers:
   - Default
   - TransparentFX
