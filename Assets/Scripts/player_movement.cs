@@ -203,7 +203,8 @@ public class player_movement : MonoBehaviour
         }
         else
         {
-            rb.transform.position = new Vector3(velocity, pos_y, 0f);
+            rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
+            //rb.transform.position = new Vector3(velocity, pos_y, 0f);
             knock_time = 0f;
             //velocity = 0f;
             player_health.knock = false;

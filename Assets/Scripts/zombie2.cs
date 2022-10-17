@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_melee : MonoBehaviour
+public class zombie2 : MonoBehaviour
 {
     player_movement player_pos;
     public GameObject player;
@@ -19,7 +19,7 @@ public class enemy_melee : MonoBehaviour
     //public static int health;
 
     [SerializeField] private Transform center;
-    [SerializeField] private float knockbackvl=10f;
+    [SerializeField] private float knockbackvl = 10f;
     [SerializeField] private float knockbacktime = 1f;
 
     // Start is called before the first frame update
@@ -51,23 +51,24 @@ public class enemy_melee : MonoBehaviour
 
         //sword_hit = sword_range.hit_melee_enemy;
 
-        
+
         sword_hit = sword_range.hit_melee_enemy;
 
         if (Input.GetMouseButtonDown(0) && sword_hit)//sword_hit
         {
             // Destroy(gameObject);
             enemy_damage();
-            /*if (health > 0)
+            /*
+             * if (health > 0)
             {
                 //health = get_health();
                 health -= 34;
                 knockback();
 
             }
-            if (health < 0)
+            if (health <= 0)
             {
-                health = 0;
+                //health = 0;
                 Destroy(gameObject);
             }
              * */
@@ -79,15 +80,15 @@ public class enemy_melee : MonoBehaviour
 
     void enemy_damage_old()
     {
-        
-       
+
+
         if (health > 0)
         {
             health -= 34;
             knockback();
             //animator.SetBool("stab", true);
         }
-        if(health < 0)
+        if (health < 0)
         {
             health = 0;
             Destroy(gameObject);
@@ -105,7 +106,7 @@ public class enemy_melee : MonoBehaviour
             //health = get_health();
             health -= 34;
             knockback();
-           
+
         }
         if (health < 0)
         {
@@ -119,7 +120,7 @@ public class enemy_melee : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player"))
         {
             melee = true;
         }
