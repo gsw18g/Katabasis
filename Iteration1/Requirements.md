@@ -1,13 +1,14 @@
 Software Requirements and Design 
 Document 
 For
-Group <X>
+Group <8>
 Version 1.0
 Authors: 
-Alice B
-Bob C
-Chris D
-Dan E
+Alejandro S
+Gavin W
+Kaitlin T
+Lloyd S
+Matthew K
 1. Overview (5 points) Give a general overview of the system in 1-2 paragraphs (similar to the one in the project 
 proposal). 
 2. Functional Requirements (10 points)List the functional requirements in sentences identified by numbers and for each requirement 
