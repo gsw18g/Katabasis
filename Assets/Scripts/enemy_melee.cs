@@ -18,6 +18,8 @@ public class enemy_melee : MonoBehaviour
     public int health = 100;
     //public static int health;
 
+    public Animator animator;
+
     [SerializeField] private Transform center;
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
@@ -110,10 +112,17 @@ public class enemy_melee : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            Destroy(gameObject);
+            
+            animator.SetBool("start_death", true);
+            //Destroy(gameObject);
         }
         Debug.Log("enemy health ====================== " + health);
 
+    }
+
+    public void end_death_anim()
+    {
+        Destroy(gameObject);
     }
 
 
