@@ -12,7 +12,7 @@ public class enemy_melee : MonoBehaviour
 
     float speed = 1f;
     Rigidbody2D rb;
-    float pos_y = 0f;
+    //float pos_y = 0f;
     bool sword_hit;
     public static bool melee = false;
     public int health = 100;
