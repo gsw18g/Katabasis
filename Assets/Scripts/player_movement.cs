@@ -12,7 +12,7 @@ public class player_movement : MonoBehaviour
     float mod;
     Vector2 jump_height;
     bool ground;
-    bool slope_check;
+    public bool slope_check;
     Vector3 slope_coord;
     public Animator animator;
 
