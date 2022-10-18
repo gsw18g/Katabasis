@@ -1,11 +1,15 @@
 Progress Report
-- Increment X -
-Group #Y
+- Increment 1 -
+Group #8
 Please use this template to describe your progress on the group project in the latest increment. Please 
 do not change the font, font size, margins or line spacing. All the text in italic should be removed from 
 your final submission. 
 1) Team Members
-Please write the name of all the team members, their FSU IDs, and GitHub IDs here. 
+Alejandro Santiago/aes19k/
+Gavin Williams/gsw18g/gsw18g
+Kaitlin Tran/kht19/ktran41
+Lloyd Smith/las18g/
+Matthew Kaplan/mak03e/
 2) Project Title and Description
 Briefly describe your project.
 3) Accomplishments and overall project status during this increment 
