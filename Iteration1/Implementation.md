@@ -1,13 +1,14 @@
 Software Implementation and Testing 
 Document 
 For
-Group <X>
+Group <8>
 Version 1.0
 Authors: 
-Alice B
-Bob C
-Chris D
-Dan E
+Alejandro S
+Gavin W
+Kaitlin T
+Lloyd S
+Matthew K
 1. Programming Languages (5 points)List the programming languages use in your project, where you use them (what components of 
 your project) and your reason for choosing them (whatever that may be). 
 2. Platforms, APIs, Databases, and other technologies used (5 points) List all the platforms, APIs, Databases, and any other technologies you use in your project and 
