@@ -1,5 +1,5 @@
 # Katabasis!
-[Screenshot 2022-10-17 210935](https://user-images.githubusercontent.com/97771567/196311928-112595a9-07e3-476d-b66b-8aa76dbd00b0.png)
+![](https://user-images.githubusercontent.com/97771567/196311928-112595a9-07e3-476d-b66b-8aa76dbd00b0.png)
 
 >Insert Cover Art Here Potentially??
 
