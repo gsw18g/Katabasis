@@ -7,18 +7,23 @@ Group #8
 Alejandro Santiago
 - FSU ID: aes19k
 - GitHub ID: alexsan5
+
 Gavin Williams
 - FSU ID: gsw18g
 - GitHub ID: gsw18g
+
 Kaitlin Tran
 - FSU ID: kht19
 - GitHub ID: ktran41
+
 Lloyd Smith
 - FSU ID: las18g
 - GitHub ID: Wattomato
+
 Matthew Kaplan
 - FSU ID: mak03e
 - GitHub ID: tarkovguy2057
+
 2) Project Title and Description
 Katabasis
 Katabasis is an action platformer based on the Greek myth of Orpheus and Eurydice. The game will be developed using Unity’s game engine and will feature 5 levels, with a miniboss at the end of each one. Unable to come to terms with the death of his wife, Orpheus enters the underworld with the hopes of bringing Eurydice back to the land of the living, weapons and Lyre in hand. However, Hades has no intentions of allowing Orpheus to cheat death. Like the original story, the game will end in tragedy.
