@@ -3,6 +3,7 @@ Progress Report
 Group #8
 
 1) Team Members
+
 Alejandro Santiago
 - FSU ID: aes19k
 - GitHub ID: alexsan5
