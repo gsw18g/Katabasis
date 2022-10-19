@@ -17,6 +17,7 @@ public class player_health : MonoBehaviour
     float mod;
     float pos_y;
     public static bool knock;
+    bool bat_melee;
 
     //[SerializeField] private Transform center;
     //[SerializeField] private float knockback_vel = 25f;
@@ -51,8 +52,9 @@ public class player_health : MonoBehaviour
         timer += Time.deltaTime;//timer wrong ???????
 
         en_melee = enemy_melee.melee;
+        bat_melee = Behaviour.bat_melee;
 
-        if(en_melee)
+        if(en_melee || bat_melee)
         {
             player_damage();
         }

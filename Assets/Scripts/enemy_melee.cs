@@ -58,21 +58,10 @@ public class enemy_melee : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && sword_hit)//sword_hit
         {
+            animator.SetBool("start_death", true);
             // Destroy(gameObject);
-            enemy_damage();
-            /*if (health > 0)
-            {
-                //health = get_health();
-                health -= 34;
-                knockback();
-
-            }
-            if (health < 0)
-            {
-                health = 0;
-                Destroy(gameObject);
-            }
-             * */
+            //enemy_damage();
+            
         }
 
         // gameObject.transform.localScale = new Vector3(1 - (health / 100), 0f, 0f);
@@ -100,7 +89,7 @@ public class enemy_melee : MonoBehaviour
 
     void enemy_damage()
     {
-
+        
 
         if (health > 0)
         {
@@ -113,7 +102,7 @@ public class enemy_melee : MonoBehaviour
         {
             health = 0;
             
-            animator.SetBool("start_death", true);
+            //animator.SetBool("start_death", true);
             //Destroy(gameObject);
         }
         Debug.Log("enemy health ====================== " + health);

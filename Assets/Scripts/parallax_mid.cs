@@ -10,6 +10,7 @@ public class parallax_mid : MonoBehaviour
     float vel;
     float x_pos;
     float y_pos;
+    float offset;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class parallax_mid : MonoBehaviour
         the_player = player.GetComponent<player_movement>();
         x_pos = gameObject.transform.position.x;
         y_pos = gameObject.transform.position.y;
+        offset = transform.position.x;
+
         //vel = gameObject.transform.position.x;
         
 
@@ -26,11 +29,12 @@ public class parallax_mid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        x_pos = gameObject.transform.position.x;
         //vel = the_player.velocity;
 
         vel = the_player.transform.position.x;
         //vel = vel - (x_pos.transform.position.x * speed);
         //gameObject.transform.position = new Vector3(x_pos + (-vel * speed), y_pos, 0f);
-        gameObject.transform.position = new Vector3(-vel * speed, y_pos, 0f);
+        gameObject.transform.position = new Vector3((-vel * speed) + offset, y_pos, 0f);
     }
 }

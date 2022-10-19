@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1800602679684745040}
   - component: {fileID: 1800602679684745052}
   - component: {fileID: 1800602679684745053}
+  - component: {fileID: 3404849605971733413}
   m_Layer: 0
   m_Name: zombie2
   m_TagString: enemy_melee
@@ -144,13 +145,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800602679684745047}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34e966b016c722b4f890aee553374779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   player: {fileID: 0}
+  the_sword: {fileID: 0}
+  health: 100
+  animator: {fileID: 0}
   center: {fileID: 1800602678957623831}
   knockbackvl: 2
   knockbacktime: 3
@@ -191,6 +194,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &3404849605971733413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800602679684745047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133193a7c7dc7204b848728b7f8d2ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  the_sword: {fileID: 0}
+  health: 100
+  center: {fileID: 0}
+  knockbackvl: 10
+  knockbacktime: 1
 --- !u!1 &1800602679924521051
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,3 +402,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4dea652b9986c4d821f163ad27d103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}

@@ -12,11 +12,13 @@ public class zombie2 : MonoBehaviour
 
     float speed = 1f;
     Rigidbody2D rb;
-    float pos_y = 0f;
+    //float pos_y = 0f;
     bool sword_hit;
     public static bool melee = false;
     public int health = 100;
     //public static int health;
+
+    public Animator animator;
 
     [SerializeField] private Transform center;
     [SerializeField] private float knockbackvl = 10f;
@@ -56,22 +58,10 @@ public class zombie2 : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && sword_hit)//sword_hit
         {
+            animator.SetBool("start_death", true);
             // Destroy(gameObject);
-            enemy_damage();
-            /*
-             * if (health > 0)
-            {
-                //health = get_health();
-                health -= 34;
-                knockback();
+            //enemy_damage();
 
-            }
-            if (health <= 0)
-            {
-                //health = 0;
-                Destroy(gameObject);
-            }
-             * */
         }
 
         // gameObject.transform.localScale = new Vector3(1 - (health / 100), 0f, 0f);
@@ -111,10 +101,17 @@ public class zombie2 : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            Destroy(gameObject);
+
+            //animator.SetBool("start_death", true);
+            //Destroy(gameObject);
         }
         Debug.Log("enemy health ====================== " + health);
 
+    }
+
+    public void end_death_anim()
+    {
+        Destroy(gameObject);
     }
 
 
