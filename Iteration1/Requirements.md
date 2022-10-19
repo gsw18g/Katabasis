@@ -18,6 +18,21 @@ system shall do. Include all the details required such that there can be no misi
 the requirements when read. Be very specific about what the system needs to do (not how, just 
 what). You may provide a brief design rationale for any requirement which you feel requires 
 explanation for how and/or why the requirement was derived.
+
+1. A high priority is for the player’s character to be able to move by pressing A(left) and D(right).
+2. A high priority is for the player to be able to jump while on the ground.
+3. A high priority is for screen to display the player’s current health value and deduct health when attacked by enemies.
+4. A high priority is for the player to be able to attack the enemies by pressing the Left Mouse Button.
+5. A medium priority is for the player to have several attacks available, including but not limited to a sword stab attack, a sword horizontal attack, a sword vertical attack, and a ranged bow and arrow attack. The stab attack shall deal the least damage, the horizontal attack medium damage, and the vertical attack high damage. 
+6. A high priority is to implement several enemy types including but not limited to a flying bat, a melee zombie, and a ranged enemy.
+6. A medium priority is to implement a knockback to the player when attacked by an enemy.
+7. A medium priority is to implement a knockback when attacking an enemy.
+8. A high priority is to allow the player’s character as well as the enemies to walk on a sloped surface.
+9. A medium priority is to implement bobbing platforms over water which sink when the player walks on them.
+10. A high priority is to have a boss fight at the end of all levels.
+11. A medium priority is to have 5 playable levels plus an introduction level.
+
+
 3. Non-functional Requirements (10 points)List the non-functional requirements of the system (any requirement referring to a property of 
 the system, such as security, safety, software quality, performance, reliability, etc.) You may 
 provide a brief rationale for any requirement which you feel requires explanation as to how and/or 
