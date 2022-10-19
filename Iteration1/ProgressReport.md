@@ -31,23 +31,49 @@ Group #8
 3) Accomplishments and overall project status during this increment 
 Describe in detail what was accomplished during this increment and where your project stands 
 overall compared to the initial scope and functionality proposed.
-4) Challenges, changes in the plan and scope of the project and things that went wrong during this 
-increment
-Please describe here in detail:
-- anything that was challenging during this increment and how you dealt with the challenges
-- any changes that occurred in the initial plan you had for the project or its scope. Describe the 
-reasons for the changes. 
-- anything that went wrong during this increment
+4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
+- Unity editor related errors
+- Walking on slope
+- Enemy knockback
 5) Team Member Contribution for this increment
-Please list each individual member and their contributions to each of the deliverables in this 
-increment (be as detailed as possible). In other words, describe the contribution of each team 
+Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible). In other words, describe the contribution of each team 
 member to:
-a) the progress report, including the sections they wrote or contributed to
-b) the requirements and design document, including the sections they wrote or contributed to
-c) the implementation and testing document, including the sections they wrote or contributed to
-d) the source code (be detailed about which parts of the system each team member contributed to 
-and how)
-e) the video or presentation
+
+- Alejandro Santiago
+  - Progress Report: Sections 5, 6
+  - Requirements and Design Document: Section 5
+  - Implementation and Testing Document: Section 2
+  - Source Code
+  - Video
+
+- Gavin Williams
+  - Progress Report: Section 5
+  - Requirements and Design Document: Sections 3, 7
+  - Implementation and Testing Document: Section 4
+  - Source Code
+  - Video
+
+- Kaitlin Tran
+  - Progress Report: Sections 1, 2, 4, 5
+  - Requirements and Design Document: Section 1
+  - Implementation and Testing Document: Section 1
+  - Source Code: 
+  - Video
+
+- Lloyd Smith
+  - Progress Report: Section 5
+  - Requirements and Design Document: Sections 4, 6
+  - Implementation and Testing Document: Section 5
+  - Source Code
+  - Video
+
+- Matthew Kaplan
+  - Progress Report: Sections 3, 5
+  - Requirements and Design Document: Section 2
+  - Implementation and Testing Document: Section 3
+  - Source Code
+  - Video
+  
 6) Plans for the next increment
 If this report if for the first or second increment, describe what are you planning to achieve in the 
 next increment.
