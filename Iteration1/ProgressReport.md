@@ -25,8 +25,8 @@ Matthew Kaplan
 - GitHub ID: tarkovguy2057
 
 2) Project Title and Description
-- Katabasis
-- Katabasis is an action platformer based on the Greek myth of Orpheus and Eurydice. The game will be developed using Unity’s game engine and will feature 5 levels, with a miniboss at the end of each one. Unable to come to terms with the death of his wife, Orpheus enters the underworld with the hopes of bringing Eurydice back to the land of the living, weapons and Lyre in hand. However, Hades has no intentions of allowing Orpheus to cheat death. Like the original story, the game will end in tragedy.
+- Title: Katabasis
+- Description: Katabasis is an action platformer based on the Greek myth of Orpheus and Eurydice. The game will be developed using Unity’s game engine and will feature 5 levels, with a miniboss at the end of each one. Unable to come to terms with the death of his wife, Orpheus enters the underworld with the hopes of bringing Eurydice back to the land of the living, weapons and Lyre in hand. However, Hades has no intentions of allowing Orpheus to cheat death. Like the original story, the game will end in tragedy.
 3) Accomplishments and overall project status during this increment 
 Describe in detail what was accomplished during this increment and where your project stands 
 overall compared to the initial scope and functionality proposed.
