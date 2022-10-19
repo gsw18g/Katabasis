@@ -57,7 +57,12 @@ member to:
   - Progress Report: Sections 1, 2, 4, 5
   - Requirements and Design Document: Section 1
   - Implementation and Testing Document: Section 1
-  - Source Code: 
+  - Source Code
+    - Katabasis/Kaitlin/*
+    - Katabasis/Assets/Sprites/bat/*
+    - Katabasis/Assets/Sprites/hor swing/*
+    - Katabasis/Assets/Sprites/orpheus/*
+    - Katabasis/Assets/Sprites/zombie/*
   - Video
 
 - Lloyd Smith
