@@ -66,14 +66,14 @@ member to:
   - Requirements and Design Document: Section 5
   - Implementation and Testing Document: Section 2
   - Source Code
-  - Video
+  - Video: General overview of project, video editing
 
 - Gavin Williams
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 3, 7
   - Implementation and Testing Document: Section 4
   - Source Code
-  - Video
+  - Video: Demo of current project, screen recording
 
 - Kaitlin Tran
   - Progress Report: Sections 1, 2, 4, 5
@@ -85,21 +85,21 @@ member to:
     - Katabasis/Assets/Sprites/hor swing/*
     - Katabasis/Assets/Sprites/orpheus/*
     - Katabasis/Assets/Sprites/zombie/*
-  - Video
+  - Video: Describe any change in scope of project and explanation
 
 - Lloyd Smith
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 4, 6
   - Implementation and Testing Document: Section 5
   - Source Code
-  - Video
+  - Video: Plan for next increment
 
 - Matthew Kaplan
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: Section 3
   - Source Code
-  - Video
+  - Video: Short description of state of project and accomplishments for this increment
   
 6) Plans for the next increment
 If this report if for the first or second increment, describe what are you planning to achieve in the 
