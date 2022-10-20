@@ -38,8 +38,17 @@ During increment 1 we accomplished several things including setting up our githu
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
 - Unity editor related errors
+  - Set up Github Desktop to push and pull directly from repo, but if someone pushed with a different editor than the main project then the entire game broke
 - Walking on slope
-- Enemy knockback
+  - Mostly resolved but can't jump while moving on slope
+- Enemies
+  - Attacking enemy deducts health from everyone
+  - Bat knockback on player not working because friction physics has to be on ground, eventually bats will attack player
+  - Only can spawn one zombie, killing one zombie will kill all immediately
+- Scope of increment
+  - Originally had plans to include a bossfight/chase scene with Cerberus but the main level obstacles had to be overcome first
+- Parallax scrolling needs adjustments
+  - Unsure what correct ratio is for speed between backgrounds, looks a little fast
 5) Team Member Contribution for this increment
 Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible). In other words, describe the contribution of each team 
 member to:
