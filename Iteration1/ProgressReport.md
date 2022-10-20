@@ -103,7 +103,7 @@ member to:
                  found in Katabasis/Assets/Scripts
        - background assests and edited static foreground objects which can be found in Katabasis/Assets/Sprites
        - prefabs which can be found in Katabasis/Assets/Objects/prefabs
-       - animation controller and scripts for player and enemy animations cab be found in Katabasis/Assets/Sprites/orpheus and Katabasis/Assets/zombie
+       - animation controller and scripts for player and enemy animations can be found in Katabasis/Assets/Sprites/orpheus and Katabasis/Assets/zombie
        - sloped surface system which allows player and enemies to walk on slopes
         
   - Video: Short description of state of project and accomplishments for this increment
