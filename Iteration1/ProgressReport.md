@@ -66,7 +66,7 @@ member to:
   - Requirements and Design Document: Section 5
   - Implementation and Testing Document: Section 2
   - Source Code
-  - Video: General overview of project, video editing
+  - Video: General overview of project, video editing and uploading
 
 - Gavin Williams
   - Progress Report: Section 5
