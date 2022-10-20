@@ -99,12 +99,12 @@ member to:
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: N/A
   - Source Code: 
-        -Scripts for check_ground, enemy_melee, melee_enemy, title_screen, move_bat, move_camera, scroll parallaz foreground, midground, background,                                    player_health, player_movement, remove_heart, scale_enemy_healthbar, slope, spawn_zombie, sword, sword_check, sword_collider, zombie2 which can be
+      - Scripts for check_ground, enemy_melee, melee_enemy, title_screen, move_bat, move_camera, scroll parallaz foreground, midground, background,                                    player_health, player_movement, remove_heart, scale_enemy_healthbar, slope, spawn_zombie, sword, sword_check, sword_collider, zombie2 which can be
                  found in Katabasis/Assets/Scripts
-        -background assests and edited static foreground objects which can be found in Katabasis/Assets/Sprites
-        -prefabs which can be found in Katabasis/Assets/Objects/prefabs
-        -animation controller and scripts for player and enemy animations cab be found in Katabasis/Assets/Sprites/orpheus and Katabasis/Assets/zombie
-        -sloped surface system which allows player and enemies to walk on slopes
+       - background assests and edited static foreground objects which can be found in Katabasis/Assets/Sprites
+       - prefabs which can be found in Katabasis/Assets/Objects/prefabs
+       - animation controller and scripts for player and enemy animations cab be found in Katabasis/Assets/Sprites/orpheus and Katabasis/Assets/zombie
+       - sloped surface system which allows player and enemies to walk on slopes
         
   - Video: Short description of state of project and accomplishments for this increment
   
