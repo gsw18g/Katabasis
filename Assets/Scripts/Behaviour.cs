@@ -9,6 +9,10 @@ public class Behaviour : MonoBehaviour
 	private Vector2 movement;
 	private Rigidbody2D rb;
 	public static bool bat_melee;
+
+    public GameObject bat;
+    sword_check in_range;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,8 @@ public class Behaviour : MonoBehaviour
     {
        movement=player.position-transform.position;
 	   movement.Normalize();
+
+        in_range = bat.GetComponent<sword_check>();
     }
 
 	private void FixedUpdate(){
@@ -37,6 +43,13 @@ public class Behaviour : MonoBehaviour
         {
             bat_melee = true;
         }
+
+        /*
+         *  if(in_range.hit_melee_enemy && Input.GetMouseButtonDown(0))
+         {
+             Destroy(gameObject);
+         }
+         * */
     }
 
     private void OnTriggerStay2D(Collider2D collision)
