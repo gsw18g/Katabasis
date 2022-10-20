@@ -76,7 +76,7 @@ member to:
   - Progress Report: Sections 1, 2, 4, 5
   - Requirements and Design Document: Section 1
   - Implementation and Testing Document: Section 1
-  - Source Code: Contributions to sprites and scripts involving character animation, camera movement, and boss fight/death scenes can be found in the following folders
+  - Source Code: Contributions to all character sprites and scripts involving character animation, scrolling camera movement, and boss fight/death scenes can be found in the following folders
     - Katabasis/Kaitlin/*
     - Katabasis/Assets/Sprites/bat/*
     - Katabasis/Assets/Sprites/hor swing/*
