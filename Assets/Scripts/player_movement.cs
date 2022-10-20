@@ -32,6 +32,8 @@ public class player_movement : MonoBehaviour
     float knock_force = 5f;
     bool stab = false;
 
+    bool sinking = sink_check.sinking;
+
     //public bool walk = false;
 
     /*[SerializeField] private Transform center;
@@ -77,6 +79,8 @@ public class player_movement : MonoBehaviour
         slope_coord = check_ground.coord;
         knock = player_health.knock;
         stab = enemy_melee.melee;
+
+        sinking = sink_check.sinking;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -136,7 +140,7 @@ public class player_movement : MonoBehaviour
        
 
         //if player is on the ground, and jump key pressed
-        if(ground || slope_check)
+        if(ground || slope_check || sinking)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
@@ -183,17 +187,20 @@ public class player_movement : MonoBehaviour
                 //Debug.Log("velocity ========== " + velocity);
                 //start adding to knocktime
                 knock_time += Time.deltaTime;
-
-            if(center.transform.position.x - zombie.transform.position.x < 0)
+            if(GameObject.FindGameObjectWithTag("enemy_melee") != null)
             {
-                //start adding speed * time * mod every frame 
-                velocity -= (knock_force * Time.deltaTime * mod);
+                if (center.transform.position.x - zombie.transform.position.x < 0)
+                {
+                    //start adding speed * time * mod every frame 
+                    velocity -= (knock_force * Time.deltaTime * mod);
+                }
+                else
+                {
+                    //start adding speed * time * mod every frame 
+                    velocity += (knock_force * Time.deltaTime * mod);
+                }
             }
-            else
-            {
-                //start adding speed * time * mod every frame 
-                velocity += (knock_force * Time.deltaTime * mod);
-            }
+           
 
                 
                 //substract vel from position.x every frame

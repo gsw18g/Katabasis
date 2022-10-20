@@ -12,6 +12,9 @@ TagManager:
   - heart2
   - heart3
   - sword_check
+  - zombie_unique
+  - sink
+  - ground_check
   layers:
   - Default
   - TransparentFX

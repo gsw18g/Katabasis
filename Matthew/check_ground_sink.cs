@@ -22,7 +22,10 @@ public class check_ground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.transform.position.y - sink_y > dist_to_sink)
+        {
+            is_grounded = true;
+        }
     }
 
     /*
@@ -56,7 +59,7 @@ public class check_ground : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("ground"))
+        if (collision.transform.CompareTag("ground") || collision.transform.CompareTag("sink"))
         {
             is_grounded = true;
         }
@@ -67,13 +70,19 @@ public class check_ground : MonoBehaviour
             coord = new Vector3(collision.transform.position.x, collision.transform.position.y, 0f);
         }
 
-       
+        if(collision.transform.CompareTag("sink"))
+        {
+            
+            
+            sink_y = collision.transform.gameObject.transform.position.y;
+            
+        }
        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("ground"))
+        if (collision.transform.CompareTag("ground") || collision.transform.CompareTag("sink"))
         {
             is_grounded = true;
         }
@@ -85,12 +94,21 @@ public class check_ground : MonoBehaviour
         }
 
 
-        
+        if (collision.transform.CompareTag("sink"))
+        {
+
+
+            sink_y = collision.transform.gameObject.transform.position.y;
+            if (gameObject.transform.position.y - sink_y > dist_to_sink)
+            {
+                is_grounded = true;
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("ground"))
+        if (collision.transform.CompareTag("ground") || collision.transform.CompareTag("sink"))
         {
             is_grounded = false;
         }
