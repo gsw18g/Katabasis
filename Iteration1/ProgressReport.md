@@ -32,7 +32,7 @@ Group #8
 Describe in detail what was accomplished during this increment and where your project stands 
 overall compared to the initial scope and functionality proposed.
 
-During increment 1 we accomplished several things including setting up our github repository and taking the first steps in order to make our platformer game. The first step was to create a moveable player character with walking, jumping, and attack animations. Next we created a zombie enemy, which has walking and death animations as well as a bat enemy with its own animation. When the zombie enemy is attacked by the player, they get knocked back in the opposite direction of the attack and a floating health bar shows damage. The player character also gets knocked back when attacked by enemies. There is a health system HUD (heads up display) which shows the player how much health is remaining in the form of three hearts in the upper left corner of the screen. Parallax scrolling backgrounds were created to give the illusion of depth when moving. We also implemented a system that allows the player and enemies to walk on sloped surfaces. Overall we have a good start on creating the mechanics and objects that we will use to begin building levels and boss fights for the rest of the game.
+During increment 1 we accomplished several things including setting up our github repository and taking the first steps in order to make our platformer game. The first step was to create a moveable player character with walking, jumping, and attack animations. Next we created a zombie enemy, which has walking and death animations as well as a bat enemy with its own animation. Originally when the zombie enemy was attacked by the player, they got knocked back in the opposite direction of the attack and a floating health bar showed their damage. We had to remove this knockback feature for the moment because it was causing some issues, however the code is working. The player character also gets knocked back when attacked by enemies. There is a health system HUD (heads up display) which shows the player how much health is remaining in the form of three hearts in the upper left corner of the screen. Parallax scrolling backgrounds were created to give the illusion of depth when moving. We also implemented a system that allows the player and enemies to walk on sloped surfaces. Overall we have a good start on creating the mechanics and objects that we will use to begin building levels and boss fights for the rest of the game.
 
 
 
@@ -98,7 +98,14 @@ member to:
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: N/A
-  - Source Code
+  - Source Code: 
+      - Scripts for check_ground, enemy_melee, melee_enemy, title_screen, move_bat, move_camera, scroll parallaz foreground, midground, background,                                    player_health, player_movement, remove_heart, scale_enemy_healthbar, slope, spawn_zombie, sword, sword_check, sword_collider, zombie2 which can be
+                 found in Katabasis/Assets/Scripts
+       - background assests and edited static foreground objects which can be found in Katabasis/Assets/Sprites
+       - prefabs which can be found in Katabasis/Assets/Objects/prefabs
+       - animation controller and scripts for player and enemy animations can be found in Katabasis/Assets/Sprites/orpheus and Katabasis/Assets/zombie
+       - sloped surface system which allows player and enemies to walk on slopes
+        
   - Video: Short description of state of project and accomplishments for this increment
   
 6) Plans for the next increment
