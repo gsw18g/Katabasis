@@ -71,7 +71,7 @@ member to:
 - Gavin Williams
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 3, 7
-  - Implementation and Testing Document: Section 4
+  - Implementation and Testing Document: N/A
   - Source Code
   - Video: Demo of current project, screen recording
 
@@ -90,14 +90,14 @@ member to:
 - Lloyd Smith
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 4, 6
-  - Implementation and Testing Document: Section 5
+  - Implementation and Testing Document: N/A
   - Source Code
   - Video: Plan for next increment
 
 - Matthew Kaplan
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
-  - Implementation and Testing Document: Section 3
+  - Implementation and Testing Document: N/A
   - Source Code
   - Video: Short description of state of project and accomplishments for this increment
   
