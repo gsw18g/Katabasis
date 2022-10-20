@@ -47,13 +47,16 @@ During increment 1 we accomplished several things including setting up our githu
   - Attacking enemy deducts health from both player and enemy
   - Bat knockback on player not working because friction physics has to be on ground, eventually bats will attack player
   - Only can spawn one zombie, killing one zombie will kill all immediately
+  - Zombies do not have idle state so they are always following player, will eventually have zombie pacing in one spot mindlessly until it "sees" player
 - Parallax scrolling needs adjustments
   - Unsure what correct ratio is for speed between backgrounds, looks a little fast
 - Scope of increment
   - Originally had plans to include a bossfight/chase scene with Cerberus but the main level obstacles had to be overcome first
+  - First level was much more difficult to create than we expected, especially due to the learning curve
 - Scope of project
-  - Added tutorial level along with 5 levels
-  - Gathering system, weapons, checkpoint put on back burner
+  - Added tutorial level along with 5 levels as an easy first level to work on, once it is complete all we have to do is take generally applicable scripts and assets to apply to our own levels with unique designs
+  - Gathering system, weapons, checkpoint put on back burner in favor of focusing playable game (only need one kind of attack and a basic health system to get through levels as of now)
+  - Decided to remove double jump feature for the sake of simplicity in level design, but still keeping dash and wall stick which will make up for it
 5) Team Member Contribution for this increment
 Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible). In other words, describe the contribution of each team 
 member to:
