@@ -28,13 +28,9 @@ Group #8
 - Katabasis
 
   - Katabasis is an action platformer based on the Greek myth of Orpheus and Eurydice. The game will be developed using Unity’s game engine and will feature 5 levels, with a miniboss at the end of each one. Unable to come to terms with the death of his wife, Orpheus enters the underworld with the hopes of bringing Eurydice back to the land of the living, weapons and Lyre in hand. However, Hades has no intentions of allowing Orpheus to cheat death. Like the original story, the game will end in tragedy.
+  
 3) Accomplishments and overall project status during this increment 
-Describe in detail what was accomplished during this increment and where your project stands 
-overall compared to the initial scope and functionality proposed.
-
-During increment 1 we accomplished several things including setting up our github repository and taking the first steps in order to make our platformer game. The first step was to create a moveable player character with walking, jumping, and attack animations. Next we created a zombie enemy, which has walking and death animations as well as a bat enemy with its own animation. Originally when the zombie enemy was attacked by the player, they got knocked back in the opposite direction of the attack and a floating health bar showed their damage. We had to remove this knockback feature for the moment because it was causing some issues, however the code is working. The player character also gets knocked back when attacked by enemies. There is a health system HUD (heads up display) which shows the player how much health is remaining in the form of three hearts in the upper left corner of the screen. Parallax scrolling backgrounds were created to give the illusion of depth when moving. We also implemented a system that allows the player and enemies to walk on sloped surfaces. Overall we have a good start on creating the mechanics and objects that we will use to begin building levels and boss fights for the rest of the game.
-
-
+- During increment 1 we accomplished several things including setting up our github repository and taking the first steps in order to make our platformer game. The first step was to create a moveable player character with walking, jumping, and attack animations. Next we created a zombie enemy, which has walking and death animations as well as a bat enemy with its own animation. Originally when the zombie enemy was attacked by the player, they got knocked back in the opposite direction of the attack and a floating health bar showed their damage. We had to remove this knockback feature for the moment because it was causing some issues, however the code is working. The player character also gets knocked back when attacked by enemies. There is a health system HUD (heads up display) which shows the player how much health is remaining in the form of three hearts in the upper left corner of the screen. Parallax scrolling backgrounds were created to give the illusion of depth when moving. We also implemented a system that allows the player and enemies to walk on sloped surfaces. Overall we have a good start on creating the mechanics and objects that we will use to begin building levels and boss fights for the rest of the game.
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
 - Unity editor related errors
@@ -57,10 +53,8 @@ During increment 1 we accomplished several things including setting up our githu
   - Added tutorial level along with 5 levels as an easy first level to work on, once it is complete all we have to do is take generally applicable scripts and assets to apply to our own levels with unique designs
   - Gathering system, weapons, checkpoint put on back burner in favor of focusing playable game (only need one kind of attack and a basic health system to get through levels as of now)
   - Decided to remove double jump feature for the sake of simplicity in level design, but still keeping dash and wall stick which will make up for it
-5) Team Member Contribution for this increment
-Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible). In other words, describe the contribution of each team 
-member to:
 
+5) Team Member Contribution for this increment
 - Alejandro Santiago
   - Progress Report: Sections 5, 6
   - Requirements and Design Document: Section 5
