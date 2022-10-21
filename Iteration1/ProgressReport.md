@@ -66,7 +66,10 @@ Group #8
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 3, 7
   - Implementation and Testing Document: N/A
-  - Source Code
+  - Developed the system of which the members of the group can share their work without issues of hampering other group members' work.
+  - Planning of the work to be done for Iteration 1 and the distribution of the work between group mates.
+  - Title screen scene
+  - Prefab design including: platforms, river of styx, slope platform (found in Katabasis/Assets/Objects/prefabs)
   - Video: Demo of current project, screen recording
 
 - Kaitlin Tran
