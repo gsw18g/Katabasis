@@ -65,7 +65,7 @@ member to:
   - Progress Report: Sections 5, 6
   - Requirements and Design Document: Section 5
   - Implementation and Testing Document: Section 2
-  - Source Code
+  - Source Code: Alejandro worked on dialogue boxes and level design, he planned the layout and story of the first level and used the platforms Gavin created and Matt photoshopped in order to set up a simple introductory first level. Alejandro also worked on a dialogue box that unfortunately had to be removed from this first increment due to the text not running properly. He also prepared the readme that can be found on the main page.
   - Video: General overview of project, video editing and uploading
 
 - Gavin Williams
@@ -79,7 +79,7 @@ member to:
   - Progress Report: Sections 1, 2, 4, 5
   - Requirements and Design Document: Section 1
   - Implementation and Testing Document: Section 1
-  - Source Code: Contributions included scripts involving character animation, scrolling camera movement, and boss fight/death scenes, as well as all character sprites. They can be found in the following folders:
+  - Source Code: Contributions included documentation files for iteration 1, scripts involving character animation, scrolling camera movement, and boss fight/death scenes, as well as all character sprites. They can be found in the following folders:
     - Katabasis/Kaitlin/*
     - Katabasis/Assets/Sprites/bat/*
     - Katabasis/Assets/Sprites/hor swing/*
@@ -109,7 +109,6 @@ member to:
   - Video: Short description of state of project and accomplishments for this increment
   
 6) Plans for the next increment
-If this report if for the first or second increment, describe what are you planning to achieve in the 
-next increment.
+- For the next increment, we are planning on using the basic functionality we established in this increment to each individually develop our own levels. By the next increment, we are hoping to have a basic draft of each level to have an entire full draft of the game with 5 levels. We also hope to fix the issues we found during this increment, such as the broken dialogue box and the enemy HP, as well as adding features we touched on initially such as level checkpoints, wall stick, and dash functionalities.
 7) Link to video
-Paste here the link to your video.
+- https://youtu.be/t4xK7KPcGvo
