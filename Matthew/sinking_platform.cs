@@ -6,7 +6,7 @@ public class sinking_platform : MonoBehaviour
 {
 
     public bool sink_ground = false;
-    public float mod = 2f;//4
+    public float mod = 20;//4
 
     float pos_y;
 
@@ -21,11 +21,10 @@ public class sinking_platform : MonoBehaviour
     {
         if(sink_ground)
         {
-            //pos_y -= Time.deltaTime * mod;//Time.deltaTime //.001
-            gameObject.transform.position -= new Vector3(0f, Time.deltaTime * mod, 0f);
+            pos_y -= Time.deltaTime * mod;//Time.deltaTime //.001
         }
 
-        //gameObject.transform.position = new Vector3(transform.position.x, pos_y, 0f);
+        gameObject.transform.position = new Vector3(transform.position.x, pos_y, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
