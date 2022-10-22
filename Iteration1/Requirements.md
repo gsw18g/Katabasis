@@ -25,9 +25,24 @@ Matthew K
     10. A high priority is to have a boss fight at the end of all levels.
     11. A medium priority is to have 5 playable levels plus an introduction level.
 
-3. Non-functional Requirements (10 points)List the non-functional requirements of the system (any requirement referring to a property of the system, such as security, safety, software quality, performance, reliability, etc.) You may provide a brief rationale for any requirement which you feel requires explanation as to how and/or why the requirement was derived.
+3. Non-functional Requirements (10 points)
+    1. The user must experience a satisfying story through the levels.
+    2. The user must experience a smooth interaction between their input and the game output.
+    3. The user must feel challenged.
+    4. The game must have different levels of difficulty.
+    5. The game must have a unique atmosphere that correlates with the story.
+    6. The game must have a satisfying fight system.
+    7. The game must run smoothly from scene to scene.
+    8. The minimum frame rate must be 30 frames per second.
+    9. The average response time between user input and reaction must be less than 0.5 seconds.
+    10. The code written for the game must be maintainable and organized.
+    11. There must be sufficient documentation to improves maintainability as the scale of the game increases.
+
 4. Use Case Diagram (10 points)This section presents the use case diagram and the textual descriptions of the use cases for the system under development. The use case diagram should contain all the use cases and relationships between them needed to describe the functionality to be developed. If you discover new use cases between two increments, update the diagram for your future increments. Textual descriptions of use cases: For the first increment, the textual descriptions for the use cases are not required. However, the textual descriptions for all use cases discovered for your system are required for the second and third iterations.
 5. Class Diagram and/or Sequence Diagrams (15 points)
 - ![Class Diagram](/Iteration1/Scanned_Documents.pdf)
 6. Operating Environment (5 points)Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.
-7. Assumptions and Dependencies (5 points)List any assumed factors (as opposed to known facts) that could affect the requirements stated in this document. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project.
+
+7. Assumptions and Dependencies (5 points)
+
+For this game we plan to use assets found in the Unity store to improve the environment and atmosphere of our game. We assume the game will be deployed on a computer with sufficient RAM and computing power to run the game. We are dependent on the Unity framework, more importantly the 2021.3.11f1 editor version. Any changes made to the project outside of this version can cause complications.
