@@ -6,6 +6,7 @@ public class move_camera : MonoBehaviour
 {
     public GameObject player;
     player_movement the_player;
+
     float x_pos;
     float y_pos;
     //offset camera to center on player
@@ -28,6 +29,9 @@ public class move_camera : MonoBehaviour
         //x_pos = gameObject.transform.position.x;
 
         gameObject.transform.position = new Vector3(x_pos + the_player.transform.position.x + offset, y_pos + the_player.transform.position.y + y_offset, 0f);
+
+        //player.transform.position.x to get x component 
+
         //gameObject.transform.position = new Vector3(x_pos, y_pos, 0f);
 
 

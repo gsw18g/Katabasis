@@ -24,14 +24,16 @@ public class enemy_melee : MonoBehaviour
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
 
+    private bool hit_melee_enemy;//   //////
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
 
-        the_sword = GameObject.FindGameObjectWithTag("sword_check");
-        sword_range = the_sword.GetComponent<sword_check>();
+        //the_sword = GameObject.FindGameObjectWithTag("sword_check");
+        //sword_range = the_sword.GetComponent<sword_check>();
 
 
 
@@ -54,13 +56,13 @@ public class enemy_melee : MonoBehaviour
         //sword_hit = sword_range.hit_melee_enemy;
 
         
-        sword_hit = sword_range.hit_melee_enemy;
+        ////////sword_hit = sword_range.hit_melee_enemy;
 
-        if (Input.GetMouseButtonDown(0) && sword_hit)//sword_hit
+        if (Input.GetMouseButtonDown(0) && hit_melee_enemy)//sword_hit
         {
-            animator.SetBool("start_death", true);
+            //animator.SetBool("start_death", true);
             // Destroy(gameObject);
-            //enemy_damage();
+            enemy_damage();
             
         }
 
@@ -102,7 +104,7 @@ public class enemy_melee : MonoBehaviour
         {
             health = 0;
             
-            //animator.SetBool("start_death", true);
+            animator.SetBool("start_death", true);
             //Destroy(gameObject);
         }
         Debug.Log("enemy health ====================== " + health);
@@ -119,7 +121,14 @@ public class enemy_melee : MonoBehaviour
     {
         if(collision.transform.CompareTag("Player"))
         {
+
+
             melee = true;
+        }
+
+        if(collision.transform.CompareTag("sword_check"))
+        {
+            hit_melee_enemy = true;
         }
     }
 
@@ -127,7 +136,14 @@ public class enemy_melee : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+
+
             melee = true;
+        }
+
+        if (collision.transform.CompareTag("sword_check"))
+        {
+            hit_melee_enemy = true;
         }
     }
 
@@ -135,7 +151,14 @@ public class enemy_melee : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+
+
             melee = false;
+        }
+
+        if (collision.transform.CompareTag("sword_check"))
+        {
+            hit_melee_enemy = false;
         }
     }
 

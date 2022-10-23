@@ -20,19 +20,21 @@ public class sink_check : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("sink enter");
+        
 
         if (collision.transform.CompareTag("sink"))
         {
+            Debug.Log("sink enter");
             sinking = true;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("sink enter");
+        
         if (collision.transform.CompareTag("sink"))
         {
+            Debug.Log("sink stay");
             sinking = true;
         }
     }

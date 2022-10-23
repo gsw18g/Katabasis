@@ -183,7 +183,7 @@ public class player_movement : MonoBehaviour
 
         if (knock && knock_time <= .1f)
         {
-            
+            var y_pos = transform.position.y;
                 //Debug.Log("velocity ========== " + velocity);
                 //start adding to knocktime
                 knock_time += Time.deltaTime;
@@ -200,16 +200,17 @@ public class player_movement : MonoBehaviour
                     velocity += (knock_force * Time.deltaTime * mod);
                 }
             }
-           
 
+            
                 
                 //substract vel from position.x every frame
-                rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
+                rb.transform.position = new Vector3(velocity, y_pos, 0f);//transform.position.y
                 //gameObject.transform.position = new Vector3(transform.position.x - velocity, transform.position.y, 0f);
-         
+
         }
         else
         {
+            
             rb.transform.position = new Vector3(velocity, transform.position.y, 0f);
             //rb.transform.position = new Vector3(velocity, pos_y, 0f);
             knock_time = 0f;

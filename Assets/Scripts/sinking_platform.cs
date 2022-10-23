@@ -32,6 +32,7 @@ public class sinking_platform : MonoBehaviour
     {
         if(collision.transform.CompareTag("Player"))
         {
+            Debug.Log("sink_ground = true");
             sink_ground = true;
         }
     }
@@ -40,6 +41,7 @@ public class sinking_platform : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            Debug.Log("sink_ground = true");
             sink_ground = true;
         }
     }
@@ -48,6 +50,7 @@ public class sinking_platform : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            Debug.Log("sink_ground = false");
             sink_ground = false;
         }
     }
