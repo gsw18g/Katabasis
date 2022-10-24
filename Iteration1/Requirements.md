@@ -44,7 +44,8 @@ Matthew K
 5. Class Diagram and/or Sequence Diagrams (15 points)
 - ![Class Diagram](/Iteration1/Scanned_Documents.pdf)
 
-6. Operating Environment (5 points)Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.
+6. Operating Environment (5 points)
+- Katabasis aims to run on almost any modern computer as it is a simple game that doesn't consume many resources. It's being developed on Unity 2021.3.11f1 and will require components of this software in order to run.
 
 7. Assumptions and Dependencies (5 points)
 
