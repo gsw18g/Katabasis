@@ -8,25 +8,26 @@ public class Behaviour : MonoBehaviour
 	public float moveSpeed = 5f;
 	private Vector2 movement;
 	private Rigidbody2D rb;
-    //bool to check if player should be knocked back and damaged
 	public static bool bat_melee;
+
+    //public GameObject bat;
+    //sword_check in_range;
+
     private bool hit_bat = false;
-    //adds offset so the bat isnt right on top of the player
-    private Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
         this.rb = GetComponent<Rigidbody2D>();
-        offset = new Vector3(1f, 0f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //adds offset in the x direction to put a little space between the bat and player
-       movement=player.position-transform.position + offset;
+       movement=player.position-transform.position;
 	   movement.Normalize();
+
+        //in_range = bat.GetComponent<sword_check>();
 
         if(hit_bat && Input.GetMouseButtonDown(0))
         {
@@ -45,30 +46,31 @@ public class Behaviour : MonoBehaviour
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //check if should do player knockback and damage
         if (collision.transform.CompareTag("Player"))
         {
             bat_melee = true;
         }
 
-        //check if bat is in range of player sword
         if (collision.transform.CompareTag("sword_check"))
         {
             hit_bat = true;
         }
 
-      
+        /*
+         *  if(in_range.hit_melee_enemy && Input.GetMouseButtonDown(0))
+         {
+             Destroy(gameObject);
+         }
+         * */
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //check if should do player knockback and damage
         if (collision.transform.CompareTag("Player"))
         {
             bat_melee = true;
         }
 
-        //check if bat is in range of player sword
         if (collision.transform.CompareTag("sword_check"))
         {
             hit_bat = true;
