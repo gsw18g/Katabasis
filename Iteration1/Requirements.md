@@ -38,11 +38,15 @@ Matthew K
     10. The code written for the game must be maintainable and organized.
     11. There must be sufficient documentation to improves maintainability as the scale of the game increases.
 
-4. Use Case Diagram (10 points)This section presents the use case diagram and the textual descriptions of the use cases for the system under development. The use case diagram should contain all the use cases and relationships between them needed to describe the functionality to be developed. If you discover new use cases between two increments, update the diagram for your future increments. Textual descriptions of use cases: For the first increment, the textual descriptions for the use cases are not required. However, the textual descriptions for all use cases discovered for your system are required for the second and third iterations.
+4. Use Case Diagram (10 points)
+- ![Use Case Diagram](/Iteration1/CaseDiagram.png)
+
 5. Class Diagram and/or Sequence Diagrams (15 points)
 - ![Class Diagram](/Iteration1/Scanned_Documents.pdf)
-6. Operating Environment (5 points)Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.
+
+6. Operating Environment (5 points)
+- Katabasis aims to run on almost any modern computer as it is a simple game that doesn't consume many resources. It's being developed on Unity 2021.3.11f1 and will require components of this software in order to run.
 
 7. Assumptions and Dependencies (5 points)
 
-For this game we plan to use assets found in the Unity store to improve the environment and atmosphere of our game. We assume the game will be deployed on a computer with sufficient RAM and computing power to run the game. We are dependent on the Unity framework, more importantly the 2021.3.11f1 editor version. Any changes made to the project outside of this version can cause complications.
+- For this game we plan to use assets found in the Unity store to improve the environment and atmosphere of our game. We assume the game will be deployed on a computer with sufficient RAM and computing power to run the game. We are dependent on the Unity framework, more importantly the 2021.3.11f1 editor version. Any changes made to the project outside of this version can cause complications.
