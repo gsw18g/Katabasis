@@ -4,29 +4,42 @@ using UnityEngine;
 
 public class enemy_melee : MonoBehaviour
 {
-    private GameObject player;
+    player_movement player_pos;
+    public GameObject player;
+
+    sword_check sword_range;
+    public GameObject the_sword;
+
     float speed = 1f;
     Rigidbody2D rb;
-    //check if player has been meleed by enemy
+    //float pos_y = 0f;
+    bool sword_hit;
     public static bool melee = false;
     public int health = 100;
+    //public static int health;
+
     public Animator animator;
-    //check if enemy should take damage
-    private bool take_damage;
 
     [SerializeField] private Transform center;
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
 
-    
+    private bool hit_melee_enemy;//   //////
 
     // Start is called before the first frame update
     void Start()
     {
-        //assign player
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
- 
+
+        //the_sword = GameObject.FindGameObjectWithTag("sword_check");
+        //sword_range = the_sword.GetComponent<sword_check>();
+
+
+
+        //sword_hit = sword_check.hit_melee_enemy;
+
+        //health = 100;
     }
 
     // Update is called once per frame
@@ -36,41 +49,73 @@ public class enemy_melee : MonoBehaviour
         // Move our position a step closer to the target.
         var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-        //apply move toward player to rigidbody
         rb.transform.position = transform.position;
 
-        //if left mouse pressed and take_damage == true (enemy has been hit with sword)
-        if (Input.GetMouseButtonDown(0) && take_damage)
+        ///sword_hit = sword_check.hit_melee_enemy;
+
+        //sword_hit = sword_range.hit_melee_enemy;
+
+        
+        ////////sword_hit = sword_range.hit_melee_enemy;
+
+        if (Input.GetMouseButtonDown(0) && hit_melee_enemy)//sword_hit
         {
-            //apply damage to enemy
+            //animator.SetBool("start_death", true);
+            // Destroy(gameObject);
             enemy_damage();
             
         }
+
+        // gameObject.transform.localScale = new Vector3(1 - (health / 100), 0f, 0f);
+
+    }
+
+    void enemy_damage_old()
+    {
+        
+       
+        if (health > 0)
+        {
+            health -= 34;
+            knockback();
+            //animator.SetBool("stab", true);
+        }
+        if(health < 0)
+        {
+            health = 0;
+            Destroy(gameObject);
+        }
+        Debug.Log("enemy health ====================== " + health);
 
     }
 
     void enemy_damage()
     {
-        //if health is positive substract 34 and knockback enemy
+        
+
         if (health > 0)
         {
+            //health = get_health();
             health -= 34;
-            knockback(); 
+            knockback();
+           
         }
-        //if enemy has 0 health play death animation
         if (health < 0)
         {
             health = 0;
-            animator.SetBool("start_death", true);   
+            
+            animator.SetBool("start_death", true);
+            //Destroy(gameObject);
         }
+        Debug.Log("enemy health ====================== " + health);
 
     }
 
-    //at end of death animation destroy enemy gameobject
     public void end_death_anim()
     {
         Destroy(gameObject);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -83,7 +128,7 @@ public class enemy_melee : MonoBehaviour
 
         if(collision.transform.CompareTag("sword_check"))
         {
-            take_damage = true;
+            hit_melee_enemy = true;
         }
     }
 
@@ -98,7 +143,7 @@ public class enemy_melee : MonoBehaviour
 
         if (collision.transform.CompareTag("sword_check"))
         {
-            take_damage = true;
+            hit_melee_enemy = true;
         }
     }
 
@@ -113,11 +158,10 @@ public class enemy_melee : MonoBehaviour
 
         if (collision.transform.CompareTag("sword_check"))
         {
-            take_damage = false;
+            hit_melee_enemy = false;
         }
     }
 
-    //knock enemy back
     public void knockback()
     {
         var dir = center.position - player.transform.position;

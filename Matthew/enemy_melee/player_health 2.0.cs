@@ -40,7 +40,7 @@ public class player_health : MonoBehaviour
     void Update()
     {
         pos_y = transform.position.y;
-
+        
 
         //Debug.Log("player_health = " + health);
 
@@ -49,7 +49,7 @@ public class player_health : MonoBehaviour
         take_damage = enemy_melee.melee;
         bat_melee = Behaviour.bat_melee;
 
-        if (take_damage || bat_melee)// || bat_melee
+        if(take_damage || bat_melee)// || bat_melee
         {
             player_damage();
         }
@@ -58,7 +58,7 @@ public class player_health : MonoBehaviour
 
     void player_damage()
     {
-        if (timer >= .5f)
+        if(timer >= .5f)
         {
             //set bool to use in player movement
             knock = true;
@@ -66,11 +66,11 @@ public class player_health : MonoBehaviour
             timer = 0f;
             num_hearts -= 1;
             //rb.AddForce(knockback, ForceMode2D.Impulse);
-
-
+            
+            
         }
 
-        if (health <= 0)
+        if(health <= 0)
         {
             player_dead = true;
             //Debug.Log("Player is dead");
@@ -87,33 +87,33 @@ public class player_health : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("bat"))
-        {
+      private void OnTriggerStay2D(Collider2D collision)
+     {
+         if (collision.transform.CompareTag("bat"))
+         {
 
             bat_melee = true;
-        }
-    }
+         }
+     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("bat"))
-        {
+     private void OnTriggerExit2D(Collider2D collision)
+     {
+         if (collision.transform.CompareTag("bat"))
+         {
 
             bat_melee = false;
-        }
-    }
-
+         }
+     }
+ 
 
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("enemy_melee"))
-        {
+     {
+         if (collision.transform.CompareTag("enemy_melee"))
+         {
 
-            take_damage = true;
-        }
+             take_damage = true;
+         }
 
         if (collision.transform.CompareTag("bat"))
         {
@@ -121,7 +121,7 @@ public class player_health : MonoBehaviour
             take_damage = true;
         }
     }
-
+     
 
     private void OnCollisionStay2D(Collision2D collision)
     {

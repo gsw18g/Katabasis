@@ -15,6 +15,7 @@ TagManager:
   - zombie_unique
   - sink
   - ground_check
+  - bat
   layers:
   - Default
   - TransparentFX
