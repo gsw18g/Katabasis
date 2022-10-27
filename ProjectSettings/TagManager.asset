@@ -16,6 +16,7 @@ TagManager:
   - sink
   - ground_check
   - bat
+  - horn
   layers:
   - Default
   - TransparentFX

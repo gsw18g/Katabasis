@@ -26,6 +26,10 @@ public class player_movement : MonoBehaviour
 
     bool sinking = sink_check.sinking;
 
+    bool bounce = false;
+    float bounce_mag = -2f;
+    Vector2 bounce_force = new Vector2(0f, 3f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -127,6 +131,13 @@ public class player_movement : MonoBehaviour
 
 
         }
+
+        if(bounce)
+        {
+            rb.AddForce(bounce_force, ForceMode2D.Impulse);
+            //rb.transform.position = new Vector3(transform.position.x, bounce_mag * Time.deltaTime, 0f);
+            bounce = false;
+        }
        
       
         if (knock && knock_time <= .1f)
@@ -188,4 +199,27 @@ public class player_movement : MonoBehaviour
         animator.SetBool("jump", false);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("horn"))
+        {
+            bounce = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("horn"))
+        {
+            bounce = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("horn"))
+        {
+            bounce = false;
+        }
+    }
 }
