@@ -17,6 +17,9 @@ TagManager:
   - ground_check
   - bat
   - horn
+  - warp
+  - hades_block
+  - hades
   layers:
   - Default
   - TransparentFX

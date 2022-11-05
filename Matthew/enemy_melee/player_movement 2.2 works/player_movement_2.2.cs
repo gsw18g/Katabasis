@@ -27,9 +27,6 @@ public class player_movement : MonoBehaviour
     char prev;
     bool bounce = false;
     float bounce_time = 0f;
-    float bounce_mag_y = .05f;//.025
-    float bounce_mag_x = .05f;
-    bool bounce_right = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,8 +57,6 @@ public class player_movement : MonoBehaviour
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
-
-        //movement and idle animation
 
         //move right
         if (Input.GetKey(KeyCode.D) && !knock)
@@ -127,35 +122,23 @@ public class player_movement : MonoBehaviour
             rb.transform.position = new Vector3(velocity, y_pos, 0f);//transform.position.y
 
         }
-        else if(bounce)
+        else //if(bounce) this works correctly without the velocity bug 
         {
-           
             bounce_time += Time.deltaTime;
-            if(bounce_time <= .2f)
+            if(bounce_time <= .5f)
             {
-               //bounce right
-                if(bounce_right)
-                {
-                    rb.transform.position += new Vector3(bounce_mag_x, bounce_mag_y, 0f);
-                }
-                //bounce_left
-                else
-                {
-                    rb.transform.position += new Vector3(-bounce_mag_x, bounce_mag_y, 0f);
-                }
-                
+                rb.transform.position += new Vector3(.1f, .1f, 0f);
             }
             else
             {
                 bounce_time = 0f;
                 bounce = false;
                 velocity = rb.transform.position.x;
-                bounce_right = false;
             }
 
             
         }
-        else// if(ground)
+        else if(ground)
         {
             //move player
             movement(velocity);
@@ -208,14 +191,6 @@ public class player_movement : MonoBehaviour
         if (collision.transform.CompareTag("horn"))
         {
             bounce = true;
-
-            var rand = Random.Range(0, 2);
-
-            if (rand == 0)
-            {
-                //bounce_mag *= -1;
-                bounce_right = true;
-            }
         }
     }
 

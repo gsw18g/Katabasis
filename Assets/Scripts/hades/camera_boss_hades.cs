@@ -11,7 +11,7 @@ public class camera_boss_hades : MonoBehaviour
     float y_pos;
     //offset camera to center on player
     float offset = 0f;//8.39
-    float y_offset = -3f;
+    public float y_offset = 1f;
     // Start is called before the first frame update
     void Start()
     {
