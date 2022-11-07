@@ -5,8 +5,11 @@ using UnityEngine;
 public class sinking_platform : MonoBehaviour
 {
 
+    Rigidbody2D rb;
     public bool sink_ground = false;
-    public float mod = 2f;//4
+    public float mod = .01f;//4
+
+    float timer = 0f;
 
     float pos_y;
 
@@ -14,15 +17,26 @@ public class sinking_platform : MonoBehaviour
     void Start()
     {
         pos_y = transform.position.y;
+        rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
     }
 
-    // Update is called once per frame
+    // sink the platform if colliding with player
     void Update()
     {
         if(sink_ground)
         {
+            timer += Time.deltaTime;
+
+            if(timer >= 0f)
+            {
+                rb.isKinematic = false;
+                timer = 0f;
+            }
+
             //pos_y -= Time.deltaTime * mod;//Time.deltaTime //.001
-            gameObject.transform.position -= new Vector3(0f, Time.deltaTime * mod, 0f);
+            //gameObject.transform.position -= new Vector3(0f, Time.deltaTime * mod, 0f);
+            
         }
 
         //gameObject.transform.position = new Vector3(transform.position.x, pos_y, 0f);

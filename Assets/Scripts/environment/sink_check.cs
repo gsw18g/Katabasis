@@ -43,7 +43,7 @@ public class sink_check : MonoBehaviour
     {
         if (collision.transform.CompareTag("sink"))
         {
-            sinking = true;
+            sinking = false;
         }
     }
 
