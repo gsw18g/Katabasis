@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy_melee : MonoBehaviour
 {
     private GameObject player;
-    float speed = 1f;
+    float speed = 2f;
     Rigidbody2D rb;
     //check if player has been meleed by enemy
     public static bool melee = false;
@@ -32,6 +32,7 @@ public class enemy_melee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
 
         // Move our position a step closer to the target.
         var step = speed * Time.deltaTime; // calculate distance to move
