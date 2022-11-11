@@ -20,6 +20,7 @@ TagManager:
   - warp
   - hades_block
   - hades
+  - Enemy
   layers:
   - Default
   - TransparentFX
