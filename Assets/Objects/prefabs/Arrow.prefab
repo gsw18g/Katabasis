@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 5
+  speed: 0.2
   resetTime: 5
 --- !u!61 &1135760061030724902
 BoxCollider2D:

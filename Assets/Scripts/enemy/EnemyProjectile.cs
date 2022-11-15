@@ -6,14 +6,14 @@ public class EnemyProjectile : EnemyDamage
     [SerializeField] private float resetTime;
     private float lifetime;
     private Animator anim;
-    private BoxCollider2D coll;
+    private BoxCollider2D boxCollider;
 
     private bool hit;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        coll = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     public void ActivateProjectile()
@@ -21,7 +21,7 @@ public class EnemyProjectile : EnemyDamage
         hit = false;
         lifetime = 0;
         gameObject.SetActive(true);
-        coll.enabled = true;
+        boxCollider.enabled = true;
     }
     private void Update()
     {
@@ -36,15 +36,18 @@ public class EnemyProjectile : EnemyDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        base.OnTriggerEnter2D(collision); //Execute logic from parent script first
-        coll.enabled = false;
-
-        if (anim != null)
-            anim.SetTrigger("explode"); //When the object is a fireball explode it
-        else
-            gameObject.SetActive(false); //When this hits any object deactivate arrow
+        //base.OnTriggerEnter2D(collision); 
+        boxCollider.enabled = false;
+        Debug.Log(collision.tag);
+        if (collision.transform.CompareTag("Player"))
+        {
+            hit = true;
+            collision.GetComponent<player_health>().player_damage();
+            gameObject.SetActive(false);
+        }
+         //When this hits any object deactivate arrow
     }
+
     private void Deactivate()
     {
         gameObject.SetActive(false);
