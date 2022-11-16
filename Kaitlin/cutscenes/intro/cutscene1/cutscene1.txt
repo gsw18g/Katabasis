@@ -1,0 +1,19 @@
+if the timeline/scene doesn't load:
+Black background: 1400 x 1000 px
+000.png: 960 x 540 px
+- frame 0: A = 0
+- frame 60: A = 255
+- frame 150: A = 255
+- frame 300: A = 0
+001.png: 960 x 540 px
+- frame 150: A = 0
+- frame 300: A = 255
+- frame 450: A = 0
+002.png: 960 x 540 px
+- frame 300: A = 0
+- frame 450: A = 255
+- frame 600: A = 0
+003.png: 960 x 540 px
+- frame 450: A = 0
+- frame 600: A = 255
+- frame 850: A = 0
