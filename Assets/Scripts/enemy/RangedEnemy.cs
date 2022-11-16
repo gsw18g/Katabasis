@@ -25,7 +25,6 @@ public class RangedEnemy : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
     private void Update()
@@ -37,12 +36,9 @@ public class RangedEnemy : MonoBehaviour
             if(cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("Attack");
+                anim.SetTrigger("RangedAttack");
             }
         }
-
-        if (enemyPatrol != null)
-            enemyPatrol.enabled = !PlayerInSight();
     }
 
     private void RangedAttack()

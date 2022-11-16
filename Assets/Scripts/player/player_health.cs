@@ -56,7 +56,7 @@ public class player_health : MonoBehaviour
 
     }
 
-    void player_damage()
+   public void player_damage()
     {
         if (timer >= .5f)
         {
