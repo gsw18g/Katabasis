@@ -37,15 +37,14 @@ public class EnemyProjectile : EnemyDamage
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //base.OnTriggerEnter2D(collision); 
+        hit = true;
         boxCollider.enabled = false;
         Debug.Log(collision.tag);
         if (collision.transform.CompareTag("Player"))
         {
-            hit = true;
             collision.GetComponent<player_health>().player_damage();
-            gameObject.SetActive(false);
         }
-         //When this hits any object deactivate arrow
+        gameObject.SetActive(false); //When this hits any object deactivate arrow
     }
 
     private void Deactivate()
