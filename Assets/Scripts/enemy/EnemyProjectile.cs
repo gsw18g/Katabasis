@@ -44,6 +44,13 @@ public class EnemyProjectile : EnemyDamage
         {
             collision.GetComponent<player_health>().player_damage();
         }
+        else if (collision.transform.CompareTag("sword_check"))
+        {
+            GameObject obj = collision.gameObject;
+            GameObject parentObj = obj.transform.parent.gameObject;
+            parentObj.GetComponent<player_health>().player_damage();
+        }
+
         gameObject.SetActive(false); //When this hits any object deactivate arrow
     }
 
