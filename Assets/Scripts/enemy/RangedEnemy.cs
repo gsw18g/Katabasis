@@ -22,6 +22,9 @@ public class RangedEnemy : MonoBehaviour
     private Animator anim;
     private EnemyPatrol enemyPatrol;
 
+    bool take_damage;
+    public int health = 100;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -38,6 +41,12 @@ public class RangedEnemy : MonoBehaviour
                 cooldownTimer = 0;
                 anim.SetTrigger("RangedAttack");
             }
+        }
+
+        //if hit left mouse button and enemy is inside sword stab range(take damage == true)
+        if (Input.GetMouseButtonDown(0) && take_damage)
+        {
+            enemy_damage();
         }
     }
 
@@ -74,4 +83,56 @@ public class RangedEnemy : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
+
+    void enemy_damage()
+    {
+        //if health is positive substract 34 and knockback enemy
+        if (health > 0)
+        {
+            health -= 34;
+            //knockback();
+        }
+        //if enemy has 0 health play death animation
+        if (health < 0)
+        {
+            health = 0;
+
+            //destroy enemy
+            Destroy(gameObject);
+            
+            //animator.SetBool("start_death", true);
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+
+        if (collision.transform.CompareTag("sword_check"))
+        {
+            take_damage = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+
+        if (collision.transform.CompareTag("sword_check"))
+        {
+            take_damage = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+
+        if (collision.transform.CompareTag("sword_check"))
+        {
+            take_damage = false;
+        }
+    }
+
 }
