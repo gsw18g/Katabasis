@@ -21,6 +21,7 @@ TagManager:
   - hades_block
   - hades
   - Enemy
+  - zombie_range
   layers:
   - Default
   - TransparentFX
