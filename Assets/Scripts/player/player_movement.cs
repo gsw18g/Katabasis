@@ -12,7 +12,7 @@ public class player_movement : MonoBehaviour
     float mod;
     Vector2 jump_height;
     bool ground;
-    public bool slope_check;
+    public bool on_slope;
 
     public Animator animator;
 
@@ -44,9 +44,6 @@ public class player_movement : MonoBehaviour
 
         velocity = pos_x;//0f change the starting pos of player
 
-        ground = check_ground.is_grounded;
-        slope_check = check_ground.on_slope;
-
     }
 
     // Update is called once per frame
@@ -54,7 +51,7 @@ public class player_movement : MonoBehaviour
     {
         //move something smoothly mult by Time.deltaTime 
         ground = check_ground.is_grounded;
-        slope_check = check_ground.on_slope;
+        on_slope = slope_check.on_slope;
         knock = player_health.knock;
         sinking = sink_check.sinking;
 
@@ -92,7 +89,7 @@ public class player_movement : MonoBehaviour
         }
 
         //if player is on the ground, and jump key pressed
-        if (ground || slope_check || sinking)
+        if (ground || sinking || on_slope)//ground || slope_check || sinking)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
