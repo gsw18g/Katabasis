@@ -24,7 +24,7 @@ public class sink_check : MonoBehaviour
 
         if (collision.transform.CompareTag("sink"))
         {
-            Debug.Log("sink enter");
+            //Debug.Log("sink enter");
             sinking = true;
         }
     }
@@ -34,7 +34,7 @@ public class sink_check : MonoBehaviour
         
         if (collision.transform.CompareTag("sink"))
         {
-            Debug.Log("sink stay");
+            //Debug.Log("sink stay");
             sinking = true;
         }
     }

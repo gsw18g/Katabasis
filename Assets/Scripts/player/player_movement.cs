@@ -12,7 +12,7 @@ public class player_movement : MonoBehaviour
     float mod;
     Vector2 jump_height;
     bool ground;
-    public bool slope_check;
+    public bool on_slope;
 
     public Animator animator;
 
@@ -40,21 +40,17 @@ public class player_movement : MonoBehaviour
         //get players starting x and y pos
         pos_x = gameObject.transform.position.x;
         pos_y = gameObject.transform.position.y;
+        //jump height
         jump_height = new Vector2(0f, 8f);//4f
-
         velocity = pos_x;//0f change the starting pos of player
-
-        ground = check_ground.is_grounded;
-        slope_check = check_ground.on_slope;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //move something smoothly mult by Time.deltaTime 
         ground = check_ground.is_grounded;
-        slope_check = check_ground.on_slope;
+        on_slope = slope_check.on_slope;
         knock = player_health.knock;
         sinking = sink_check.sinking;
 
@@ -68,31 +64,28 @@ public class player_movement : MonoBehaviour
         {
             prev = 'a';
             velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
-            
-            //walk = true;
             animator.SetBool("walk", true);
             
-            flip_player(0);
+            flip_player();
         }
         //move left
         else if (Input.GetKey(KeyCode.A) && !knock)
         {
             prev = 'd';
             velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
-            
-            //walk = true;
             animator.SetBool("walk", true);
             //movement(velocity);
-            flip_player(0);
+            flip_player();
         }
+        //idle animation
         else
         {
-            //walk = false;
+            
             animator.SetBool("walk", false);
         }
 
         //if player is on the ground, and jump key pressed
-        if (ground || slope_check || sinking)
+        if (ground || sinking || on_slope)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -104,6 +97,7 @@ public class player_movement : MonoBehaviour
             }
         }
 
+        //knock player back if colliding with enemy
         if (knock && knock_time <= .1f)
         {
             var y_pos = transform.position.y;
@@ -113,23 +107,23 @@ public class player_movement : MonoBehaviour
             {
                 if (center.transform.position.x - zombie.transform.position.x < 0)
                 {
-                    //start adding speed * time * mod every frame 
+                    //start subtracting knock_force * time * mod every frame to knock player left
                     velocity -= (knock_force * Time.deltaTime * mod);
                 }
                 else
                 {
-                    //start adding speed * time * mod every frame 
+                    //start adding knock_force * time * mod every frame to knock player right
                     velocity += (knock_force * Time.deltaTime * mod);
                 }
             }
 
-            //substract vel from position.x every frame
+            //set new velocity every frame
             rb.transform.position = new Vector3(velocity, y_pos, 0f);//transform.position.y
 
         }
+        //bounce player in air if colliding with horn
         else if(bounce)
         {
-           
             bounce_time += Time.deltaTime;
             if(bounce_time <= .2f)
             {
@@ -145,6 +139,7 @@ public class player_movement : MonoBehaviour
                 }
                 
             }
+            //reset bounce
             else
             {
                 bounce_time = 0f;
@@ -152,23 +147,23 @@ public class player_movement : MonoBehaviour
                 velocity = rb.transform.position.x;
                 bounce_right = false;
             }
-
             
         }
-        else// if(ground)
+        //else move player (on ground)
+        else
         {
             //move player
             movement(velocity);
         }
 
+        //if left mouse pressed play stab animation
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetBool("stab", true);
         }
 
  
-    }//update
-
+    }//end update
 
     public void reset_stab()
     {
@@ -183,7 +178,7 @@ public class player_movement : MonoBehaviour
         animator.SetBool("jump", false);
     }
 
-
+    //move player
     void movement(float vel)
     {
         rb.transform.position = new Vector3(vel, transform.position.y, 0f);
@@ -191,7 +186,7 @@ public class player_movement : MonoBehaviour
         player_health.knock = false;
     }
 
-    void flip_player(int deg)
+    void flip_player()
     {
         if(prev == 'a')
         {
@@ -207,13 +202,12 @@ public class player_movement : MonoBehaviour
     {
         if (collision.transform.CompareTag("horn"))
         {
+            //get random value 0 or 1
             bounce = true;
-
             var rand = Random.Range(0, 2);
-
+          
             if (rand == 0)
             {
-                //bounce_mag *= -1;
                 bounce_right = true;
             }
         }

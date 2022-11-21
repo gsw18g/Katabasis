@@ -7,7 +7,7 @@ public class sinking_platform : MonoBehaviour
 
     Rigidbody2D rb;
     public bool sink_ground = false;
-    public float mod = .01f;//4
+    public float mod = 20f;//4//.01
 
     float timer = 0f;
 

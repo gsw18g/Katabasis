@@ -14,6 +14,8 @@ public class enemy_melee : MonoBehaviour
     //check if enemy should take damage
     private bool take_damage;
 
+    public GameObject zombie_death;
+
     [SerializeField] private Transform center;
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
@@ -62,7 +64,11 @@ public class enemy_melee : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            animator.SetBool("start_death", true);   
+            //animator.SetBool("start_death", true);
+
+            //spawn zombie death animation where zombie died
+            Instantiate(zombie_death, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);
+            Destroy(gameObject);
         }
 
     }

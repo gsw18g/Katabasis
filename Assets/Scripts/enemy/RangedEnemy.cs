@@ -105,6 +105,7 @@ public class RangedEnemy : MonoBehaviour
     }
 
 
+    //when enemy trigger collider 1st collides with player sword set take damage to true 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -115,6 +116,7 @@ public class RangedEnemy : MonoBehaviour
         }
     }
 
+    //when enemy trigger collider continues to collide with player sword set take damage to true 
     private void OnTriggerStay2D(Collider2D collision)
     {
         
@@ -125,6 +127,8 @@ public class RangedEnemy : MonoBehaviour
         }
     }
 
+
+    //when enemy trigger collider stops colliding with player sword set take damage to false
     private void OnTriggerExit2D(Collider2D collision)
     {
         
