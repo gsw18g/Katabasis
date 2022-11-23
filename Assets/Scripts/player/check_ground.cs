@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class check_ground : MonoBehaviour
 {
-    public static bool is_grounded;
+    public static bool is_grounded = false;
+    public static bool on_boat = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        is_grounded = false;
+        
 
     }
 
@@ -27,6 +28,8 @@ public class check_ground : MonoBehaviour
             is_grounded = true;
         }
 
+        
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -35,6 +38,8 @@ public class check_ground : MonoBehaviour
         {
             is_grounded = true;
         }
+
+        
 
     }
 
@@ -45,6 +50,30 @@ public class check_ground : MonoBehaviour
             is_grounded = false;
         }
 
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("boat"))
+        {
+            on_boat = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("boat"))
+        {
+            on_boat = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("boat"))
+        {
+            on_boat = false;
+        }
     }
 
 }

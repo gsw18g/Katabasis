@@ -30,6 +30,8 @@ public class player_movement : MonoBehaviour
     float bounce_mag_y = .05f;//.025
     float bounce_mag_x = .05f;
     bool bounce_right = false;
+
+    public bool on_boat = check_ground.on_boat;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class player_movement : MonoBehaviour
         on_slope = slope_check.on_slope;
         knock = player_health.knock;
         sinking = sink_check.sinking;
+        on_boat = check_ground.on_boat;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -148,6 +151,12 @@ public class player_movement : MonoBehaviour
                 bounce_right = false;
             }
             
+        }
+        else if(on_boat)
+        {
+            //add the boats velocity to the player velocity
+            velocity += Time.deltaTime * 1.5f;
+            movement(velocity);
         }
         //else move player (on ground)
         else

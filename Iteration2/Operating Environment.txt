@@ -1,0 +1,2 @@
+Katabasis aims to run on almost any modern computer as it is a simple game that doesn't consume many resources. 
+It's being developed on Unity 2021.3.11f1 and will require components of this software in order to run
