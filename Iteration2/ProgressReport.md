@@ -33,7 +33,17 @@ Group #8
 - During increment 2 we added several things to our platformer Katabasis. We created sloped hills to give the game a more realistic look and fixed bugs to allow the player to jump on the hills. We fixed the code related to the zombie health system so that health is deducted from each individual zombie when attacked and each zombie's health bar reflects this damage. The knockback system now works, which enables the player and zombie to be knocked back when attacked. Skull platfroms which fall when the player walks on them were added to level 2. We also added new parallax scrolling backgrounds, the river styx which damages the player if he falls into it, and charon's boat. Lastly an attack patten was added to the behavior of the bat enemies.
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
+- Challenges
+- Parallax scrolling upwards
+- Unity editor errors
+- Ranged enemy
+- Workflow style changed, we got a little disorganized on knowing who was doing what
 - Scope
+- Down to 3 levels of gameplay, not including the bossfight and cutscenes
+- Still no gathering system
+- No dash or wall stick
+- Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
+
 
 5) Team Member Contribution for this increment
 - Alejandro Santiago
