@@ -22,4 +22,4 @@ Matthew K
 *- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). *
 
 5. Non-Execution-based Testing (10 points)
-*- Describe how/if you performed non-execution-based testing (such as code reviews/inspections/walkthroughs). *
+- A group member who had not previously seen code files reviewed every single script and gave feedback on syntax, design, and comments in the attached document.
