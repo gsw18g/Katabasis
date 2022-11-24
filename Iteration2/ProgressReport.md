@@ -34,15 +34,20 @@ Group #8
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
 - Challenges
-- Parallax scrolling upwards
-- Unity editor errors
-- Ranged enemy
-- Workflow style changed, we got a little disorganized on knowing who was doing what
+  - Parallax scrolling during vertical player movement
+  - Unity editor errors
+  - Ranged enemy arrows got stuck in its box
+  - Ranged enemy not recognizing player and shooting
+  - Workflow style changed, we got a little disorganized on knowing who was doing what
+  - Zombie damaged character after it was "killed"
+  - Jumping on slope bug
+  - Enemypatrol file had a mathfs error when it was originally pushed
+  - Game over screen not functional as of yet
 - Scope
-- Down to 3 levels of gameplay, not including the bossfight and cutscenes
-- Still no gathering system
-- No dash or wall stick
-- Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
+  - Down to 3 levels of gameplay, not including the bossfight and cutscenes
+  - Still no gathering system
+  - No dash or wall stick
+  - Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
 
 
 5) Team Member Contribution for this increment
