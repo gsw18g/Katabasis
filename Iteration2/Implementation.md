@@ -21,5 +21,11 @@ Matthew K
 4. Execution-based Non-Functional Testing (10 points)
 *- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). *
 
+We've been implementing multiple features and obstacles in order to make the experience of the player more enjoyable and have multiple interactions with the objects and enemies we've prepared.
+
+We've implemented multiple difficulties in order for the player to feel challenged even if they are experienced.
+
+We've kept our code organized in multiple folders in order for it to be easily found and is documented for ease of reading and modifying.
+
 5. Non-Execution-based Testing (10 points)
 - A group member who had not previously seen code files reviewed every single script and gave feedback on syntax, design, and comments in the attached document (/Iteration2/Iteration 2 Code Review(1).pdf).
