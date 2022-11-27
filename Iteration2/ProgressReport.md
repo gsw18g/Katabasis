@@ -55,8 +55,8 @@ Group #8
   - Progress Report: Sections 5, 6
   - Requirements and Design Document: Section 5
   - Implementation and Testing Document: Section 2
-  - Source Code: 
-  - Video: 
+  - Source Code: Created a new backgroud in photoshop for the second level along with a new parallax script to allow 5 layers of movement, also composed an original song for the title screen using Logic Pro (can be found in the folder titled 'Alex', titled 'Orpheus' Lament'). 
+  - Video: Gave a general overview of the project. 
 
 - Gavin Williams
   - Progress Report: Section 5
@@ -90,4 +90,4 @@ Group #8
 - For the next increment, 
 
 7) Link to video
-- **MEETING ON WEDNESDAY AT 8PM TO FILM!**
+- https://youtu.be/nJTQX3uuR2U
