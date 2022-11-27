@@ -1,3 +1,6 @@
+// enemy_damage.cs: Give player “damage”
+// written by: Gavin Williams
+
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
