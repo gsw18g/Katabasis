@@ -1,26 +1,29 @@
+// ranged_enemy.cs:
+// written by: Gavin Williams, Matthew Kaplan
+
 using UnityEngine;
 
-public class RangedEnemy : MonoBehaviour
+public class ranged_enemy : MonoBehaviour
 {
     [Header("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
+    [SerializeField] private float attack_cooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
     [Header("Ranged Attack")]
-    [SerializeField] private Transform projectilePoint;
+    [SerializeField] private Transform projectile_point;
     [SerializeField] private GameObject[] projectile;
 
     [Header("Collider Parameters")]
-    [SerializeField] private float colliderDistance;
-    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private float collider_distance;
+    [SerializeField] private BoxCollider2D box_collider;
 
     [Header("Player Layer")]
-    [SerializeField] private LayerMask playerLayer;
-    private float cooldownTimer = Mathf.Infinity;
+    [SerializeField] private LayerMask player_layer;
+    private float cooldown_timer = Mathf.Infinity;
 
     private Animator anim;
-    private EnemyPatrol enemyPatrol;
+    private EnemyPatrol enemy_patrol;
 
     bool take_damage;
     public int health = 100;
@@ -32,18 +35,18 @@ public class RangedEnemy : MonoBehaviour
 
     private void Update()
     {
-        cooldownTimer += Time.deltaTime;
+        cooldown_timer += Time.deltaTime;
 
         if (PlayerInSight())
         {
-            if(cooldownTimer >= attackCooldown)
+            if(cooldown_timer >= attack_cooldown)
             {
-                cooldownTimer = 0;
+                cooldown_timer = 0;
                 anim.SetTrigger("RangedAttack");
             }
         }
 
-        //if hit left mouse button and enemy is inside sword stab range(take damage == true)
+        // if hit left mouse button and enemy is inside sword stab range(take_damage == true)
         if (Input.GetMouseButtonDown(0) && take_damage)
         {
             enemy_damage();
@@ -52,8 +55,8 @@ public class RangedEnemy : MonoBehaviour
 
     private void RangedAttack()
     {
-        cooldownTimer = 0;
-        projectile[FindProjectile()].transform.position = projectilePoint.position;
+        cooldown_timer = 0;
+        projectile[FindProjectile()].transform.position = projectile_point.position;
         projectile[FindProjectile()].GetComponent<EnemyProjectile>().ActivateProjectile();
     }
 
@@ -70,9 +73,9 @@ public class RangedEnemy : MonoBehaviour
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
-            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-            0, Vector2.left, 0, playerLayer);
+            Physics2D.BoxCast(box_collider.bounds.center + transform.right * range * transform.localScale.x * collider_distance,
+            new Vector3(box_collider.bounds.size.x * range, box_collider.bounds.size.y, box_collider.bounds.size.z),
+            0, Vector2.left, 0, player_layer);
 
         return hit.collider != null;
     }
@@ -80,63 +83,52 @@ public class RangedEnemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+        Gizmos.DrawWireCube(box_collider.bounds.center + transform.right * range * transform.localScale.x * collider_distance,
+            new Vector3(box_collider.bounds.size.x * range, box_collider.bounds.size.y, box_collider.bounds.size.z));
     }
 
     void enemy_damage()
     {
-        //if health is positive substract 34 and knockback enemy
+        // if health is positive substract 34 and knockback enemy
         if (health > 0)
         {
             health -= 34;
-            //knockback();
+            // knockback();
         }
-        //if enemy has 0 health play death animation
+        
+        // if enemy has 0 health play death animation
         if (health < 0)
         {
             health = 0;
-
-            //destroy enemy
-            Destroy(gameObject);
-            
-            //animator.SetBool("start_death", true);
+            // destroy enemy
+            Destroy(gameObject);            
         }
     }
 
-
-    //when enemy trigger collider 1st collides with player sword set take damage to true 
+    // when enemy trigger collider 1st collides with player sword set take damage to true 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-
         if (collision.transform.CompareTag("sword_check"))
         {
             take_damage = true;
         }
     }
 
-    //when enemy trigger collider continues to collide with player sword set take damage to true 
+    // when enemy trigger collider continues to collide with player sword set take damage to true 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
-
         if (collision.transform.CompareTag("sword_check"))
         {
             take_damage = true;
         }
     }
 
-
-    //when enemy trigger collider stops colliding with player sword set take damage to false
+    // when enemy trigger collider stops colliding with player sword set take damage to false
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
-
         if (collision.transform.CompareTag("sword_check"))
         {
             take_damage = false;
         }
     }
-
 }
