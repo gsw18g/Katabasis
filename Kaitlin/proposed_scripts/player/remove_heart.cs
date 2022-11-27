@@ -1,4 +1,3 @@
-
 // remove_heart.cs: Displays hearts representing player health
 // written by: Matthew Kaplan
 
