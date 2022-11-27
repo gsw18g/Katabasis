@@ -1,3 +1,6 @@
+// warp.cs: Warps position of player?
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +43,5 @@ public class warp : MonoBehaviour
         {
 
         }
-
     }
 }
