@@ -1,3 +1,7 @@
+// boss_blocks.cs: Builds and destroys platforms used that boss will destroy in fight
+// written by: Matthew Kaplan
+// TODO: boss_blocks instance and Awake()
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,38 +17,11 @@ public class boss_blocks : MonoBehaviour
 
     private GameObject[] instance_count;
 
-    /*
-     * private static boss_blocks instance = null;
-
-    //game instance singleton
-    public static boss_blocks Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
-
-    //make sure only one instance is instantiated
-    private void Awake()
-    {
-        //if the singleton hasn't been initialized yet
-        if(instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
-    }
-     * */
-
     // Start is called before the first frame update
     void Start()
     {
         //build_floor();
         player = GameObject.FindGameObjectWithTag("Player");
-
         instance_count = GameObject.FindGameObjectsWithTag("ground");
         Debug.Log("instances = " + instance_count.Length);
     }
@@ -52,7 +29,6 @@ public class boss_blocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
  
     }
 
@@ -61,7 +37,6 @@ public class boss_blocks : MonoBehaviour
         for(int i = 0; i < size; i++)
         {
             blocks[i] = Instantiate(brick, gameObject.transform.position, gameObject.transform.rotation);
-
             blocks[i].transform.position = new Vector3(transform.position.x + (i * offset), transform.position.y, transform.position.z);
         }
     }
@@ -77,7 +52,6 @@ public class boss_blocks : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -89,14 +63,13 @@ public class boss_blocks : MonoBehaviour
 
         if (collision.transform.CompareTag("hades") && hades.destroy)
         {
-
             Debug.Log("destroy");
             Destroy(gameObject);
         }
     }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         
     }
-
 }
