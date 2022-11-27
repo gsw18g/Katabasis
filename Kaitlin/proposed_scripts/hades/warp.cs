@@ -1,5 +1,6 @@
 // warp.cs: Warps position of player?
 // written by: Matthew Kaplan
+// TODO: empty if statements
 
 using System.Collections;
 using System.Collections.Generic;
