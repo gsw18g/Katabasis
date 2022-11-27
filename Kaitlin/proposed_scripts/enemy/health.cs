@@ -1,35 +1,40 @@
+
+// health.cs: health system animations for player?
+// written by: Gavin Williams
+// TODO: move to player folder if this is for the player
+
 using UnityEngine;
 using System.Collections;
 
-public class Health : MonoBehaviour
+public class health : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+    [SerializeField] private float starting_health;
+    public float current_health { get; private set; }
     private Animator anim;
     private bool dead;
 
     [Header("iFrames")]
-    [SerializeField] private float iFramesDuration;
-    [SerializeField] private int numberOfFlashes;
-    private SpriteRenderer spriteRend;
+    [SerializeField] private float iframes_duration;
+    [SerializeField] private int number_of_flashes;
+    private SpriteRenderer sprite_rend;
 
     [Header("Components")]
-    [SerializeField] private Behaviour[] components;
+    [SerializeField] private behavior[] components;
     private bool invulnerable;
 
     private void Awake()
     {
-        currentHealth = startingHealth;
+        currentHealth = starting_health;
         anim = GetComponent<Animator>();
-        spriteRend = GetComponent<SpriteRenderer>();
+        sprite_rend = GetComponent<SpriteRenderer>();
     }
     public void TakeDamage(float _damage)
     {
         if (invulnerable) return;
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        current_health = Mathf.Clamp(current_health - _damage, 0, starting_health);
 
-        if (currentHealth > 0)
+        if (current_health > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
@@ -48,21 +53,25 @@ public class Health : MonoBehaviour
             }
         }
     }
+    
     public void AddHealth(float _value)
     {
-        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+        current_health = Mathf.Clamp(current_health + _value, 0, starting_health);
     }
+    
     private IEnumerator Invunerability()
     {
         invulnerable = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
-        for (int i = 0; i < numberOfFlashes; i++)
+        
+        for (int i = 0; i < number_of_flashes; i++)
         {
-            spriteRend.color = new Color(1, 0, 0, 0.5f);
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            spriteRend.color = Color.white;
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            sprite_rend.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(iframes_duration / (number_of_flashes * 2));
+            sprite_rend.color = Color.white;
+            yield return new WaitForSeconds(iframes_duration / (number_of_flashes * 2));
         }
+        
         Physics2D.IgnoreLayerCollision(10, 11, false);
         invulnerable = false;
     }
