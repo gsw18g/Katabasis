@@ -1,3 +1,6 @@
+// check_ground.cs: Identifies if the player is touching the ground or not
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +13,6 @@ public class check_ground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
     }
 
@@ -27,9 +29,6 @@ public class check_ground : MonoBehaviour
         {
             is_grounded = true;
         }
-
-        
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -37,10 +36,7 @@ public class check_ground : MonoBehaviour
         if (collision.transform.CompareTag("ground"))
         {
             is_grounded = true;
-        }
-
-        
-
+        }     
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -48,9 +44,7 @@ public class check_ground : MonoBehaviour
         if (collision.transform.CompareTag("ground"))
         {
             is_grounded = false;
-        }
-
-        
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,6 +54,7 @@ public class check_ground : MonoBehaviour
             on_boat = true;
         }
     }
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("boat"))
@@ -75,5 +70,4 @@ public class check_ground : MonoBehaviour
             on_boat = false;
         }
     }
-
 }
