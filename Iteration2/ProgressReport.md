@@ -87,7 +87,7 @@ Group #8
   - Video: 
   
 6) Plans for the next increment
-- For the next increment, 
+- For the next increment, Alex plans on focusing on sound design and solidifying the plot points of the project, as well as helping finish the third and final level of the game.
 
 7) Link to video
 - https://youtu.be/nJTQX3uuR2U
