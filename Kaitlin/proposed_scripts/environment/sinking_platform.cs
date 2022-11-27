@@ -1,10 +1,12 @@
+// sinking_platform.cs: sink platform if collision with player detected
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class sinking_platform : MonoBehaviour
 {
-
     Rigidbody2D rb;
     public bool sink_ground = false;
     public float mod = 20f;//4//.01
@@ -32,14 +34,8 @@ public class sinking_platform : MonoBehaviour
             {
                 rb.isKinematic = false;
                 timer = 0f;
-            }
-
-            //pos_y -= Time.deltaTime * mod;//Time.deltaTime //.001
-            //gameObject.transform.position -= new Vector3(0f, Time.deltaTime * mod, 0f);
-            
+            }            
         }
-
-        //gameObject.transform.position = new Vector3(transform.position.x, pos_y, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
