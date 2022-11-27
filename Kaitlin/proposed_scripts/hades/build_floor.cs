@@ -1,3 +1,7 @@
+
+// build_floor.cs: Builds ground used in boss fight
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +31,6 @@ public class build_floor : MonoBehaviour
     void Update()
     {
 
-
     }
 
     void build_ground()
@@ -35,13 +38,10 @@ public class build_floor : MonoBehaviour
         for (int i = 0; i < size; i++)
         {
             blocks[i] = Instantiate(brick, gameObject.transform.position, gameObject.transform.rotation);
-
             blocks[i].transform.position = new Vector3(transform.position.x + (i * offset), transform.position.y, transform.position.z);
         }
     }
-
-   
-
+    
     void find_block()
     {
         for (int i = 0; i < instance_count.Length; i++)
@@ -52,8 +52,4 @@ public class build_floor : MonoBehaviour
             }
         }
     }
-
-
-   
-
 }
