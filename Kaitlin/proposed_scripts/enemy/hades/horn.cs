@@ -1,3 +1,7 @@
+// horn.cs: Hades animation reaction to contact with player
+// written by: Matthew Kaplan
+// TODO: implement bounce in Update()
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +23,6 @@ public class horn : MonoBehaviour
         if(bounce)
         {
             //do bounce
-
         }
     }
 
