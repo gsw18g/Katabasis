@@ -1,3 +1,6 @@
+// player_movement.cs: Activates specific player movements based on user input
+// written by: Gavin Williams, Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,12 +35,12 @@ public class player_movement : MonoBehaviour
     bool bounce_right = false;
 
     public bool on_boat = check_ground.on_boat;
+    
     // Start is called before the first frame update
     void Start()
     {
         mod = 1.5f;//.005
         speed = 2.0f;
-
         rb = GetComponent<Rigidbody2D>();
         //get players starting x and y pos
         pos_x = gameObject.transform.position.x;
@@ -45,7 +48,6 @@ public class player_movement : MonoBehaviour
         //jump height
         jump_height = new Vector2(0f, 8f);//4f
         velocity = pos_x;//0f change the starting pos of player
-
     }
 
     // Update is called once per frame
@@ -56,19 +58,16 @@ public class player_movement : MonoBehaviour
         knock = player_health.knock;
         sinking = sink_check.sinking;
         on_boat = check_ground.on_boat;
-
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
-
         //movement and idle animation
-
+        
         //move right
         if (Input.GetKey(KeyCode.D) && !knock)
         {
             prev = 'a';
             velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
             animator.SetBool("walk", true);
-            
             flip_player();
         }
         //move left
@@ -83,20 +82,17 @@ public class player_movement : MonoBehaviour
         //idle animation
         else
         {
-            
             animator.SetBool("walk", false);
         }
 
-        //if player is on the ground, and jump key pressed
+        // if player is on the ground, and jump key pressed
         if (ground || sinking || on_slope)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //jump
-
+                // jump
                 rb.AddForce(jump_height, ForceMode2D.Impulse);
                 animator.SetBool("jump", true);
-                //Debug.Log("ground + jump");
             }
         }
 
@@ -104,45 +100,43 @@ public class player_movement : MonoBehaviour
         if (knock && knock_time <= .1f)
         {
             var y_pos = transform.position.y;
-            //start adding to knocktime
+            // start adding to knocktime
             knock_time += Time.deltaTime;
             if (GameObject.FindGameObjectWithTag("enemy_melee") != null)
             {
                 if (center.transform.position.x - zombie.transform.position.x < 0)
                 {
-                    //start subtracting knock_force * time * mod every frame to knock player left
+                    // start subtracting knock_force * time * mod every frame to knock player left
                     velocity -= (knock_force * Time.deltaTime * mod);
                 }
                 else
                 {
-                    //start adding knock_force * time * mod every frame to knock player right
+                    // start adding knock_force * time * mod every frame to knock player right
                     velocity += (knock_force * Time.deltaTime * mod);
                 }
             }
-
-            //set new velocity every frame
+            
+            // set new velocity every frame
             rb.transform.position = new Vector3(velocity, y_pos, 0f);//transform.position.y
-
         }
-        //bounce player in air if colliding with horn
+        // bounce player in air if colliding with horn
         else if(bounce)
         {
             bounce_time += Time.deltaTime;
             if(bounce_time <= .2f)
             {
-               //bounce right
+               // bounce right
                 if(bounce_right)
                 {
                     rb.transform.position += new Vector3(bounce_mag_x, bounce_mag_y, 0f);
                 }
-                //bounce_left
+                // bounce_left
                 else
                 {
                     rb.transform.position += new Vector3(-bounce_mag_x, bounce_mag_y, 0f);
                 }
-                
             }
-            //reset bounce
+            // reset bounce
             else
             {
                 bounce_time = 0f;
@@ -150,28 +144,25 @@ public class player_movement : MonoBehaviour
                 velocity = rb.transform.position.x;
                 bounce_right = false;
             }
-            
         }
         else if(on_boat)
         {
-            //add the boats velocity to the player velocity
+            // add the boats velocity to the player velocity
             velocity += Time.deltaTime * 1.5f;
             movement(velocity);
         }
-        //else move player (on ground)
+        // else move player (on ground)
         else
         {
-            //move player
+            // move player
             movement(velocity);
         }
 
-        //if left mouse pressed play stab animation
+        // if left mouse pressed play stab animation
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetBool("stab", true);
         }
-
- 
     }//end update
 
     public void reset_stab()
@@ -180,10 +171,8 @@ public class player_movement : MonoBehaviour
         animator.SetBool("stab", false);
     }
 
-
     public void reset_jump()
-    {
-
+    { 
         animator.SetBool("jump", false);
     }
 
@@ -226,7 +215,7 @@ public class player_movement : MonoBehaviour
     {
         if (collision.transform.CompareTag("horn"))
         {
-            //          bounce = true;
+            // bounce = true;
         }
     }
 
@@ -234,9 +223,7 @@ public class player_movement : MonoBehaviour
     {
         if (collision.transform.CompareTag("horn"))
         {
-            //bounce = false;
-            
-
+            // bounce = false;
         }
     }
 }
