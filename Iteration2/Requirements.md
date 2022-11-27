@@ -21,9 +21,19 @@ Matthew K
     6. A medium priority is to implement a knockback to the player when attacked by an enemy.
     7. A medium priority is to implement a knockback when attacking an enemy.
     8. A high priority is to allow the player’s character as well as the enemies to walk on a sloped surface.
-    9. A medium priority is to implement bobbing platforms over water which sink when the player walks on them.
-    10. A high priority is to have a boss fight at the end of all levels.
-    11. A medium priority is to have 5 playable levels plus an introduction level.
+    9. A high priority is to allow the player to jump on a sloped surface.
+    10. A medium priority is to implement bobbing platforms over water which sink when the player walks on them.
+    11. A high priority is to have a boss fight at the end of all levels.
+    12. A medium priority is to have 5 playable levels plus an introduction level.
+    13. A medium priority is to implement charon's boat which carries the player as it moves towards the end of the level.
+    14. A medium priority is to add an attack pattern to the bat enemy
+    15. A medium priority is to use the sloped surfaces to make hills so that the levels aren't just flat platforms.
+    16. A medium priority is to create platforms that the player and enemies can walk on.
+    17. A medium priority is to create zombies that crawl out of the ground.
+    18. A medium priority is to add a cerberus semi boss.
+    19. A medium priority is to implement cut scenes at the beginning of the game.
+    20. A high priority is to implement a death screen with navigation menu, including Continue, Restart, Main Menu, and Quit buttons.
+    21. A high priority is to have the player be taken to level 2 after completing level 1 automatically.
 
 3. Non-functional Requirements (10 points)
     1. The user must experience a satisfying story through the levels.

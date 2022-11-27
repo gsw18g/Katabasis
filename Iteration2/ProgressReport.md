@@ -33,15 +33,30 @@ Group #8
 - During increment 2 we added several things to our platformer Katabasis. We created sloped hills to give the game a more realistic look and fixed bugs to allow the player to jump on the hills. We fixed the code related to the zombie health system so that health is deducted from each individual zombie when attacked and each zombie's health bar reflects this damage. The knockback system now works, which enables the player and zombie to be knocked back when attacked. Skull platfroms which fall when the player walks on them were added to level 2. We also added new parallax scrolling backgrounds, the river styx which damages the player if he falls into it, and charon's boat. Lastly an attack patten was added to the behavior of the bat enemies.
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
+- Challenges
+  - Parallax scrolling during vertical player movement
+  - Unity editor errors
+  - Ranged enemy arrows got stuck in its box
+  - Ranged enemy not recognizing player and shooting
+  - Workflow style changed, we got a little disorganized on knowing who was doing what
+  - Zombie damaged character after it was "killed"
+  - Jumping on slope bug
+  - Enemypatrol file had a mathfs error when it was originally pushed
+  - Game over screen not functional as of yet
 - Scope
+  - Down to 3 levels of gameplay, not including the bossfight and cutscenes
+  - Still no gathering system
+  - No dash or wall stick
+  - Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
+
 
 5) Team Member Contribution for this increment
 - Alejandro Santiago
   - Progress Report: Sections 5, 6
   - Requirements and Design Document: Section 5
   - Implementation and Testing Document: Section 2
-  - Source Code: 
-  - Video: 
+  - Source Code: Created a new backgroud in photoshop for the second level along with a new parallax script to allow 5 layers of movement, also composed an original song for the title screen using Logic Pro (can be found in the folder titled 'Alex', titled 'Orpheus' Lament'). 
+  - Video: Gave a general overview of the project. 
 
 - Gavin Williams
   - Progress Report: Section 5
@@ -72,7 +87,7 @@ Group #8
   - Video: 
   
 6) Plans for the next increment
-- For the next increment, 
+- For the next increment, we plan on focusing on sound design and solidifying the plot points of the project, as well as finishing the third and final level of the game, which will feature a final boss battle. We will also be uping the speed of the player's movement and solidifying the game over screen. If time permits, we also want to create a hard mode and potentially implement some of the inital ideas we had like a dash and being able to stick and climb on walls.
 
 7) Link to video
-- **MEETING ON WEDNESDAY AT 8PM TO FILM!**
+- https://youtu.be/nJTQX3uuR2U
