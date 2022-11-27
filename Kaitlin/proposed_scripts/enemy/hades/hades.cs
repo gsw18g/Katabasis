@@ -1,3 +1,7 @@
+// hades.cs: Moves hades like a normal enemy to follow player
+// written by: Matthew Kaplan
+// TODO: implement OnTriggerEnter2D(), OnTriggerStay2D(), OnTriggerExit2D()
+
 using UnityEngine;
 
 public class hades : MonoBehaviour
@@ -10,7 +14,7 @@ public class hades : MonoBehaviour
     Vector3 last_player_pos;
 
     [Header("Patrol Points")]
-    [SerializeField] private Transform leftEdge;
+    [SerializeField] private Transform left_edge;
     [SerializeField] private Transform rightEdge;
 
     [Header("Enemy")]
@@ -18,15 +22,14 @@ public class hades : MonoBehaviour
 
     [Header("Movement parameters")]
     [SerializeField] private float speed;
-    private Vector3 initScale;
-    private bool movingLeft;
+    private Vector3 init_scale;
+    private bool moving_left;
 
     [Header("Enemy Animator")]
-    //[SerializeField] private Animator anim;
 
     [Header("Idle Behavior")]
-    [SerializeField] private float idleDuration;
-    private float idleTimer;
+    [SerializeField] private float idle_duration;
+    private float idle_timer;
 
     private void Awake()
     {
@@ -35,19 +38,17 @@ public class hades : MonoBehaviour
 
     private void DirectionChange()
     {
-        //anim.SetBool("moving", false);
-        idleTimer += Time.deltaTime;
+        idle_timer += Time.deltaTime;
 
         if (idleTimer > idleDuration && !stop)
-            movingLeft = !movingLeft;
+            moving_left = !moving_left;
     }
 
     private void Update()
     {
-
         if (movingLeft)
         {
-            if (enemy.position.x >= leftEdge.position.x)
+            if (enemy.position.x >= left_edge.position.x)
                 MoveInDirection(-1);
             else
             {
@@ -56,7 +57,7 @@ public class hades : MonoBehaviour
         }
         else
         {
-            if (enemy.position.x <= rightEdge.position.x)
+            if (enemy.position.x <= right_edge.position.x)
                 MoveInDirection(1);
             else
             {
@@ -75,9 +76,8 @@ public class hades : MonoBehaviour
         else if (timer > 3f && timer < 4f)
         {
             stop = true;
-
-            //enemy.position = new Vector3(player.transform.position.x, transform.position.y, 0f);
             enemy.position = new Vector3(last_player_pos.x, transform.position.y, 0f);
+            
             if (enemy.position.x % 1.5f != 0)
             {
                 enemy.transform.position = new Vector3(enemy.transform.position.x - (enemy.transform.position.x % 1.5f), transform.position.y, 0f);
@@ -92,40 +92,16 @@ public class hades : MonoBehaviour
             stop = false;
             destroy = false;
             movingLeft = !movingLeft;
-
         }
-
     }
 
     private void MoveInDirection(int direction)
     {
         idleTimer = 0;
-        //anim.SetBool("moving", true);
         //Make enemy face direciton
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
         //Move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed,
             enemy.position.y, enemy.position.z);
     }
-
-    /*
-     *    private void OnTriggerEnter2D(Collider2D collision)
-       {
-           Debug.Log("on trigger enter");
-           if(collision.transform.CompareTag("hades_block"))
-           {
-               Destroy(collision.gameObject);
-           }
-       }
-
-       private void OnTriggerStay2D(Collider2D collision)
-       {
-
-       }
-
-       private void OnTriggerExit2D(Collider2D collision)
-       {
-
-       }
-     * */
 }
