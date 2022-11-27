@@ -1,3 +1,6 @@
+// melee_enemy.cs: gets and sets health of enemy when damaged
+// written by: Gavin Williams, Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,9 +22,6 @@ public class melee_enemy : MonoBehaviour
     {
         
     }
-
-    //protected abstract int get_health();
-    //protected abstract void set_health();
 
     protected int get_health()
     {
