@@ -1,3 +1,7 @@
+
+// remove_heart.cs: Displays hearts representing player health
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,17 +19,17 @@ public class remove_heart : MonoBehaviour
     {
         if(player_health.num_hearts == 2)
         {
-            Destroy(GameObject.FindWithTag("heart3"));
+            Destroy(GameObject.FindWithTag("heart_3"));
         }
 
         if (player_health.num_hearts == 1)
         {
-            Destroy(GameObject.FindWithTag("heart2"));
+            Destroy(GameObject.FindWithTag("heart_2"));
         }
 
         if (player_health.num_hearts == 0)
         {
-            Destroy(GameObject.FindWithTag("heart1"));
+            Destroy(GameObject.FindWithTag("heart_1"));
         }
     }
 }
