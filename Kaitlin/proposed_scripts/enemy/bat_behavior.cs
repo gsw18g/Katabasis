@@ -1,3 +1,7 @@
+// bat_behavior.cs: Bat behavior when it sees player and gets damaged
+// written by: Lloyd Smith
+// TODO: hit_bat bool trigger true in OnTriggerEnter2D()?
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +9,7 @@ using UnityEngine;
 public class BATBehaviour : MonoBehaviour
 {
     public Transform player;
-    public float moveSpeed = 5f;
+    public float move_speed = 5f;
     private Vector2 movement;
     private Rigidbody2D rb;
     //bool to check if player should be knocked back and damaged
@@ -15,10 +19,10 @@ public class BATBehaviour : MonoBehaviour
     private Vector3 offset;
     public float radius = 5f;
     [Range(1, 360)] public float angle = 360f;
-    public LayerMask targetLayer;
+    public LayerMask target_layer;
     public float pause = 0f;
-    public float timepause = 1f;
-    public bool CanSeePlayer { get; private set; }
+    public float time_pause = 1f;
+    public bool can_see_player { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -34,20 +38,19 @@ public class BATBehaviour : MonoBehaviour
         //adds offset in the x direction to put a little space between the bat and player
         movement = player.position - transform.position + offset;
         movement.Normalize();
+        
         if (hit_bat && Input.GetMouseButtonDown(0))
         {
             Destroy(gameObject);
         }
-
-
     }
 
     private IEnumerator FOVCHECK()
     {
         WaitForSeconds wait = new WaitForSeconds(0.2f);
+        
         while (true)
         {
-
             yield return wait;
             FOV();
         }
@@ -55,39 +58,39 @@ public class BATBehaviour : MonoBehaviour
 
     private void FOV()
     {
-        Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
+        Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, target_layer);
+        
         if (rangeCheck.Length > 0)
         {
-
             Transform target = rangeCheck[0].transform;
-            Vector2 directionToTarget = (target.position - transform.position).normalized;
-            if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
+            Vector2 target_direction = (target.position - transform.position).normalized; // renamed to target_direction
+            
+            if (Vector2.Angle(transform.up, target_direction) < angle / 2)
             {
-                CanSeePlayer = true;
+                can_see_player = true;
             }
             else
-                CanSeePlayer = false;
-
+                can_see_player = false;
         }
-        else if (CanSeePlayer)
-            CanSeePlayer = false;
-
-
+        else if (can_see_player)
+            can_see_player = false;
     }
 
     private void FixedUpdate()
     {
-
-        if (CanSeePlayer)
+        if (can_see_player)
         {
             Vector2 original = transform.position;
-            if(pause>timepause)
+            
+            if(pause>time_pause)
             {
                 rb.isKinematic = false;
-                if(pause>timepause+0.4)
+                
+                if(pause>time_pause+0.4)
                     MoveAttack();
                 else
                     MoveDown();
+                    
                 pause+=Time.deltaTime;
             }
             else
@@ -97,20 +100,18 @@ public class BATBehaviour : MonoBehaviour
                 pause += Time.deltaTime;
 
             }
-            
-        
-        }//Invoke(nameof(MoveAttack), 1f);
+        } // Invoke(nameof(MoveAttack), 1f);
         else
             moveCharacter(movement);
-
     }
 
     void MoveDown()
     {
-        Vector3 d;
+        Vector3 d; // what is d? should probably rename
         d = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z) - transform.position;
         rb.MovePosition((Vector3)transform.position + (d * moveSpeed * Time.deltaTime));
     }
+    
     void MoveAttack()
     {
         Vector3 dir;
@@ -123,16 +124,15 @@ public class BATBehaviour : MonoBehaviour
         {
             dir = new Vector3(transform.position.x-1, transform.position.y, transform.position.z) - transform.position;
         }
-        rb.MovePosition((Vector3)transform.position + (dir * moveSpeed * Time.deltaTime));
-
+        rb.MovePosition((Vector3)transform.position + (dir * move_speed * Time.deltaTime));
     }
+    
     void moveCharacter(Vector2 dir)
     {
         
-        rb.MovePosition((Vector2)transform.position + (dir * moveSpeed * Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (dir * move_speed * Time.deltaTime));
 
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -158,9 +158,6 @@ public class BATBehaviour : MonoBehaviour
         {
             //hit_bat = true;
         }
-
-
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -179,13 +176,9 @@ public class BATBehaviour : MonoBehaviour
 
         if (collision.transform.CompareTag("bat"))
         {
-
             movement = transform.position + offset - collision.transform.position;
             movement.Normalize();
-
         }
-
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -204,15 +197,6 @@ public class BATBehaviour : MonoBehaviour
         {
             movement = transform.position + offset - collision.transform.position;
             movement.Normalize();
-
         }
-
     }
-
-
-
-
-
-
-
 }
