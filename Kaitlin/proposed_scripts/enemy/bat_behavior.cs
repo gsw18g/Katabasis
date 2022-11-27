@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BATBehaviour : MonoBehaviour
+public class bat_behavior : MonoBehaviour
 {
     public Transform player;
     public float move_speed = 5f;
