@@ -52,7 +52,7 @@ Matthew K
 - ![Use Case Diagram](/Iteration1/CaseDiagram.png)
 
 5. Class Diagram and/or Sequence Diagrams (15 points)
-- ![Class Diagram](/Iteration1/Scanned_Documents.pdf)
+- ![Class Diagram](/Iteration2/Diagram.pdf)
 
 6. Operating Environment (5 points)
 - Katabasis aims to run on almost any modern computer as it is a simple game that doesn't consume many resources. It's being developed on Unity 2021.3.11f1 and will require components of this software in order to run.
