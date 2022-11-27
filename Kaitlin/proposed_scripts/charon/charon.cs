@@ -1,3 +1,6 @@
+// charon.cs: Moves boat
+// written by: Matthew Kaplan
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
