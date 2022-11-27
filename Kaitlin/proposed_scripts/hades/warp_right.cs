@@ -1,3 +1,7 @@
+// warp_right.cs: Warps position of player? Same as warp.cs except Vector3 value is different
+// written by: Matthew Kaplan
+// TODO: empty if statements
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +44,5 @@ public class warp_right : MonoBehaviour
         {
 
         }
-
     }
 }
