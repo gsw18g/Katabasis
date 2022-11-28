@@ -1,5 +1,6 @@
 // enemy_patrol.cs: Idle enemy patrolling movement
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 
 using UnityEngine;
 

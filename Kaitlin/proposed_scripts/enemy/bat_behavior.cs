@@ -1,5 +1,6 @@
 // bat_behavior.cs: Bat behavior when it sees player and gets damaged
 // written by: Lloyd Smith
+// reviewed by: Kaitlin Tran
 // TODO: hit_bat bool trigger true in OnTriggerEnter2D()?
 
 using System.Collections;

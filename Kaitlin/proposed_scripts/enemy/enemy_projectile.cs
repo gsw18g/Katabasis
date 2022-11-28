@@ -1,5 +1,6 @@
 // enemy_projectile.cs: Activates, moves, and deactivates arrow when it hits an object
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 
 using UnityEngine;
 

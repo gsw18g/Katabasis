@@ -1,5 +1,6 @@
 // behavior.cs: Bat enemy behavior to follow and “hit” player and check if bat has been hit by player
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: is this one being used anymore?
 
 using System.Collections;

@@ -1,5 +1,6 @@
 // slope_check.cs: Checks if player is on slope or not for movement
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: can this be combined with player_movement file?
 
 using System.Collections;

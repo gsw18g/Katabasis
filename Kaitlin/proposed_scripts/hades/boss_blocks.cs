@@ -1,5 +1,6 @@
 // boss_blocks.cs: Builds and destroys platforms used that boss will destroy in fight
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: boss_blocks instance and Awake()
 
 using System.Collections;

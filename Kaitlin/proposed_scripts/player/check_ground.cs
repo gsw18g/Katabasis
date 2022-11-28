@@ -1,5 +1,6 @@
 // check_ground.cs: Identifies if the player is touching the ground or not
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

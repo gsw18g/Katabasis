@@ -1,5 +1,6 @@
 // horn.cs: Hades animation reaction to contact with player
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: implement bounce in Update()
 
 using System.Collections;

@@ -1,5 +1,6 @@
 // sword_collider.cs: Checks if sword hits enemy
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

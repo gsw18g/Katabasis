@@ -1,5 +1,6 @@
 // spawn_zombie.cs: Instantiate zombie object when scene starts
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

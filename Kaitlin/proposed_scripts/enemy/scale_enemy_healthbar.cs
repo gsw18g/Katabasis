@@ -1,5 +1,6 @@
 // scale_enemy_healthbar.cs: Scales enemy health bar display
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

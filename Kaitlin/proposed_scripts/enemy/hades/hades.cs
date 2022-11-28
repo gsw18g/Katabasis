@@ -1,5 +1,6 @@
 // hades.cs: Moves hades like a normal enemy to follow player
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: implement OnTriggerEnter2D(), OnTriggerStay2D(), OnTriggerExit2D()
 
 using UnityEngine;

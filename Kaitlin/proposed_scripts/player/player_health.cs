@@ -1,5 +1,6 @@
 // player_health.cs: Sets player health, deducts health if collision with enemy detected and senses if player is dead
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

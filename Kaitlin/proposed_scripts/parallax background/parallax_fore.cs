@@ -1,5 +1,6 @@
 // parallax_fore.cs: Move foremost layer of background at certain rate for illusion of depth
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

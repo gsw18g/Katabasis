@@ -1,5 +1,6 @@
 // enemy_melee.cs: Zombie behavior when it sees player and takes damage
 // written by: Gavin Williams, Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: get_health() and set_health()
 
 using System.Collections;

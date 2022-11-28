@@ -1,3 +1,7 @@
+// menu.cs: menu functionality
+// written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

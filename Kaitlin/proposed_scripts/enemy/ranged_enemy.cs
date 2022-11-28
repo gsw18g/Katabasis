@@ -1,5 +1,6 @@
 // ranged_enemy.cs: Ranged enemy behavior when it sees player and takes damage
 // written by: Gavin Williams, Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using UnityEngine;
 

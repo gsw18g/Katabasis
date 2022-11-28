@@ -1,5 +1,6 @@
 // enemy_damage.cs: Give player “damage”
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 
 using UnityEngine;
 

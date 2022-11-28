@@ -1,5 +1,6 @@
 // melee_enemy.cs: gets and sets health of enemy when damaged
 // written by: Gavin Williams, Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

@@ -1,5 +1,6 @@
 // destroy_dead_zombie.cs: Destroys zombie object when it’s dead
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: possibly organize into somewhere else?
 
 using System.Collections;

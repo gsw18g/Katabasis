@@ -1,5 +1,6 @@
 // parallax_back.cs: Move backmost layer of background at certain rate for illusion of depth
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

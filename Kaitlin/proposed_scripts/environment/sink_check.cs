@@ -1,5 +1,6 @@
 // sink_check.cs: check to sink platform if collision with player detected?
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

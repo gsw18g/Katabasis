@@ -1,5 +1,6 @@
 // move_bat.cs: Moves bat enemy object
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 // TODO: add comments. Should this be in the file with the other bat behavior?
 
 using System.Collections;

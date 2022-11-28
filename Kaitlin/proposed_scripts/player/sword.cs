@@ -1,5 +1,6 @@
 // sword.cs: Sword movement up and down
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TODO: timed cooldown
 
 using System.Collections;

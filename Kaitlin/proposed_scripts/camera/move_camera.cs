@@ -1,5 +1,6 @@
 // camera_level.cs: Centers and moves camera with player
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 // TO DO: This does the same thing as camera_level2 except one value is changed, is there a better way to implement?
 
 using System.Collections;

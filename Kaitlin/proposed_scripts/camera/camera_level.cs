@@ -1,5 +1,6 @@
 // camera_level.cs: Centers and moves camera with player
 // written by: Matthew Kaplan
+// reviewed by: Kaitlin Tran
 
 using System.Collections;
 using System.Collections.Generic;

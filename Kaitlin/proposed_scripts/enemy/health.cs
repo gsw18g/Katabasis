@@ -1,6 +1,7 @@
 
 // health.cs: health system animations for player?
 // written by: Gavin Williams
+// reviewed by: Kaitlin Tran
 // TODO: move to player folder if this is for the player
 
 using UnityEngine;
