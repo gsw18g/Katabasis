@@ -13,7 +13,7 @@ public class player_movement : MonoBehaviour
     Vector2 jump_height;
     bool ground;
     public bool on_slope;
-
+    public bool hypno = false;
     public Animator animator;
 
     bool knock = false;
