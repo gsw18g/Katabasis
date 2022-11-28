@@ -69,8 +69,9 @@ Group #8
   - Progress Report: Sections 1, 2, 4, 5
   - Requirements and Design Document: Section 1
   - Implementation and Testing Document: Sections 1, 5
-  - Source Code: 
-  - Video: 
+  - Source Code: Katabasis/Kaitlin/*
+    - includes concept art, sprites and animations of ranged and melee enemies, bosses, and , entire beginning cutscene of game, and proposed code revisions for Katabasis/Assets/Scripts/*
+  - Video: Describe any change in scope of project and explanation
 
 - Lloyd Smith
   - Progress Report: Section 5
