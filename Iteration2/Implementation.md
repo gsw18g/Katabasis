@@ -17,6 +17,7 @@ Matthew K
  
 3. Execution-based Functional Testing (10 points)
 - For every functionality we produced, we tested how the functionality works with the rest of our game to fix any new bugs that popped up and to make sure the functionality works as intended before moving on to the next.
+- incremental changes were also separated into different scenes/ branches to avoid breaking the game with new code
 - Functionality testing is performed by finishing a script/object, and then putting the Unity editor in play mode to analyze the behavior of our change/addition.
 - Unity has its own compiler which assisted in finding any syntax errors in our scripts.
 - Highest priority functional requirements were implemented and tested first and haven been the base of other requirements.
