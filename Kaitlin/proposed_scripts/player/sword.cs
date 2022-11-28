@@ -1,3 +1,7 @@
+// sword.cs: Sword movement up and down
+// written by: Matthew Kaplan
+// TODO: timed cooldown
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,8 +65,6 @@ public class sword : MonoBehaviour
                 z_rot = z_rot + (Time.deltaTime * mod);
 
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
-
-                //Debug.Log("z_rot1 = " + z_rot);
             }
             //sword is at top of swing
             else
@@ -72,23 +74,16 @@ public class sword : MonoBehaviour
                 down = true;
                 downswing = true;
             }
-
-            
         }
         else if(down)
         {
-            //Debug.Log("down = true");
-
             //if sword is not at bottom of swing
             if((z_rot + 34) > 0)
             {
-                //Debug.Log("z_rot2 = " + z_rot);
                 //increase z rot smoothly
                 z_rot = z_rot - (Time.deltaTime * mod);
 
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
-                
-
             }
             //sword is at bottom of swing
             else
@@ -96,34 +91,23 @@ public class sword : MonoBehaviour
                 //Debug.Log("down = false");
                 down = false;
                 back_to_start = true;
-                
-
             }
         }
 
-        
         if(back_to_start)
         {
-            //if sword is not at start position
+            // if sword is not at start position
             if (z_rot < 0f)
             {
-                //Debug.Log("z_rot3 = " + z_rot);
-                //increase z rot soothly
+                // increase z rot soothly
                 z_rot = z_rot + (Time.deltaTime * mod);
-
                 transform.eulerAngles = new Vector3(0f, 0f, z_rot);
-
             }
-            //sword is start pos
+            // sword is start pos
             else
             {
-                
-
                 back_to_start = false;
             }
         }
-        
     }
-
-
 }
