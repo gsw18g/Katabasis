@@ -71,6 +71,7 @@ Group #8
   - Implementation and Testing Document: Sections 1, 5
   - Source Code: Katabasis/Kaitlin/*
     - includes concept art, sprites and animations of ranged and melee enemies, bosses, and , entire beginning cutscene of game, and proposed code revisions for Katabasis/Assets/Scripts/*
+    - reorganized and added new information to README.md
   - Video: Describe any change in scope of project and explanation
 
 - Lloyd Smith
