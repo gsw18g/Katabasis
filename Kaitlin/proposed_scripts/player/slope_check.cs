@@ -1,3 +1,7 @@
+// slope_check.cs: Checks if player is on slope or not for movement
+// written by: Matthew Kaplan
+// TODO: can this be combined with player_movement file?
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,8 +24,7 @@ public class slope_check : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        //check if slope collison circle is colliding with a slope
+        // check if slope collison circle is colliding with a slope
         if (collision.transform.CompareTag("slope"))
         {
             on_slope = true;
@@ -30,7 +33,7 @@ public class slope_check : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //check if slope collison circle is colliding with a slope
+        // check if slope collison circle is colliding with a slope
         if (collision.transform.CompareTag("slope"))
         {
             on_slope = true;
@@ -39,7 +42,7 @@ public class slope_check : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //check if slope collison circle is colliding with a slope
+        // check if slope collison circle is colliding with a slope
         if (collision.transform.CompareTag("slope"))
         {
             on_slope = false;
