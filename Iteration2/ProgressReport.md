@@ -85,7 +85,7 @@ Group #8
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: N/A
-  - Source Code: 
+  - Source Code: scripts including camera level 2, camera level 1, charon boat movement, zombie death object, hades boss, move bat, spawn zombie, sink check, sinking platform, boss blocks, build floor, hades camera, warp, warp right, slope check, hades, hades horn
   - Video: 
   
 6) Plans for the next increment
