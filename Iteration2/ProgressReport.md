@@ -62,8 +62,8 @@ Group #8
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 3, 7
   - Implementation and Testing Document: Section 3
-  - Source Code:
-  - Video: 
+  - Source Code: Any code related to the ranged enemy archetype or the death screen for this iteration.
+  - Video: Game Demo
 
 - Kaitlin Tran
   - Progress Report: Sections 1, 2, 4, 5
