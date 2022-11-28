@@ -23,6 +23,8 @@ TagManager:
   - Enemy
   - zombie_range
   - boat
+  - BatTrigger
+  - fireball_radius
   layers:
   - Default
   - TransparentFX

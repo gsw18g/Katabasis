@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy_melee : MonoBehaviour
 {
     private GameObject player;
-    float speed = 2f;
+    public float speed = 2f;
     Rigidbody2D rb;
     //check if player has been meleed by enemy
     public static bool melee = false;
