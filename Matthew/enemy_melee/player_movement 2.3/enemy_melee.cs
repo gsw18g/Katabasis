@@ -13,7 +13,6 @@ public class enemy_melee : MonoBehaviour
     public Animator animator;
     //check if enemy should take damage
     private bool take_damage;
-    public bool awake = false;
 
     public GameObject zombie_death;
 
@@ -37,15 +36,11 @@ public class enemy_melee : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        if(awake)
-        {
-            // Move our position a step closer to the target.
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-            //apply move toward player to rigidbody
-            rb.transform.position = transform.position;
-        }
-        
+        // Move our position a step closer to the target.
+        var step = speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+        //apply move toward player to rigidbody
+        rb.transform.position = transform.position;
 
         //if left mouse pressed and take_damage == true (enemy has been hit with sword)
         if (Input.GetMouseButtonDown(0) && take_damage)
@@ -97,11 +92,6 @@ public class enemy_melee : MonoBehaviour
         {
             take_damage = true;
         }
-
-        if(collision.transform.CompareTag("zombie_awake"))
-        {
-            awake = true;
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -116,11 +106,6 @@ public class enemy_melee : MonoBehaviour
         if (collision.transform.CompareTag("sword_check"))
         {
             take_damage = true;
-        }
-
-        if (collision.transform.CompareTag("zombie_awake"))
-        {
-            awake = true;
         }
     }
 
@@ -137,11 +122,6 @@ public class enemy_melee : MonoBehaviour
         {
             take_damage = false;
         }
-
-        if (collision.transform.CompareTag("zombie_awake"))
-        {
-            awake = false;
-        }
     }
 
     //knock enemy back
@@ -157,6 +137,17 @@ public class enemy_melee : MonoBehaviour
         yield return new WaitForSeconds(knockbacktime);
     }
 
-   
+    /*
+     * override protected int get_health()
+    {
+
+        return this.health;
+    }
+
+    override protected void set_health()
+    {
+        this.health -= 34;
+    }
+     * */
 
 }

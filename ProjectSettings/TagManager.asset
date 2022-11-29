@@ -25,6 +25,7 @@ TagManager:
   - boat
   - BatTrigger
   - fireball_radius
+  - zombie_awake
   layers:
   - Default
   - TransparentFX
