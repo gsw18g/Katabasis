@@ -12,8 +12,6 @@ public class player_health : MonoBehaviour
     public static bool knock = false;
     bool bat_melee;
 
-    public static Vector3 attacking_enemy;
-
     private UIManager UIManager;
 
     // Start is called before the first frame update
@@ -68,8 +66,7 @@ public class player_health : MonoBehaviour
         {
 
             bat_melee = true;
-            //Debug.Log("bat coord = " + collision.transform.position);
-            attacking_enemy = collision.transform.position;
+            Debug.Log("bat coord = " + collision.transform);
         }
 
     }
@@ -100,7 +97,6 @@ public class player_health : MonoBehaviour
         {
 
             take_damage = true;
-            attacking_enemy = collision.transform.position;
         }
 
         

@@ -17,8 +17,6 @@ public class enemy_melee : MonoBehaviour
 
     public GameObject zombie_death;
 
-    public bool stop_awake = false;
-
     [SerializeField] private Transform center;
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
@@ -100,7 +98,7 @@ public class enemy_melee : MonoBehaviour
             take_damage = true;
         }
 
-        if(collision.transform.CompareTag("zombie_awake") && !stop_awake)
+        if(collision.transform.CompareTag("zombie_awake"))
         {
             awake = true;
         }
@@ -120,7 +118,7 @@ public class enemy_melee : MonoBehaviour
             take_damage = true;
         }
 
-        if (collision.transform.CompareTag("zombie_awake") && !stop_awake)
+        if (collision.transform.CompareTag("zombie_awake"))
         {
             awake = true;
         }
@@ -140,7 +138,7 @@ public class enemy_melee : MonoBehaviour
             take_damage = false;
         }
 
-        if (collision.transform.CompareTag("zombie_awake") && !stop_awake)
+        if (collision.transform.CompareTag("zombie_awake"))
         {
             awake = false;
         }

@@ -11,18 +11,14 @@ public class fireball_destroy : MonoBehaviour
     bool stop_seek = false;
     Vector3 player_pos;
 
-    float pos_y;
-
-    float speed = 20f;//25
+    float speed = 25f;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         player_pos = player.transform.position;
-
-        pos_y = transform.position.y;
-
+        
     }
 
     // Update is called once per frame
@@ -31,17 +27,17 @@ public class fireball_destroy : MonoBehaviour
        
         timer += Time.deltaTime;
 
-        rb.transform.position = new Vector3(gameObject.transform.position.x - Time.deltaTime * speed, pos_y, 0f);
 
+        
         //if(!stop_seek)
         //{
-        //player = GameObject.FindGameObjectWithTag("Player");
-        // Move our position a step closer to the target.
-        ////////////////var step = speed * Time.deltaTime;
+            //player = GameObject.FindGameObjectWithTag("Player");
+            // Move our position a step closer to the target.
+            var step = speed * Time.deltaTime;
             // calculate distance to move
-            ////////////////transform.position = Vector3.MoveTowards(transform.position, player_pos, step);//transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, player_pos, step);//transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         //apply move toward player to rigidbody
-        /////////rb.transform.position = transform.position;
+        rb.transform.position = transform.position;
         //}
         //else
         //{
@@ -50,7 +46,7 @@ public class fireball_destroy : MonoBehaviour
         
 
 
-        if (timer > 10f)
+        if (timer > 4f)
         {
             Destroy(gameObject);
         }

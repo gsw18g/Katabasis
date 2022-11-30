@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4445fd27062b2b40b0e9c09b75fe52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 7045587965885282770, guid: 8d208aa486e1eaf4d946d720fbc1ec87, type: 3}
   moveSpeed: 5
   radius: 5
   angle: 360

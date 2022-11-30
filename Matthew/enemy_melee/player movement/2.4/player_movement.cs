@@ -31,8 +31,6 @@ public class player_movement : MonoBehaviour
     float bounce_mag_x = .05f;
     bool bounce_right = false;
 
-    Vector3 attacking_enemy;
-
     public bool on_boat = check_ground.on_boat;
     // Start is called before the first frame update
     void Start()
@@ -58,7 +56,6 @@ public class player_movement : MonoBehaviour
         knock = player_health.knock;
         sinking = sink_check.sinking;
         on_boat = check_ground.on_boat;
-        attacking_enemy = player_health.attacking_enemy;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -111,7 +108,7 @@ public class player_movement : MonoBehaviour
             knock_time += Time.deltaTime;
             if (GameObject.FindGameObjectWithTag("enemy_melee") != null)
             {
-                if (center.transform.position.x - attacking_enemy.x  < 0)//zombie.transform.position.x
+                if (center.transform.position.x - zombie.transform.position.x < 0)
                 {
                     //start subtracting knock_force * time * mod every frame to knock player left
                     velocity -= (knock_force * Time.deltaTime * mod);
