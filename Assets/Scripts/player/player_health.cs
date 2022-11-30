@@ -12,6 +12,8 @@ public class player_health : MonoBehaviour
     public static bool knock = false;
     bool bat_melee;
 
+    private UIManager UIManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class player_health : MonoBehaviour
         player_dead = false;
         timer = 0f;
         num_hearts = 3;
+        UIManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -52,7 +55,7 @@ public class player_health : MonoBehaviour
         if (health <= 0)
         {
             player_dead = true;
-
+            UIManager.GameOver();
         }
     }
 
