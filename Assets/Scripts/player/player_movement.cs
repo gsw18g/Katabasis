@@ -69,7 +69,7 @@ public class player_movement : MonoBehaviour
         if(hypno)
         {
             //move right
-            if (Dir=='L' && !knock)
+            if (Dir=='R' && !knock)
             {
                 prev = 'a';
                 velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
@@ -78,7 +78,7 @@ public class player_movement : MonoBehaviour
                 flip_player();
             }
             //move left
-            else if (Dir=='R' && !knock)
+            else if (Dir=='L' && !knock)
             {
                 prev = 'd';
                 velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
