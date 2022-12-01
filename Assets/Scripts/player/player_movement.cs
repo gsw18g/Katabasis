@@ -14,6 +14,7 @@ public class player_movement : MonoBehaviour
     bool ground;
     public bool on_slope;
     public bool hypno = false;
+    public char Dir;
     public Animator animator;
 
     bool knock = false;
@@ -65,43 +66,75 @@ public class player_movement : MonoBehaviour
 
         //movement and idle animation
 
-        //move right
-        if (Input.GetKey(KeyCode.D) && !knock)
+        if(hypno)
         {
-            prev = 'a';
-            velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
-            animator.SetBool("walk", true);
-            
-            flip_player();
+            //move right
+            if (Dir=='L' && !knock)
+            {
+                prev = 'a';
+                velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
+                animator.SetBool("walk", true);
+
+                flip_player();
+            }
+            //move left
+            else if (Dir=='R' && !knock)
+            {
+                prev = 'd';
+                velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
+                animator.SetBool("walk", true);
+                //movement(velocity);
+                flip_player();
+            }
+            //idle animation
+            else
+            {
+
+                animator.SetBool("walk", false);
+            }
+
         }
-        //move left
-        else if (Input.GetKey(KeyCode.A) && !knock)
-        {
-            prev = 'd';
-            velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
-            animator.SetBool("walk", true);
-            //movement(velocity);
-            flip_player();
-        }
-        //idle animation
         else
         {
-            
-            animator.SetBool("walk", false);
-        }
-
-        //if player is on the ground, and jump key pressed
-        if (ground || sinking || on_slope)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            //move right
+            if (Input.GetKey(KeyCode.D) && !knock)
             {
-                //jump
+                prev = 'a';
+                velocity = gameObject.transform.position.x + (speed * Time.deltaTime * mod);
+                animator.SetBool("walk", true);
 
-                rb.AddForce(jump_height, ForceMode2D.Impulse);
-                animator.SetBool("jump", true);
-                //Debug.Log("ground + jump");
+                flip_player();
+            }
+            //move left
+            else if (Input.GetKey(KeyCode.A) && !knock)
+            {
+                prev = 'd';
+                velocity = gameObject.transform.position.x + (-speed * Time.deltaTime * mod);
+                animator.SetBool("walk", true);
+                //movement(velocity);
+                flip_player();
+            }
+            //idle animation
+            else
+            {
+
+                animator.SetBool("walk", false);
+            }
+
+            //if player is on the ground, and jump key pressed
+            if (ground || sinking || on_slope)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    //jump
+
+                    rb.AddForce(jump_height, ForceMode2D.Impulse);
+                    animator.SetBool("jump", true);
+                    //Debug.Log("ground + jump");
+                }
             }
         }
+        
 
         //knock player back if colliding with enemy
         if (knock && knock_time <= .1f)
