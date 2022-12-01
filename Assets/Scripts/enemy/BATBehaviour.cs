@@ -13,7 +13,7 @@ public class BATBehaviour : MonoBehaviour
     private bool hit_bat = false;
     //adds offset so the bat isnt right on top of the player
     private Vector3 offset;
-    public float radius = 5f;
+    public float radius;//5F
     [Range(1, 360)] public float angle = 360f;
     public LayerMask targetLayer;
     public float pause = 0f;

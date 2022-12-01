@@ -33,6 +33,8 @@ public class player_movement : MonoBehaviour
 
     Vector3 attacking_enemy;
 
+    bool stop_boat = false;
+
     public bool on_boat = check_ground.on_boat;
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,7 @@ public class player_movement : MonoBehaviour
         sinking = sink_check.sinking;
         on_boat = check_ground.on_boat;
         attacking_enemy = player_health.attacking_enemy;
+        stop_boat = charon.stop;
 
         //continuously get y coord to do jump
         pos_y = gameObject.transform.position.y;
@@ -155,7 +158,7 @@ public class player_movement : MonoBehaviour
             }
             
         }
-        else if(on_boat)
+        else if(on_boat && !stop_boat)
         {
             //add the boats velocity to the player velocity
             velocity += Time.deltaTime * 1.5f;

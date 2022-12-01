@@ -26,6 +26,7 @@ TagManager:
   - BatTrigger
   - fireball_radius
   - zombie_awake
+  - stop_boat
   layers:
   - Default
   - TransparentFX
