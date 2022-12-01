@@ -85,8 +85,14 @@ public class SirenBeh : MonoBehaviour
                 else
                 {
                     pause += Time.deltaTime;
+                    if (player.transform.position.x > transform.position.x)
+                        plmv.Dir = 'R';
+                    else
+                        plmv.Dir = 'L';
+
                     plmv.hypno = true;
-                    plmv.enabled = false;
+                    
+
                 }
                     
             }
