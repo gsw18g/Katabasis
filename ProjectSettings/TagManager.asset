@@ -27,6 +27,8 @@ TagManager:
   - fireball_radius
   - zombie_awake
   - stop_boat
+  - hades_range
+  - player_body
   layers:
   - Default
   - TransparentFX
