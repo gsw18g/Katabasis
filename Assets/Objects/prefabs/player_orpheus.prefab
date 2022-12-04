@@ -329,10 +329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee52723200c4b84f85eab74051b6546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   velocity: 0
   on_slope: 0
   hypno: 0
+  Dir: 0
   animator: {fileID: 7045587965885282763}
   zombie: {fileID: 3987004530003737270, guid: bfc9df9d67a44bc4eb3b4ea108ef8bd3, type: 3}
   center: {fileID: 71950340764487340}

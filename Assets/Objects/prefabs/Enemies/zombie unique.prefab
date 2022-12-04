@@ -348,9 +348,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingLayerID: 1753083209
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -390,9 +390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e966b016c722b4f890aee553374779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
   health: 100
   animator: {fileID: 3987004530003737295}
+  awake: 0
   zombie_death: {fileID: 5412740689404096113, guid: c3ca8d2a4d3871c4e9eddadc05fad958, type: 3}
+  stop_awake: 0
   center: {fileID: 3987004529580277568}
   knockbackvl: 2
   knockbacktime: 3
