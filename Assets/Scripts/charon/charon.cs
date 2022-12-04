@@ -5,10 +5,10 @@ using UnityEngine;
 public class charon : MonoBehaviour
 {
     Rigidbody2D rb;
-    float mod = 1.5f;
+    float mod = 2.5f;//1.5
     float pos_y;
 
-    public static bool stop = false;
+    public static bool stop = true;
 
     // Start is called before the first frame update
     void Start()

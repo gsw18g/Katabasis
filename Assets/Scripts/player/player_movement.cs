@@ -48,7 +48,7 @@ public class player_movement : MonoBehaviour
         pos_x = gameObject.transform.position.x;
         pos_y = gameObject.transform.position.y;
         //jump height
-        jump_height = new Vector2(0f, 8f);//4f
+        jump_height = new Vector2(0f, 8.5f);//8//4f
         velocity = pos_x;//0f change the starting pos of player
 
     }
@@ -194,7 +194,7 @@ public class player_movement : MonoBehaviour
         else if(on_boat && !stop_boat)
         {
             //add the boats velocity to the player velocity
-            velocity += Time.deltaTime * 1.5f;
+            velocity += Time.deltaTime * 2.5f;
             movement(velocity);
         }
         //else move player (on ground)

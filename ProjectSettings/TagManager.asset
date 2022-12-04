@@ -31,6 +31,7 @@ TagManager:
   - player_body
   - heart4
   - heart5
+  - start_boat
   layers:
   - Default
   - TransparentFX
