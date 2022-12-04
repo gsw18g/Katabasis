@@ -28,7 +28,6 @@ public class parallax_fore : MonoBehaviour
     void Update()
     {
         //vel = the_player.velocity;
-
         vel = the_player.transform.position.x;
 
         //vel = vel - (x_pos.transform.position.x * speed);

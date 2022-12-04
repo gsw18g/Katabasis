@@ -11,6 +11,9 @@ public class player_health : MonoBehaviour
     public static int num_hearts;
     public static bool knock = false;
     bool bat_melee;
+    private Animator anim;
+
+
 
     public static Vector3 attacking_enemy;
 
@@ -23,8 +26,9 @@ public class player_health : MonoBehaviour
         health = 100;
         player_dead = false;
         timer = 0f;
-        num_hearts = 3;
+        num_hearts = 5;
         UIManager = FindObjectOfType<UIManager>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,7 +53,7 @@ public class player_health : MonoBehaviour
         {
             //set bool to use in player movement
             knock = true;
-            health -= 34;
+            health -= 20;
             timer = 0f;
             num_hearts -= 1;
         }
@@ -57,10 +61,15 @@ public class player_health : MonoBehaviour
         if (health <= 0)
         {
             player_dead = true;
+            anim.SetTrigger("Dead");
             UIManager.GameOver();
         }
     }
 
+    public void end_death_anim()
+    {
+        gameObject.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
