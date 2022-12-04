@@ -29,6 +29,8 @@ TagManager:
   - stop_boat
   - hades_range
   - player_body
+  - heart4
+  - heart5
   layers:
   - Default
   - TransparentFX

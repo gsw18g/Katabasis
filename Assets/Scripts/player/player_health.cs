@@ -26,7 +26,7 @@ public class player_health : MonoBehaviour
         health = 100;
         player_dead = false;
         timer = 0f;
-        num_hearts = 3;
+        num_hearts = 5;
         UIManager = FindObjectOfType<UIManager>();
         anim = GetComponent<Animator>();
     }
@@ -53,7 +53,7 @@ public class player_health : MonoBehaviour
         {
             //set bool to use in player movement
             knock = true;
-            health -= 34;
+            health -= 20;
             timer = 0f;
             num_hearts -= 1;
         }

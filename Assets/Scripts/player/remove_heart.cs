@@ -13,7 +13,17 @@ public class remove_heart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player_health.num_hearts == 2)
+        if (player_health.num_hearts == 4)
+        {
+            Destroy(GameObject.FindWithTag("heart5"));
+        }
+
+        if (player_health.num_hearts == 3)
+        {
+            Destroy(GameObject.FindWithTag("heart4"));
+        }
+
+        if (player_health.num_hearts == 2)
         {
             Destroy(GameObject.FindWithTag("heart3"));
         }
