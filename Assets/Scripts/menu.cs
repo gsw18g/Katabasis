@@ -21,12 +21,13 @@ public class menu : MonoBehaviour
 
     public void start_first()
     {
-        SceneManager.LoadScene(first_level);
+        SceneManager.LoadScene(1);
     }
 
     public void quit()
     {
         Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
         Debug.Log("quiting game");
     }
 }
