@@ -27,13 +27,11 @@ public class move_camera : MonoBehaviour
     void Update()
     {
         //x_pos = gameObject.transform.position.x;
-
+   
         gameObject.transform.position = new Vector3(x_pos + the_player.transform.position.x + offset, y_pos + the_player.transform.position.y + y_offset, 0f);
 
         //player.transform.position.x to get x component 
 
         //gameObject.transform.position = new Vector3(x_pos, y_pos, 0f);
-
-
     }
 }
