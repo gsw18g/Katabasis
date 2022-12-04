@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Active Scenes/Main Menu.unity
     guid: 8243997fb62637f418af872842f73adb
   - enabled: 1
-    path: Assets/Scenes/Active Scenes/graveyard_2.unity
+    path: Assets/Scenes/Active Scenes/cutscene1.unity
+    guid: 81ebc7db7ccbdc043ab295767fd90cd5
+  - enabled: 1
+    path: Assets/Scenes/Active Scenes/Graveyard.unity
     guid: 3d763b7422b52094ab48e9e40b2f8be9
   - enabled: 0
     path: Assets/Scenes/test scene.unity
