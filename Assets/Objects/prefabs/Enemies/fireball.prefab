@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8541940440571237885}
   m_Layer: 0
   m_Name: fireball
-  m_TagString: Untagged
+  m_TagString: fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b596ee49a01373498f20ead007083b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vert: 1
 --- !u!58 &-8541940440571237885
 CircleCollider2D:
   m_ObjectHideFlags: 0

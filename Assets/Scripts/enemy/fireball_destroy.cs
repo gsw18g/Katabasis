@@ -13,6 +13,8 @@ public class fireball_destroy : MonoBehaviour
 
     float pos_y;
 
+    public bool vert = false;
+
     float speed = 20f;//25
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,17 @@ public class fireball_destroy : MonoBehaviour
        
         timer += Time.deltaTime;
 
-        rb.transform.position = new Vector3(gameObject.transform.position.x - Time.deltaTime * speed, pos_y, 0f);
+        //vertical fireball
+        if(vert)
+        {
+            rb.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - Time.deltaTime * speed, 0f);
+        }
+        //horizontal fireball
+        else
+        {
+            rb.transform.position = new Vector3(gameObject.transform.position.x - Time.deltaTime * speed, pos_y, 0f);
+        }
+        
 
         //if(!stop_seek)
         //{
@@ -63,6 +75,12 @@ public class fireball_destroy : MonoBehaviour
         {
             stop_seek = true;
         }
+
+        if (collision.CompareTag("player_body"))
+        {
+            player_health.fireball_damage = true;
+            
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -72,6 +90,11 @@ public class fireball_destroy : MonoBehaviour
             stop_seek = true;
         }
 
+        if (collision.CompareTag("player_body"))
+        {
+            player_health.fireball_damage = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -79,6 +102,12 @@ public class fireball_destroy : MonoBehaviour
         if (collision.transform.CompareTag("fireball_radius"))
         {
             stop_seek = false;
+        }
+
+        if (collision.CompareTag("player_body"))
+        {
+            player_health.fireball_damage = false;
+            Destroy(gameObject);
         }
     }
 }

@@ -11,6 +11,7 @@ public class player_health : MonoBehaviour
     public static int num_hearts;
     public static bool knock = false;
     bool bat_melee;
+    public static bool fireball_damage = false;
     private Animator anim;
 
 
@@ -40,7 +41,7 @@ public class player_health : MonoBehaviour
         //take_damage = enemy_melee.melee;
         bat_melee = Behaviour.bat_melee;
 
-        if (take_damage || bat_melee)
+        if (take_damage || bat_melee || fireball_damage)
         {
             player_damage();
         }
@@ -81,6 +82,8 @@ public class player_health : MonoBehaviour
             attacking_enemy = collision.transform.position;
         }
 
+        
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -90,6 +93,7 @@ public class player_health : MonoBehaviour
 
             bat_melee = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -99,6 +103,8 @@ public class player_health : MonoBehaviour
 
             bat_melee = false;
         }
+
+        
     }
 
 

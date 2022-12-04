@@ -32,6 +32,7 @@ TagManager:
   - heart4
   - heart5
   - start_boat
+  - fireball
   layers:
   - Default
   - TransparentFX

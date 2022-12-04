@@ -29,7 +29,7 @@ public class fireball : MonoBehaviour
         distance = transform.position.x - player.transform.position.x;
         timer += Time.deltaTime;
         
-        if(timer > 2f)
+        if(timer > 1f)
         {
             //instantiate fireball object and add force to rigidbody
             var ball = Instantiate(the_fireball, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);
