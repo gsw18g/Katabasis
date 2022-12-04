@@ -72,7 +72,6 @@ public class zombie_patrol : MonoBehaviour
         }
         else
         {
-            Debug.Log("awake is true");
             //flip zombie so he faces player before enemy_melee takes over movement
             if(last_dir == -1)
             {

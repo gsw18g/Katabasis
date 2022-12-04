@@ -14,7 +14,7 @@ public class parallax_fore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = .5f;//.5 // .6
+        speed = .15f;//.5 // .6
         the_player = player.GetComponent<player_movement>();
         x_pos = gameObject.transform.position.x;
         y_pos = gameObject.transform.position.y;
