@@ -36,6 +36,10 @@ public class UIManager : MonoBehaviour
         {
             weak_point.health = 300;
         }
+        else if(scene_name == "level 2 test")
+        {
+            cerberus_weak_point.health = 200;
+        }
     }
 
     //Activate game over screen

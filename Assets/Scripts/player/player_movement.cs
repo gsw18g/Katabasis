@@ -215,7 +215,7 @@ public class player_movement : MonoBehaviour
 
     public void reset_stab()
     {
-        Debug.Log("reset stab = false");
+        //Debug.Log("reset stab = false");
         animator.SetBool("stab", false);
     }
 

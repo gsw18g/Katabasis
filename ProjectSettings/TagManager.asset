@@ -33,6 +33,7 @@ TagManager:
   - heart5
   - start_boat
   - fireball
+  - cerberus
   layers:
   - Default
   - TransparentFX

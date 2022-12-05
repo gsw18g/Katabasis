@@ -85,12 +85,12 @@ public class boss_blocks : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("trigger enter");
+        //Debug.Log("trigger enter");
 
         if (collision.transform.CompareTag("hades") && hades.destroy)
         {
 
-            Debug.Log("destroy");
+            //Debug.Log("destroy");
             Destroy(gameObject);
         }
     }

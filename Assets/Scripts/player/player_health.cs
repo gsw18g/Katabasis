@@ -14,6 +14,8 @@ public class player_health : MonoBehaviour
     public static bool fireball_damage = false;
     private Animator anim;
 
+    bool cerberus_melee = false;
+
 
 
     public static Vector3 attacking_enemy;
@@ -41,7 +43,7 @@ public class player_health : MonoBehaviour
         //take_damage = enemy_melee.melee;
         bat_melee = Behaviour.bat_melee;
 
-        if (take_damage || bat_melee || fireball_damage)
+        if (take_damage || bat_melee || fireball_damage || cerberus_melee)
         {
             player_damage();
         }
@@ -82,7 +84,9 @@ public class player_health : MonoBehaviour
             attacking_enemy = collision.transform.position;
         }
 
-        
+       
+
+
 
     }
 
@@ -93,6 +97,8 @@ public class player_health : MonoBehaviour
 
             bat_melee = true;
         }
+
+
 
     }
 
@@ -105,6 +111,7 @@ public class player_health : MonoBehaviour
         }
 
         
+
     }
 
 
@@ -118,7 +125,14 @@ public class player_health : MonoBehaviour
             attacking_enemy = collision.transform.position;
         }
 
-        
+        if (collision.transform.CompareTag("cerberus"))
+        {
+
+            cerberus_melee = true;
+            
+            attacking_enemy = collision.transform.position;
+        }
+
     }
 
 
@@ -141,7 +155,14 @@ public class player_health : MonoBehaviour
             take_damage = false;
         }
 
-        
+        if (collision.transform.CompareTag("cerberus"))
+        {
+
+            cerberus_melee = false;
+            
+
+        }
+
     }
 
 

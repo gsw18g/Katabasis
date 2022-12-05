@@ -36,7 +36,7 @@ public class fireball_hor : MonoBehaviour
         if (player != null)
         {
             //player_pos = player.transform.position;
-            Debug.Log("hades - player = " + (hades.transform.position.x - player.transform.position.x));
+            //Debug.Log("hades - player = " + (hades.transform.position.x - player.transform.position.x));
 
             if (hades.transform.position.x - player.transform.position.x > 0)
             {
