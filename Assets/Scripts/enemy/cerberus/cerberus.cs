@@ -32,9 +32,21 @@ public class cerberus : MonoBehaviour
 
     //public static int health = 100;
 
+    Rigidbody2D rb;
+    float dash_speed = 15.0f;//10f
+
+    float pos_y;
+
+    public static bool flip = false;
+
+    int last_dir;
+
     private void Awake()
     {
         initScale = enemy.localScale;
+
+        rb = GetComponent<Rigidbody2D>();
+        pos_y = transform.position.y;
     }
 
     private void DirectionChange()
@@ -71,6 +83,10 @@ public class cerberus : MonoBehaviour
             }
         }
 
+        Debug.Log("dir = " + last_dir);
+
+        
+
 
         timer += Time.deltaTime;
 
@@ -79,18 +95,35 @@ public class cerberus : MonoBehaviour
         {
             //get last player position
             last_player_pos = player.transform.position;
+            last_player_pos.y = pos_y;
         }
-        else if (timer > 3f && timer < 3.1f)
+        else if (timer > 3f && timer < 3.4f)
         {
             stop = true;
 
-            //enemy.position = new Vector3(player.transform.position.x, transform.position.y, 0f);
-            enemy.position = new Vector3(last_player_pos.x, transform.position.y, 0f);
             
+            //enemy.position = new Vector3(last_player_pos.x, transform.position.y, 0f);
+
 
             animator.SetBool("attack", true);
 
+            if (last_dir == 1 && enemy.transform.position.x - player.transform.position.x > 0)
+            {
+                flip = true;
+            }
+            else if (last_dir == -1 && enemy.transform.position.x - player.transform.position.x < 0)
+            {
+                flip = true;
+            }
 
+
+            var step = dash_speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, last_player_pos, step);
+            //apply move toward player to rigidbody
+            //rb.transform.position = transform.position;
+
+            
+            //rb.transform.position = new Vector3(gameObject.transform.position.x - Time.deltaTime * speed, pos_y, 0f);
 
         }
         else if (timer > 3.4f && timer < 3.9f)
@@ -102,8 +135,9 @@ public class cerberus : MonoBehaviour
             //destroy = false;
             timer = 0f;
             stop = false;
+            flip = false;
 
-            //movingLeft = !movingLeft;
+            movingLeft = !movingLeft;
 
             //animator.SetBool("stab", false);
 
@@ -115,6 +149,7 @@ public class cerberus : MonoBehaviour
 
     private void MoveInDirection(int direction)
     {
+        last_dir = direction;
         idleTimer = 0;
         //anim.SetBool("moving", true);
         //Make enemy face direciton

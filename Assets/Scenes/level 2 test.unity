@@ -23475,6 +23475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840975804}
   - component: {fileID: 840975803}
+  - component: {fileID: 840975806}
   m_Layer: 0
   m_Name: cerb offset
   m_TagString: Untagged
@@ -23517,6 +23518,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840975806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840975802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d3a071dfc593c419ddb30a239bdb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843211408
 GameObject:
   m_ObjectHideFlags: 0
