@@ -7,6 +7,8 @@ public class hades : MonoBehaviour
     public GameObject player;
     public static bool destroy = false;
 
+    public Animator animator;
+
     Vector3 last_player_pos;
 
     [Header("Patrol Points")]
@@ -89,6 +91,8 @@ public class hades : MonoBehaviour
                 enemy.transform.position = new Vector3(enemy.transform.position.x - (enemy.transform.position.x % 1.5f), transform.position.y, 0f);
             }
 
+            animator.SetBool("stab", true);
+
             
 
         }
@@ -104,6 +108,10 @@ public class hades : MonoBehaviour
             
             movingLeft = !movingLeft;
 
+            //animator.SetBool("stab", false);
+
+            //animator.SetBool("idle", true);
+
         }
 
     }
@@ -117,6 +125,12 @@ public class hades : MonoBehaviour
         //Move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed,
             enemy.position.y, enemy.position.z);
+    }
+
+    public void reset_stab()
+    {
+        
+        animator.SetBool("stab", false);
     }
 
     /*

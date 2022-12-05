@@ -6,9 +6,16 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     //[SerializeField] private AudioClip gameOverSound;
 
+    Scene current_scene;
+    string scene_name;
+
     private void Awake()
     {
         gameOverScreen.SetActive(false);
+
+        //get current active scene name
+        current_scene = SceneManager.GetActiveScene();
+        scene_name = current_scene.name;
     }
 
     #region Game Over Functions
@@ -23,6 +30,12 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        //if scene == hades reset hades health on restart
+        if(scene_name == "hades")
+        {
+            weak_point.health = 300;
+        }
     }
 
     //Activate game over screen
