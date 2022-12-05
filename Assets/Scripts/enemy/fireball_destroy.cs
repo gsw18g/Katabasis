@@ -20,8 +20,8 @@ public class fireball_destroy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        player_pos = player.transform.position;
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //player_pos = player.transform.position;
 
         pos_y = transform.position.y;
 
