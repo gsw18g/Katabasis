@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cerberus_weak_point : MonoBehaviour
 {
@@ -29,9 +30,15 @@ public class cerberus_weak_point : MonoBehaviour
 
         health -= 10;
 
+        //if cereberus is dead
         if (health < 0)
         {
             health = 0;
+            Destroy(gameObject);
+            //load hades scene
+            SceneManager.LoadScene(5);
+            //reset checkpoint
+            level2_checkpoint.checkpoint = false;
         }
 
         Debug.Log("cerberus health = " + health);

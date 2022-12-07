@@ -33,7 +33,7 @@ public class cerberus : MonoBehaviour
     //public static int health = 100;
 
     Rigidbody2D rb;
-    float dash_speed = 15.0f;//10f
+    float dash_speed = 20.0f;//15//10f
 
     float pos_y;
 
@@ -137,7 +137,7 @@ public class cerberus : MonoBehaviour
             stop = false;
             flip = false;
 
-            movingLeft = !movingLeft;
+            //movingLeft = !movingLeft;
 
             //animator.SetBool("stab", false);
 

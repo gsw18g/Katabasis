@@ -29,23 +29,34 @@ public class UIManager : MonoBehaviour
     //Restart level
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        //if scene == hades reset hades health on restart
-        if(scene_name == "hades")
+        if(level2_checkpoint.checkpoint)
         {
-            weak_point.health = 300;
-        }
-        else if(scene_name == "level 2 test")
-        {
+            //if checkpoint reached reload cerberus fight
+            SceneManager.LoadScene(4);
+            //reset cerberus health
             cerberus_weak_point.health = 200;
         }
+        else
+        {
+            //reload current scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            //if scene is hades reset hades health on restart
+            if (scene_name == "hades")
+            {
+                weak_point.health = 300;
+            }
+           
+        }
+
+        
     }
 
     //Activate game over screen
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        level2_checkpoint.checkpoint = false;
     }
 
     //Quit game/exit play mode if in Editor
