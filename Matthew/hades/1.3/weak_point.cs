@@ -7,13 +7,11 @@ public class weak_point : MonoBehaviour
     public static int health = 300;
 
     bool take_damage = false;
-    private UIManager UIManager;
-    public static bool win_game = false;
-    public GameObject hades;
+
     // Start is called before the first frame update
     void Start()
     {
-        UIManager = FindObjectOfType<UIManager>();
+        
     }
 
     // Update is called once per frame
@@ -34,10 +32,6 @@ public class weak_point : MonoBehaviour
         if(health < 0)
         {
             health = 0;
-            UIManager.WinGame();
-            win_game = true;
-            Destroy(hades);
-           
         }
 
         Debug.Log("hades health = " + health);

@@ -65,7 +65,11 @@ public class player_health : MonoBehaviour
         {
             player_dead = true;
             anim.SetTrigger("Dead");
-            UIManager.GameOver();
+            if(!weak_point.win_game)
+            {
+                UIManager.GameOver();
+            }
+            
         }
     }
 

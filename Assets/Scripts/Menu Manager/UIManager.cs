@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject winScreen;
     //[SerializeField] private AudioClip gameOverSound;
 
     Scene current_scene;
@@ -12,6 +13,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         gameOverScreen.SetActive(false);
+        winScreen.SetActive(false);
 
         //get current active scene name
         current_scene = SceneManager.GetActiveScene();
@@ -24,6 +26,11 @@ public class UIManager : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         //SoundManager.instance.PlaySound(gameOverSound);
+    }
+
+    public void WinGame()
+    {
+        winScreen.SetActive(true);
     }
 
     //Restart level
@@ -45,6 +52,7 @@ public class UIManager : MonoBehaviour
             if (scene_name == "hades")
             {
                 weak_point.health = 300;
+                hades.destroy = false;
             }
            
         }
