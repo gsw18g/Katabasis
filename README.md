@@ -91,5 +91,7 @@ Sound effects will be pulled from Unity's catalog
 - Opening Cutscene: ACHIEVED, as well as mid-story and ending cutscenes
 - Overworld Map
     - Charon could take Orpheus to the selected stage so long as he has the coin for it, otherwise he has to start at the beginning
+- Points system
+- Checkpoint system
 - Dialogue/Text Boxes
-- An additional  stages (5 total, based off of the 5 stages of grief)
+- An additional stages with minibosses (5 total, based off of the 5 stages of grief)
