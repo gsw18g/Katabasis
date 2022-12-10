@@ -41,7 +41,7 @@ public class player_movement : MonoBehaviour
     void Start()
     {
         mod = 1.5f;//.005
-        speed = 3.0f;
+        speed = 5.0f;
 
         rb = GetComponent<Rigidbody2D>();
         //get players starting x and y pos

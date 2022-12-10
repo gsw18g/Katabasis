@@ -34,6 +34,7 @@ TagManager:
   - start_boat
   - fireball
   - cerberus
+  - Exit
   layers:
   - Default
   - TransparentFX
