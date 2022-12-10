@@ -41,6 +41,7 @@ public class enemy_melee : MonoBehaviour
 
         if(awake)
         {
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.zombieAttack); // audio glitch HERE
             // Move our position a step closer to the target.
             var step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
@@ -70,6 +71,7 @@ public class enemy_melee : MonoBehaviour
         //if enemy has 0 health play death animation
         if (health < 0)
         {
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.zombieDeath);
             health = 0;
             //animator.SetBool("start_death", true);
 

@@ -37,6 +37,7 @@ public class BATBehaviour : MonoBehaviour
         if (hit_bat && Input.GetMouseButtonDown(0))
         {
             Destroy(gameObject);
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerStab); // needs to be moved into the new version
         }
 
 
@@ -128,7 +129,7 @@ public class BATBehaviour : MonoBehaviour
     }
     void moveCharacter(Vector2 dir)
     {
-        
+        SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.batAttack); // needs to be moved into the new version
         rb.MovePosition((Vector2)transform.position + (dir * moveSpeed * Time.deltaTime));
 
     }

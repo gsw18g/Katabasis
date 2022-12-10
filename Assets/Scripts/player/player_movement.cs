@@ -131,7 +131,7 @@ public class player_movement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     //jump
-
+                    SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerJump);
                     rb.AddForce(jump_height, ForceMode2D.Impulse);
                     animator.SetBool("jump", true);
                     //Debug.Log("ground + jump");

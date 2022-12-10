@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class player_health : MonoBehaviour
@@ -59,10 +60,12 @@ public class player_health : MonoBehaviour
             health -= 20;
             timer = 0f;
             num_hearts -= 1;
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerHurt);
         }
 
         if (health <= 0)
         {
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerDeath);
             player_dead = true;
             anim.SetTrigger("Dead");
             if(!weak_point.win_game)
