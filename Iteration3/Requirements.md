@@ -34,6 +34,17 @@ Matthew K
     19. A medium priority is to implement cut scenes at the beginning of the game.
     20. A high priority is to implement a death screen with navigation menu, including Continue, Restart, Main Menu, and Quit buttons.
     21. A high priority is to have the player be taken to level 2 after completing level 1 automatically.
+    22. A high priority is to have zombies that patrol back and forth until the player gets close and then they attack.
+    23. A high priority is to have zombies that have health bars that reflect their current health, and health gets deducted when they are attacked.
+    24. A high priority is to implement the river styx that kills the player if they fall into it.
+    25. A high priority is to start moving charon's boat when the player reaches a certain point, and stops at a certain point.
+    26. A high priority is to have sound effects that play when the player jumps, stabs, gets damaged, dies, when zombies attack, die, and when bats attack and die.
+    27. A high priority is to have music for the menus, and levels.
+    28. A high priority is to have a checkpoint at the end of level 2 before the cerberus boss fight.
+    29. A high priority is to have a cerberus mini boss fight with an attack and health.
+    30. A high priority is to have bats that shoot fireballs that damage the player.
+    31. A high priority is to have a final boss fight that features 2 attacks: a ground destroy and a fireball.
+    32. A high priority is to have a "you won" screen at the end of the game.
 
 3. Non-functional Requirements (10 points)
     1. The user must experience a satisfying story through the levels.
