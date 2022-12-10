@@ -28,5 +28,5 @@ Matthew K
 - We've kept our code organized in multiple folders in order for it to be easily found and is documented for ease of reading and modifying.
 
 5. Non-Execution-based Testing (10 points)
-- A group member who had not previously seen code files reviewed every single script and gave feedback on syntax, design, and comments in the attached document (/Iteration3/Increment 3 Code Review.md).
+- A group member who had not previously seen code files reviewed every single script and gave feedback on functionality, organization, syntax, design, and comments in the attached document (/Iteration3/Increment 3 Code Review.md).
 - Proposed changes from code review can be found in Katabasis/Kaitlin/proposed_scripts/
