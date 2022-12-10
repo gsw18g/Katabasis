@@ -34,21 +34,16 @@ Group #8
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
 - Challenges
-  - Parallax scrolling during vertical player movement
-  - Unity editor errors
-  - Ranged enemy arrows got stuck in its box
-  - Ranged enemy not recognizing player and shooting
-  - Workflow style changed, we got a little disorganized on knowing who was doing what
-  - Zombie damaged character after it was "killed"
-  - Jumping on slope bug
-  - Enemypatrol file had a mathfs error when it was originally pushed
-  - Game over screen not functional as of yet
+  - Very small time window to implement changes to plan based on scope of last increment
+  - Based on changed workflow style (instead of each one of us doing our own level we work on the aspect of the project that we are strongest in) organization of work was mostly divided, but when we put all of our work together there were some merge conflicts
+  - Combining separately done work together led to an inharmonious final product (stylistic differences in code-writing, transitions between storyline and gameplay,  syncing music with visuals, etc.)
+  - Work lost due to not saving before Unity software crash
+  - Cutscenes had to be transferred over to Katabasis/Assets/Scenes manually due to previous Unity editor errors
+  - Bugs: zombies walking backwards, Cerberus movement, player knockback forward instead of backwards
 - Scope
-  - Down to 3 levels of gameplay, not including the bossfight and cutscenes
-  - Still no gathering system
-  - No dash or wall stick
   - Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
-
+  - Did not have enough time to implement syntactical/stylistic code review proposals
+  - Accomplished as much as possible within 2 weeks minus time dedicated to other final exams and assignments
 
 5) Team Member Contribution for this increment
 - Alejandro Santiago
