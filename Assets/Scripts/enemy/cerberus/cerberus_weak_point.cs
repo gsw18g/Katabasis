@@ -36,7 +36,7 @@ public class cerberus_weak_point : MonoBehaviour
             health = 0;
             Destroy(gameObject);
             //load hades scene
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
             //reset checkpoint
             level2_checkpoint.checkpoint = false;
         }

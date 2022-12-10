@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
         if(level2_checkpoint.checkpoint)
         {
             //if checkpoint reached reload cerberus fight
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
             //reset cerberus health
             cerberus_weak_point.health = 200;
         }
