@@ -24,7 +24,6 @@ Matthew K
 
 4. Execution-based Non-Functional Testing (10 points)
 - We've been implementing multiple features and obstacles in order to make the experience of the player more enjoyable and have multiple interactions with the objects and enemies we've prepared.
-- We've implemented multiple difficulties in order for the player to feel challenged even if they are experienced.
 - We've kept our code organized in multiple folders in order for it to be easily found and is documented for ease of reading and modifying.
 
 5. Non-Execution-based Testing (10 points)
