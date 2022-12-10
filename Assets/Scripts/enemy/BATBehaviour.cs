@@ -21,6 +21,8 @@ public class BATBehaviour : MonoBehaviour
     public float timepause = 1f;
     private bool nearplayer = false;
     public bool CanSeePlayer { get; private set; }
+    bool play1=true;
+    bool play2=true;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,11 @@ public class BATBehaviour : MonoBehaviour
         movement.Normalize();
         if (hit_bat && Input.GetMouseButtonDown(0))
         {
-            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerStab); // needs to be moved into the new version
+            if (play1)
+            {
+                SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerStab); // needs to be moved into the new version
+                play1 = false;
+            }
             Destroy(gameObject);
             
         }
@@ -149,7 +155,11 @@ public class BATBehaviour : MonoBehaviour
     }
     void moveCharacter(Vector2 dir)
     {
-        SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.batAttack); // needs to be moved into the new version
+        if (play2)
+        {
+            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.batAttack); // needs to be moved into the new version
+            play2 = false;
+        }
         rb.MovePosition((Vector2)transform.position + (dir * moveSpeed * Time.deltaTime));
 
     }
