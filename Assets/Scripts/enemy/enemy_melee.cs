@@ -23,6 +23,7 @@ public class enemy_melee : MonoBehaviour
     [SerializeField] private float knockbackvl=10f;
     [SerializeField] private float knockbacktime = 1f;
 
+    bool once = true;
     
 
     // Start is called before the first frame update
@@ -41,7 +42,12 @@ public class enemy_melee : MonoBehaviour
 
         if(awake)
         {
-            SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.zombieAttack); // audio glitch HERE
+            if(once)
+            {
+                SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.zombieAttack); // audio glitch HERE
+                once = false;
+            }
+            
             // Move our position a step closer to the target.
             var step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
