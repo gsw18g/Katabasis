@@ -34,6 +34,11 @@ Matthew K
     19. A medium priority is to implement cut scenes at the beginning of the game.
     20. A high priority is to implement a death screen with navigation menu, including Continue, Restart, Main Menu, and Quit buttons.
     21. A high priority is to have the player be taken to level 2 after completing level 1 automatically.
+    22. A high priority is to have zombies that patrol back and forth until the player gets close and then they attack.
+    23. A high priority is to have zombies that have health bars that reflect their current health, and health gets deducted when they are attacked.
+    24. A high priority is to implement the river styx that kills the player if they fall into it.
+    25. A high priority is to start moving charon's boat when the player reaches a certain point, and stops at a certain point.
+    26. A high priority is to 
 
 3. Non-functional Requirements (10 points)
     1. The user must experience a satisfying story through the levels.
