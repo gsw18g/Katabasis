@@ -13,7 +13,7 @@ Matthew K
 - We used C# scripts to control the animations of sprites (idle, walking/flying in different directions, attacking), spawning and behavior of non-player characters, camera movements, parallax scrolling of the background, interactions between the player and enemies (fighting/damage), and a health system for the player and enemies. This is the language that Unity uses to script behaviors of its assets.
 
 2. Platforms, APIs, Databases, and other technologies used (5 points)
-- Unity is still the major platform we are using to develop Katabasis, and we are still using VSCode, Photoshop, and FireAlpaca for scripts, platforms, and animation. We still have not needed to used any APIs or Databases, although we are new using Logic Pro to develop music and sound for the project.
+- No new platforms or technologies have been used since the last increment. Unity is still the major platform we are using to develop Katabasis, and we are still using VSCode, Photoshop, and FireAlpaca for scripts, platforms, and animation. We still have not needed to used any APIs or Databases, although we are new using Logic Pro to develop music and sound for the project.
  
 3. Execution-based Functional Testing (10 points)
 - For every functionality we produced, we tested how the functionality works with the rest of our game to fix any new bugs that popped up and to make sure the functionality works as intended before moving on to the next.
