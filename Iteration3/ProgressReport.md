@@ -36,7 +36,7 @@ Group #8
 - Challenges
   - Very small time window to implement changes to plan based on scope of last increment
   - Based on changed workflow style (instead of each one of us doing our own level we work on the aspect of the project that we are strongest in) organization of work was mostly divided, but when we put all of our work together there were some merge conflicts
-  - Combining separately done work together led to an inharmonious final product (stylistic differences in code-writing, transitions between storyline and gameplay,  syncing music with visuals, etc.)
+  - Combining separately done work together led to an inharmonious final product (stylistic differences in code-writing, artistic transitions between storyline and gameplay, physically transitioning between scenes using timelines, syncing music with visuals, etc.)
   - Work lost due to not saving before Unity software crash
   - Cutscenes had to be transferred over to Katabasis/Assets/Scenes manually due to previous Unity editor errors
   - Bugs: zombies walking backwards, Cerberus movement, player knockback forward instead of backwards
