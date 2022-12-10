@@ -24439,6 +24439,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8101851819502417585, guid: 5514c4a0b3d6dc341b4e4052c91fe472, type: 3}
   m_PrefabInstance: {fileID: 1452044600}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &836462643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836462631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4445fd27062b2b40b0e9c09b75fe52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 466872819}
+  moveSpeed: 5
+  radius: 5
+  close: 20
+  angle: 360
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  pause: 0
+  timepause: 1
 --- !u!1 &840975802
 GameObject:
   m_ObjectHideFlags: 0
@@ -39125,7 +39147,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: bat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8101851819502417587, guid: 5514c4a0b3d6dc341b4e4052c91fe472, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5514c4a0b3d6dc341b4e4052c91fe472, type: 3}
 --- !u!1 &1460091808
 GameObject:
@@ -39211,6 +39234,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1462029402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2440885161122154737, guid: e0f4001ebfec0f8438e4f6f4a8836d9c, type: 3}
+  m_PrefabInstance: {fileID: 5886287530710529256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462804430
 GameObject:
   m_ObjectHideFlags: 0
@@ -59163,7 +59191,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2440885161122154740, guid: e0f4001ebfec0f8438e4f6f4a8836d9c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0f4001ebfec0f8438e4f6f4a8836d9c, type: 3}
 --- !u!1001 &6737621401568565583
 PrefabInstance:
@@ -59305,6 +59334,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2440885161122154742, guid: e0f4001ebfec0f8438e4f6f4a8836d9c, type: 3}
   m_PrefabInstance: {fileID: 5886287530710529256}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8101851818356292645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462029402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4445fd27062b2b40b0e9c09b75fe52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 466872819}
+  moveSpeed: 5
+  radius: 5
+  close: 20
+  angle: 360
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  pause: 0
+  timepause: 1
 --- !u!4 &8101851819770374645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6818164471182561125, guid: 88e8eeed404bce1479f1e261e9f92352, type: 3}
