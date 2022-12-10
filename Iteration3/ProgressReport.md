@@ -91,7 +91,7 @@ Group #8
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: 3
-  - Source Code: scripts including camera level 2, camera level 1, charon boat movement, zombie death object, hades boss, move bat, spawn zombie, sink check, sinking platform, boss blocks, build floor, hades camera, warp, warp right, slope check, hades, hades horn
+  - Source Code: scripts including zombie patrol, player movement knockback, stop boat, hades, scale hades health, remove_heart, start_boat, player_movement, fireball_destroy, fireball_hor, hades animation controller, cerberus animation controller, cerberus, cerberus_weak_point, scale_cerberus_health, flip, level2_cheakpoint, and UIManager additions
   - Video: 
   
 6) Plans for the next increment
