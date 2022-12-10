@@ -95,7 +95,7 @@ Group #8
   - Video: 
   
 6) Plans for the next increment
-- For the next increment, we plan on focusing on sound design and solidifying the plot points of the project, as well as finishing the third and final level of the game, which will feature a final boss battle. We will also be uping the speed of the player's movement and solidifying the game over screen. If time permits, we also want to create a hard mode and potentially implement some of the inital ideas we had like a dash and being able to stick and climb on walls.
+- N/A
 
 7) Link to video
 - 
