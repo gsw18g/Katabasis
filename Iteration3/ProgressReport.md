@@ -42,7 +42,7 @@ Group #8
   - Bugs: zombies walking backwards, Cerberus movement, player knockback forward instead of backwards
 - Scope
   - Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
-  - Did not have enough time to implement syntactical/stylistic code review proposals
+  - Did not have enough time to implement all syntactical/stylistic code review proposals or organize repository for maximum efficiency
   - Accomplished as much as possible within 2 weeks minus time dedicated to other final exams and assignments
 
 5) Team Member Contribution for this increment
