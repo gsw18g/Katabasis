@@ -91,7 +91,7 @@ Group #8
   - Progress Report: Sections 3, 5
   - Requirements and Design Document: Section 2
   - Implementation and Testing Document: 3
-  - Source Code: scripts and objects including zombie patrol, player_movement knockback, stop boat, hades, scale_hades_health, weak_point, remove_heart, start_boat, player_movement, fireball_destroy, fireball_hor, hades animation controller, cerberus animation controller, cerberus, cerberus_weak_point, scale_cerberus_health, flip, level2_cheakpoint, and UIManager additions
+  - Source Code: scripts and objects including zombie patrol, player_movement knockback, stop boat, charon, hades, scale_hades_health, weak_point, remove_heart, start_boat, player_movement, fireball_destroy, fireball_hor, hades animation controller, cerberus animation controller, cerberus, cerberus_weak_point, scale_cerberus_health, flip, level2_cheakpoint, and UIManager additions
   - Video: 
   
 6) Plans for the next increment
