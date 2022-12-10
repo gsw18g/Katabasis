@@ -38,7 +38,8 @@ Being able to select menu buttons
 Using capitalization in variables consistently
 - Comments
 Comments good
-/Menu Manager/SelectionArrow.cs authored by Gavin Williams and Matthew Kaplan
+
+**/Menu Manager/SelectionArrow.cs authored by Gavin Williams and Matthew Kaplan**
 - Design
 Remove unused code comments in lines 7, 8, 38-39, 55
 - Functionality
@@ -47,7 +48,8 @@ Being able to select menu buttons
 Using capitalization in variables consistently
 - Comments
 Comments good
-/camera/camera_level2.cs authored by Matthew Kaplan
+
+**/camera/camera_level2.cs authored by Matthew Kaplan**
 - Design
 Remove unused code comments in lines 19, 22, 29, 32, 34, 36
 - Functionality
@@ -59,7 +61,9 @@ Comments good
 - Changes from Increment 2
 Commented out line 31 and replaced with current line 31
 For movement with player
-/camera/move_camera.cs authored by Matthew Kaplan
+
+**/camera/move_camera.cs authored by Matthew Kaplan
+**
 - Design
 Remove unused code comments in lines 19, 22, 29, 33, 35
 This does the same thing as camera_level2 except one value is changed, is there a better way to implement?
@@ -71,7 +75,9 @@ Using lowercase underscores in variables consistently
 Comments ok
 - Changes from Increment 2
 NO CHANGES except for removing some whitespace
-/charon/charon.cs
+
+**/charon/charon.cs
+**
 - Design
 Should charon have its own separate folder?
 - Functionality
@@ -80,7 +86,9 @@ Starts and stops boat movement
 Using lowercase underscores in variables consistently
 - Comments
 No comments
-/enemy/hades/hades.cs authored by Matthew Kaplan
+
+**/enemy/hades/hades.cs authored by Matthew Kaplan
+**
 - Design
 Remove or implement unused code comments in lines 25, 38, 79, 103, 111-130
 - Functionality
@@ -91,7 +99,9 @@ Using capitalization in variables inconsistently (last_player_pos is exception)
 Comments good
 - Changes from Increment 2
 NO CHANGES
-/enemy/hades/horn.cs authored by Matthew Kaplan
+
+**/enemy/hades/horn.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 - Functionality
@@ -101,7 +111,9 @@ Naming consistent
 - No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/BATbehavior.cs authored by Lloyd Smith
+
+**/enemy/BATbehavior.cs authored by Lloyd Smith
+**
 - Design
 Unused code comments in lines 102, 159
 Extra space in lines 211-217
@@ -114,7 +126,9 @@ Variable naming inconsistent between capitalization and underscores
 Comments ok
 - Changes from Increment 2
 Radius isn’t 5f anymore, not defined in file (function called from game)
-/enemy/Behaviour.cs authored by Matthew Kaplan
+
+**/enemy/Behaviour.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 Remove space in lines 90-97
@@ -129,7 +143,9 @@ Might want to rename to specify this is bat behavior
 Comments good
 - Changes from Increment 2
 NO CHANGES
-/enemy/EnemyDamage.cs authored by Gavin Williams
+
+**/enemy/EnemyDamage.cs authored by Gavin Williams
+**
 - Design
 No unused code comments
 Looks for collisions with player
@@ -142,7 +158,9 @@ Using lowercase underscores in variables consistently
 No comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/EnemyPatrol.cs authored by Gavin Williams
+
+**/enemy/EnemyPatrol.cs authored by Gavin Williams
+**
 - Design
 No unused code comments
 - Functionality
@@ -154,7 +172,9 @@ Using capitalization in variables consistently
 No comments for anything except MoveInDirection function
 - Changes from Increment 2
 NO CHANGES
-/enemy/EnemyProjectile.cs authored by Gavin Williams
+
+**/enemy/EnemyProjectile.cs authored by Gavin Williams
+**
 - Design
 Delete unused code comments in line 39
 - Functionality
@@ -166,7 +186,9 @@ Using capitalization in variables consistently
 Needs more comments, more than just line 54
 - Changes from Increment 2
 NO CHANGES
-/enemy/Health.cs authored by Gavin Williams
+
+**/enemy/Health.cs authored by Gavin Williams
+**
 - Design
 No unused code comments
 - Functionality
@@ -179,7 +201,9 @@ Should rename the file or add comments to show what object this is affecting… 
 No comments except for line 43
 - Changes from Increment 2
 NO CHANGES
-/enemy/ProjectileHolder.cs authored by Gavin Williams and Matthew Kaplan
+
+**/enemy/ProjectileHolder.cs authored by Gavin Williams and Matthew Kaplan
+**
 - Design
 No unused code comments
 Can we put this somewhere else or does it have to be in this file if it’s just one function?
@@ -192,7 +216,9 @@ Using capitalization in variables consistently
 No comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/RangedEnemy.cs authored by Gavin Williams and Matthew Kaplan
+
+**/enemy/RangedEnemy.cs authored by Gavin Williams and Matthew Kaplan
+**
 - Design
 Delete unused code comments in line 103
 - Functionality
@@ -205,7 +231,9 @@ Function naming inconsistent (enemy_damage vs PlayerInSight)
 Comments ok
 - Changes from Increment 2
 NO CHANGES
-/enemy/SirenBeh.cs authored by Lloyd Smith
+
+**/enemy/SirenBeh.cs authored by Lloyd Smith
+**
 - Design
 No unused code comments
 - Functionality
@@ -216,7 +244,9 @@ Using capitalization in variables consistently
 Names like plmv and Beh might get confusing
 - Comments
 No comments
-/enemy/destroy_dead_zombie.cs authored by Matthew Kaplan
+
+**/enemy/destroy_dead_zombie.cs authored by Matthew Kaplan
+**
 - Design
 All this file does is call the Destroy(gameObject) function, can this be put somewhere else?
 - Functionality
@@ -228,7 +258,9 @@ Using lowercase underscores consistently
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/enemy_melee.cs authored by Gavin Williams and Matthew Kaplan
+
+**/enemy/enemy_melee.cs authored by Gavin Williams and Matthew Kaplan
+**
 - Design
 Destroy(gameObject) function is called multiple times
 Delete unused code comments in lines 74
@@ -243,7 +275,9 @@ Comments ok
 Float speed made public
 New bool awake and functions to activate zombie
 New bool stop_awake to deactivate zombie in some functions
-/enemy/fireball.cs authored by Matthew Kaplan
+
+**/enemy/fireball.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 23, 36, 38
 - Functionality
@@ -253,7 +287,9 @@ File named with underscores
 Using lowercase and underscores consistently
 - Comments
 Comments ok
-/enemy/fireball_destroy.cs authored by Matthew Kaplan
+
+**/enemy/fireball_destroy.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 36-49
 Can this be combined with fireball.cs
@@ -264,7 +300,9 @@ File named with underscores
 Using lowercase and underscores consistently
 - Comments
 No comments
-/enemy/melee_enemy.cs authored by Gavin Williams and Matthew Kaplan
+
+**/enemy/melee_enemy.cs authored by Gavin Williams and Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 23, 24
 All this file does is define, get and set health can this be somewhere else?
@@ -278,7 +316,9 @@ Consistent variable names
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/move_bat.cs authored by Gavin Williams
+
+**/enemy/move_bat.cs authored by Gavin Williams
+**
 - Design
 No unused code comments
 Should this be in the file with the other bat behavior?
@@ -291,7 +331,9 @@ Consistent variable naming
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/scale_enemy_healthbar.cs authored by Gavin Williams
+
+**/enemy/scale_enemy_healthbar.cs authored by Gavin Williams
+**
 - Design
 Delete unused code comments in lines 19, 27
 - Functionality
@@ -303,7 +345,9 @@ Variable naming consistent
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/spawn_zombie.cs authored by Matthew Kaplan
+
+**/enemy/spawn_zombie.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 - Functionality
@@ -315,7 +359,9 @@ Consistent variable naming
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/zombie2.cs authored by Gavin Williams
+
+**/enemy/zombie2.cs authored by Gavin Williams
+**
 - Design
 All code is commented out
 - Functionality
@@ -327,7 +373,9 @@ Consistent variable naming with underscores
 No comments
 - Changes from Increment 2
 NO CHANGES
-/enemy/zombie_patrol.cs authored by Matthew Kaplan
+
+**/enemy/zombie_patrol.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 41, 95
 - Functionality
@@ -336,7 +384,9 @@ Zombie idle patrol
 Inconsistent variable naming with capitalization, underscores
 - Comments
 Comments ok
-/environment/sink_check.cs authored by Matthew Kaplan
+
+**/environment/sink_check.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 27, 37
 - Functionality
@@ -348,7 +398,9 @@ Consistent variable naming
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/environment/sinking_platform.cs authored by Matthew Kaplan
+
+**/environment/sinking_platform.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 37, 38, 42
 - Functionality
@@ -360,7 +412,9 @@ Consistent variable naming with underscores
 Could use more comments
 - Changes from Increment 2
 NO CHANGES
-/hades/boss_blocks.cs authored by Matthew Kaplan
+
+**/hades/boss_blocks.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 16-40, 45
 - Functionality
@@ -372,7 +426,9 @@ Consistent variable naming
 Could use more comments
 - Changes from Increment 2
 NO CHANGES
-/hades/build_floor.cs authored by Matthew Kaplan
+
+**/hades/build_floor.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 16-40, 45
 - Functionality
@@ -384,7 +440,9 @@ Consistent variable naming with underscores
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/hades/camera_boss_hades.cs authored by Matthew Kaplan
+
+**/hades/camera_boss_hades.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 19, 22, 29, 33, 35
 - Functionality
@@ -397,7 +455,9 @@ Consistent variable naming with underscores
 Comments ok
 - Changes from Increment 2
 NO CHANGES
-/hades/warp.cs authored by Matthew Kaplan
+
+**/hades/warp.cs authored by Matthew Kaplan
+**
 - Design
 Empty if statements Lines 31-34 and 39-42
 - Functionality
@@ -409,7 +469,9 @@ Consistent variable naming
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/hades/warp_right.cs authored by Matthew Kaplan
+
+**/hades/warp_right.cs authored by Matthew Kaplan
+**
 - Design
 Empty if statements Lines 31-34 and 39-42
 Identical to warp.cs
@@ -423,7 +485,9 @@ Consistent variable naming
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/parallax background/parallax_back.cs authored by Matthew Kaplan
+
+**/parallax background/parallax_back.cs authored by Matthew Kaplan
+**
 - Design
 Unused code comments in lines 21, 30, 33, 34
 - Functionality
@@ -435,7 +499,9 @@ Consistent variable naming with underscores
 Could use more comments
 - Changes from Increment 2
 NO CHANGES
-/parallax background/parallax_fore.cs authored by Matthew Kaplan
+
+**/parallax background/parallax_fore.cs authored by Matthew Kaplan
+**
 - Design
 Unused code comments in lines 21, 30, 34, 35, 38
 - Functionality
@@ -447,7 +513,9 @@ Consistent variable naming with underscores
 No useful comments
 - Changes from Increment 2
 NO CHANGES except removing a line of whitespace
-/parallax background/parallax_mid.cs authored by Matthew Kaplan
+
+**/parallax background/parallax_mid.cs authored by Matthew Kaplan
+**
 - Design
 Unused code comments in lines 23, 33, 36, 37
 Lots of empty space lines 24-26
@@ -460,7 +528,9 @@ Consistent variable naming with underscores
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/player/check_ground.cs authored by Matthew Kaplan
+
+**/player/check_ground.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 - Functionality
@@ -472,7 +542,9 @@ Consistent variable naming with underscores
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/player/player_health.cs authored by Matthew Kaplan
+
+**/player/player_health.cs authored by Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 25, 40, 80
 Timer wrong in line 38? Maybe remove
@@ -485,7 +557,9 @@ Consistent variable naming with underscores
 Only one useful comment
 - Changes from Increment 2
 Added game over screen
-/player/player_movement.cs authored by Gavin Williams and Matthew Kaplan
+
+**/player/player_movement.cs authored by Gavin Williams and Matthew Kaplan
+**
 - Design
 Delete unused code comments in lines 77, 96, 220, 228
 Empty if statements for lines 220, 228
@@ -498,7 +572,9 @@ Consistent variable naming with underscores
 Comments good
 - Changes from Increment 2
 Fixed knockback bugs
-/player/remove_heart.cs authored by Matthew Kaplan
+
+**/player/remove_heart.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 - Functionality
@@ -510,7 +586,9 @@ Inconsistent variable naming with underscores
 No comments, self explanatory
 - Changes from Increment 2
 NO CHANGES
-/player/slope_check.cs authored by Matthew Kaplan
+
+**/player/slope_check.cs authored by Matthew Kaplan
+**
 - Design
 No unused code comments
 - Functionality
@@ -522,7 +600,9 @@ Consistent variable naming with underscores
 Comments good
 - Changes from Increment 2
 NO CHANGES
-/player/sword.cs authored by Matthew Kaplan
+
+**/player/sword.cs authored by Matthew Kaplan
+**
 - Design
 Delete or implement unused code comments in lines 35-43, 51, 65, 70, 80, 85, 96, 110
 Functionality
@@ -534,7 +614,9 @@ Consistent variable naming with underscore
 Comments good
 - Changes from Increment 2
 NO CHANGES
-/player/sword_check.cs authored by Matthew Kaplan
+
+**/player/sword_check.cs authored by Matthew Kaplan
+**
 - Design
 This file does nothing, delete or implement asap
 - Functionality
@@ -546,7 +628,9 @@ Consistent variable naming with underscore
 No useful comments
 - Changes from Increment 2
 NO CHANGES
-/player/sword_collider.cs authored by Matthew Kaplan
+
+**/player/sword_collider.cs authored by Matthew Kaplan
+**
 - Design
 Looks like the replacement for sword_check, delete the other file
 - Functionality
