@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class player_movement : MonoBehaviour
@@ -217,6 +218,7 @@ public class player_movement : MonoBehaviour
     {
         //Debug.Log("reset stab = false");
         animator.SetBool("stab", false);
+        SFXManager.sfxInstance.Audio.PlayOneShot(SFXManager.sfxInstance.playerStab);
     }
 
 
