@@ -82,7 +82,7 @@ Group #8
   - Progress Report: Section 5
   - Requirements and Design Document: Sections 4, 6
   - Implementation and Testing Document: Section 4
-  - Source Code
+  - Source Code: scrips for the syren and bats behaviour
   - Video: 
 
 - Matthew Kaplan
@@ -91,8 +91,5 @@ Group #8
   - Implementation and Testing Document: 3
   - Source Code: scripts including camera level 2, camera level 1, charon boat movement, zombie death object, hades boss, move bat, spawn zombie, sink check, sinking platform, boss blocks, build floor, hades camera, warp, warp right, slope check, hades, hades horn
   - Video: 
-  
-6) Plans for the next increment
-- For the next increment, we plan on focusing on sound design and solidifying the plot points of the project, as well as finishing the third and final level of the game, which will feature a final boss battle. We will also be uping the speed of the player's movement and solidifying the game over screen. If time permits, we also want to create a hard mode and potentially implement some of the inital ideas we had like a dash and being able to stick and climb on walls.
 
 7) Link to video
