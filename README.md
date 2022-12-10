@@ -92,4 +92,4 @@ Sound effects will be pulled from Unity's catalog
 - Overworld Map
     - Charon could take Orpheus to the selected stage so long as he has the coin for it, otherwise he has to start at the beginning
 - Dialogue/Text Boxes
-- An additional four stages (9 total, based off of the 9 circles of hell instead of the 5 stages of grief)
+- An additional  stages (5 total, based off of the 5 stages of grief)
