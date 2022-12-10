@@ -35,20 +35,16 @@ Group #8
 
 4) Challenges, changes in the plan and scope of the project and things that went wrong during this increment
 - Challenges
-  - Parallax scrolling during vertical player movement
-  - Unity editor errors
-  - Ranged enemy arrows got stuck in its box
-  - Ranged enemy not recognizing player and shooting
-  - Workflow style changed, we got a little disorganized on knowing who was doing what
-  - Zombie damaged character after it was "killed"
-  - Jumping on slope bug
-  - Enemypatrol file had a mathfs error when it was originally pushed
-  - Game over screen not functional as of yet
+  - Very small time window to implement changes to plan based on scope of last increment
+  - Based on changed workflow style (instead of each one of us doing our own level we work on the aspect of the project that we are strongest in) organization of work was mostly divided, but when we put all of our work together there were some merge conflicts
+  - Combining separately done work together led to an inharmonious final product (stylistic differences in code-writing, artistic transitions between storyline and gameplay, physically transitioning between scenes using timelines, syncing music with visuals, etc.)
+  - Work lost due to not saving before Unity software crash
+  - Cutscenes had to be transferred over to Katabasis/Assets/Scenes manually due to previous Unity editor errors
+  - Bugs: zombies walking backwards, Cerberus movement, player knockback forward instead of backwards
 - Scope
-  - Down to 3 levels of gameplay, not including the bossfight and cutscenes
-  - Still no gathering system
-  - No dash or wall stick
   - Changed workflow style, instead of each one of us doing our own level we work on the aspect of the project that we are strongest in
+  - Did not have enough time to implement all syntactical/stylistic code review proposals or organize repository for maximum efficiency
+  - Accomplished as much as possible within 2 weeks minus time dedicated to other final exams and assignments
 
 
 5) Team Member Contribution for this increment
@@ -70,9 +66,18 @@ Group #8
   - Progress Report: Sections 1, 2, 4, 5
   - Requirements and Design Document: Section 1
   - Implementation and Testing Document: Sections 1, 5
-  - Source Code: Katabasis/Kaitlin/*
-    - includes concept art, sprites and animations of ranged and melee enemies, bosses, and , entire beginning cutscene of game, and proposed code revisions for Katabasis/Assets/Scripts/*
-    - reorganized and added new information to README.md
+  - Source Code: includes concept art, sprites and animations of ranged and melee enemies, bosses, transitions between storyline and gameplay of game, all cutscene artwork, scenes, and playable timelines, and proposed code revisions for Katabasis/Assets/Scripts/* and Katabasis/Assets/Scenes/*
+    - Katabasis/Kaitlin/*
+    - Katabasis/Assets/Scenes/Active Scenes/cutscene1.unity
+    - Katabasis/Assets/Scenes/Active Scenes/cutscene2.unity
+    - Katabasis/Assets/Scenes/Active Scenes/cutscene3.unity
+    - Katabasis/Assets/Objects/scene1_timeline.playable
+    - Katabasis/Assets/Objects/scene2_timeline.playable
+    - Katabasis/Assets/Objects/scene3_timeline.playable
+    - Katabasis/Assets/Sprites/*
+    - README.md: Reorganized and added new information 
+    - Implement 3 Code Review.md: Code review
+    - Created and organized Iteration3 folder
   - Video: Describe any change in scope of project and explanation
 
 - Lloyd Smith
@@ -93,4 +98,4 @@ Group #8
 - For the next increment, we plan on focusing on sound design and solidifying the plot points of the project, as well as finishing the third and final level of the game, which will feature a final boss battle. We will also be uping the speed of the player's movement and solidifying the game over screen. If time permits, we also want to create a hard mode and potentially implement some of the inital ideas we had like a dash and being able to stick and climb on walls.
 
 7) Link to video
-- https://youtu.be/nJTQX3uuR2U
+- 
