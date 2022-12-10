@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 510952582}
   - component: {fileID: 510952581}
   - component: {fileID: 510952580}
+  - component: {fileID: 510952585}
   m_Layer: 5
   m_Name: 4_005
   m_TagString: Untagged
@@ -596,6 +597,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510952585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510952579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 0232c55dae14f0142b0fa5bf102891dc, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 510952579}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &518142530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,44 +1765,48 @@ PlayableDirector:
   - key: {fileID: 2108315159682950444, guid: ca36dddb1ff3c4847936209651c1303b, type: 2}
     value: {fileID: 510952580}
   - key: {fileID: 6288045878052912005, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 737083600}
   - key: {fileID: -3845177392426587794, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1272619858}
   - key: {fileID: -5528984526823136085, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1193456644}
   - key: {fileID: 9104503761078997932, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 839479572}
   - key: {fileID: -1072933330959994527, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 774968834}
   - key: {fileID: 788157269362250876, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1541372845}
   - key: {fileID: -2263617775410422099, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 518142535}
   - key: {fileID: -1587365192579451304, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1409691848}
   - key: {fileID: 7934553288230120277, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 988413521}
   - key: {fileID: -6212858541416672414, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 258151650}
   - key: {fileID: 637087202108039894, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 607321656}
   - key: {fileID: -1567744780610664603, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1854903522}
   - key: {fileID: 1809628266697210286, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1778843621}
   - key: {fileID: 124254731684193101, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1147004141}
   - key: {fileID: 1152897407110242662, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1752634028}
   - key: {fileID: -6445741499327221481, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1458858978}
   - key: {fileID: -3768169036592797208, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1822341718}
   - key: {fileID: -99990847677750807, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 847386455}
   - key: {fileID: -9108823180323918443, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1783271167}
   - key: {fileID: 2108315159682950444, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
+    value: {fileID: 510952580}
+  - key: {fileID: 2517449605944715637, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1837177110572668837, guid: 9eb539336f43ec2489c653cc616c6673, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -2081,6 +2116,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193456642}
   m_CullTransparentMesh: 1
+--- !u!1 &1224607906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224607908}
+  - component: {fileID: 1224607907}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1224607907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224607906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054d00abcd8ce9d44ab001a2926fe340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1224607908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224607906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 780.3741, y: 299.5, z: 0.061035156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272619856
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,9 +28,14 @@ public class UIManager : MonoBehaviour
         //SoundManager.instance.PlaySound(gameOverSound);
     }
 
-    public void WinGame()
+    public void WinScreen()
     {
         winScreen.SetActive(true);
+    }
+    
+    public void WinGame()
+    {
+        SceneManager.LoadScene(7);
     }
 
     //Restart level
@@ -43,6 +48,7 @@ public class UIManager : MonoBehaviour
             //reset cerberus health
             cerberus_weak_point.health = 200;
         }
+
         else
         {
             //reload current scene
