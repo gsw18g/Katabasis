@@ -24,7 +24,7 @@ Katabasis is an epic retelling of the tragic love story of Orpheus and Eurydice,
 *Stage Two*
 > River with ghostlike skulls floating about. It would open on Charon's boat, after he realizes you have no obols, he kicks you off, you then have to find the underworld entrance, and once you find it, Cerberus blocks the way and triggers the Cerberus Boss Battle / Chase.
 
-**Hades' Palace** - *Stage Three*
+*Stage Three*: Hades' Palace
 > In this stage, there would be a boss battle with Hades. At the end of it, Hades caves in and lets him return to Earth with Eurydice on the condition that he escapes the underworld in 10 minutes and doesn't turn around to ensure that Eyurdice is following him.
 
 #### Horror Elements
